@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledBriefAboutSection = styled.div`
+const StyledBriefAboutSection = styled.h2`
   margin-top: 16rem;
   margin-bottom: 16rem;
   font-size: 8rem;

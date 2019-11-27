@@ -6,7 +6,7 @@ import { SectionWrap } from '../components/SectionWrap'
 import styled from 'styled-components'
 import theme from '../styles/theme'
 
-const ServicesHeadline = styled.div`
+const ServicesHeadline = styled.h2`
   font-size: 8rem;
   letter-spacing: -0.08rem;
   line-height: 8.8rem;
@@ -40,7 +40,7 @@ const ProcessSection = styled.div`
   margin-bottom: 20rem;
 `
 
-const ProcessSectionLeft = styled.div`
+const ProcessSectionLeft = styled.h2`
   font-size: 8rem;
   letter-spacing: -0.08rem;
   line-height: 8.8rem;

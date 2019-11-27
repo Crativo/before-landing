@@ -6,8 +6,8 @@ import theme from '../../styles/theme'
 const StyledFeaturedFour = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 12rem;
 `
-
 
 const CaseStudy = styled.div`
   margin-right: 1.5rem;
