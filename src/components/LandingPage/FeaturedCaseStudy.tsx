@@ -2,9 +2,15 @@ import React from 'react'
 import Container from '../Container'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
+import { mq } from '../../styles/media'
 
 const StyledFeaturedCaseStudy = styled.div`
   display: flex;
+  flex-direction: column;
+
+  ${mq.tablet} {
+    flex-direction: row;
+  }
 `
 
 const LeftFeatured = styled.div`
@@ -27,7 +33,11 @@ const FeaturedAction = styled.div`
   letter-spacing: -0.064rem;
   line-height: 3.8rem;
   color: ${theme.colors.primary};
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
+
+  ${mq.tablet} {
+    margin-bottom: 10rem;
+  }
 `
 
 const Img = styled.img`

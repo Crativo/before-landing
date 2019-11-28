@@ -4,21 +4,26 @@ import Container from '../Container'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 import { Link } from 'gatsby'
+import { SectionWrap } from '../SectionWrap'
+import { mq } from '../../styles/media'
 
 export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10rem;
-  padding: 0 10rem;
 `
 
 export const StyledNavigation = styled.header`
-  display: flex;
+  display: none;
   font-size: 2rem;
   letter-spacing: 0.1rem;
   line-height: 3rem;
   color: ${theme.colors.black};
+
+  ${mq.tablet} {
+    display: flex;
+  }
 `
 
 export const StyledLink = styled(Link)`
@@ -32,15 +37,17 @@ export const StyledLink = styled(Link)`
 
 const Header = () => (
   <Container>
-    <StyledHeader>
-      <Link to="/"><LogoIcon /></Link>
-      <StyledNavigation>
-        <StyledLink to="/work">work</StyledLink>
-        <StyledLink to="/services">services</StyledLink>
-        <StyledLink to="/about">about</StyledLink>
-        <StyledLink to="/contact">contact</StyledLink>
-      </StyledNavigation>
-    </StyledHeader>
+    <SectionWrap>
+      <StyledHeader>
+        <Link to="/"><LogoIcon /></Link>        
+        <StyledNavigation>
+          <StyledLink to="/work">work</StyledLink>
+          <StyledLink to="/services">services</StyledLink>
+          <StyledLink to="/about">about</StyledLink>
+          <StyledLink to="/contact">contact</StyledLink>
+        </StyledNavigation>
+      </StyledHeader>
+    </SectionWrap>
   </Container>
 )
 

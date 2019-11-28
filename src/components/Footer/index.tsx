@@ -5,17 +5,29 @@ import styled from 'styled-components'
 import { SectionWrap } from '../SectionWrap'
 import { LogoIcon } from '../LogoIcon'
 import { Link } from 'gatsby'
+import { mq } from '../../styles/media'
 
 export const StyledFooter = styled.div`
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background: ${theme.colors.grey};
+
+  ${mq.tablet} {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 `
 
 const ActionSection = styled.div`
-  margin-top: 12rem;
-  font-size: 4rem;
-  margin-bottom: 20rem;
+  font-size: 2.4rem;
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+
+  ${mq.tablet} {
+    font-size: 4rem;
+    margin-top: 12rem;
+    margin-bottom: 20rem;
+  }
 `
 
 const FooterActionTitle = styled.div`
