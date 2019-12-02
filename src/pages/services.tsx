@@ -14,14 +14,23 @@ const ProvidedServices = styled.div`
 
   ${mq.tablet} {
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  ${mq.desktop} {
+    flex-direction: row;
+    flex-wrap: nowrap;
     margin-bottom: 20rem;
   }
 `
 
 const ServiceItem = styled.div`
+  ${mq.tablet} {
+    width: 50%;
+  }
+
   ${mq.desktop} {
     width: 25%;
-    margin-right: 10rem;
   }
 `
 
@@ -48,9 +57,10 @@ const ServiceDetails = styled.div`
 const ProcessSection = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 8rem;
 
-  ${mq.tablet} {
+  ${mq.desktop} {
     flex-direction: row;
     margin-bottom: 20rem;
   }
@@ -61,23 +71,19 @@ const ProcessSectionLeft = styled.div`
   letter-spacing: -0.08rem;
   line-height: 8.8rem;
 
-  ${mq.tablet} {
+  ${mq.desktop} {
     width: 50%;
   }
 `
 
 const ProcessSectionRight = styled.div`
-  ${mq.tablet} {
-    width: 50%;
+  ${mq.desktop} {
+    padding-left: 4rem;
   }
 `
 
 const ProcessItem = styled.div`
   margin-bottom: 1rem;
-
-  ${mq.tablet} {
-    margin-bottom: 2rem;
-  }
   
   ${mq.desktop} {
     margin-bottom: 4rem;
@@ -86,7 +92,7 @@ const ProcessItem = styled.div`
 
 const ProcessItemTitle = styled.div`
   font-size: 3.2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
 `
 
 const ProcessItemDetails = styled.ul`

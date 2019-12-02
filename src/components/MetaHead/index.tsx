@@ -15,8 +15,8 @@ const MetaHead = ({ title, description } : { title: string; description: string}
 )
 
 MetaHead.defaultProps = {
-  title: 'Portfolio',
-  description: 'My lifes greatets achievements',
+  title: 'before',
+  description: 'Small design studio helping brands being understood by a viewer on the other side of the screen.',
 }
 
 export default MetaHead

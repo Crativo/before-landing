@@ -53,7 +53,7 @@ const CaseStudyFoot = styled.div`
   font-size: 2.4rem;
 
 
-  ${mq.tablet} {
+  ${mq.desktop} {
     font-size: 3.2rem;
   }
 `
