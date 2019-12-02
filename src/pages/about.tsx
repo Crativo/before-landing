@@ -6,26 +6,30 @@ import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import styled from 'styled-components'
 import theme from '../styles/theme'
+import { PageHeadline } from '../components/PageHeadline'
+import { mq } from '../styles/media'
 
-const AboutHeadline = styled.h2`
-  font-size: 8rem;
-  letter-spacing: -0.08rem;
-  line-height: 8.8rem;
-  max-width: 89.4rem;
-  margin-top: 20rem;
-  margin-bottom: 20rem;
-`
-
-const TeamSection = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20rem;
+const TeamItemWrap = styled.div`
+  margin-bottom: 6rem;
 `
 
 const TeamItem = styled.div`
-  width: 25%;
   margin-bottom: 6rem;
-  margin-right: 3rem;
+`
+
+const TeamSection = styled.div`
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
+  margin-bottom: 20rem;
+
+  ${mq.tablet} {
+    grid-template-columns: 50% 50%;
+  }
+
+  ${mq.desktop} {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
 `
 
 const TeamItemPic = styled.div`
@@ -45,9 +49,7 @@ const Splitter = styled.div`
   color: ${theme.colors.darkerGrey};
 `
 
-const TeamItemName = styled.div`
-  
-`
+const TeamItemName = styled.div``
 
 const TeamItemJob = styled.div`
   color: ${theme.colors.darkerGrey};
@@ -60,73 +62,88 @@ class About extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <AboutHeadline>
-              A small collective of international designers who share the same city.
-            </AboutHeadline>
+            <PageHeadline>
+              A small collective of international designers who share the same
+              city.
+            </PageHeadline>
 
             <TeamSection>
-              <TeamItem>
-                <TeamItemPic />
-                <TeamItemDetails>
-                  <TeamItemName>Jeff Gee</TeamItemName>
-                  <Splitter>&nbsp;/&nbsp;</Splitter>
-                  <TeamItemJob>Art Direction</TeamItemJob>
-                </TeamItemDetails>
-              </TeamItem>
+              <TeamItemWrap>
+                <TeamItem>
+                  <TeamItemPic />
+                  <TeamItemDetails>
+                    <TeamItemName>Jeff Gee</TeamItemName>
+                    <Splitter>&nbsp;/&nbsp;</Splitter>
+                    <TeamItemJob>Art Direction</TeamItemJob>
+                  </TeamItemDetails>
+                </TeamItem>
+              </TeamItemWrap>
 
-              <TeamItem>
-                <TeamItemPic />
-                <TeamItemDetails>
-                  <TeamItemName>Michal Ivanecký</TeamItemName>
-                  <Splitter>&nbsp;/&nbsp;</Splitter>
-                  <TeamItemJob>Visual Design</TeamItemJob>
-                </TeamItemDetails>
-              </TeamItem>
+              <TeamItemWrap>
+                <TeamItem>
+                  <TeamItemPic />
+                  <TeamItemDetails>
+                    <TeamItemName>Michal Ivanecký</TeamItemName>
+                    <Splitter>&nbsp;/&nbsp;</Splitter>
+                    <TeamItemJob>Visual Design</TeamItemJob>
+                  </TeamItemDetails>
+                </TeamItem>
+              </TeamItemWrap>
 
-              <TeamItem>
-                <TeamItemPic />
-                <TeamItemDetails>
-                  <TeamItemName>Miroslav Priščák</TeamItemName>
-                  <Splitter>&nbsp;/&nbsp;</Splitter>
-                  <TeamItemJob>Content Strategist</TeamItemJob>
-                </TeamItemDetails>
-              </TeamItem>
+              <TeamItemWrap>
+                <TeamItem>
+                  <TeamItemPic />
+                  <TeamItemDetails>
+                    <TeamItemName>Miroslav Priščák</TeamItemName>
+                    <Splitter>&nbsp;/&nbsp;</Splitter>
+                    <TeamItemJob>Content Strategist</TeamItemJob>
+                  </TeamItemDetails>
+                </TeamItem>
+              </TeamItemWrap>
 
-              <TeamItem>
-                <TeamItemPic />
-                <TeamItemDetails>
-                  <TeamItemName>Ondrej Solčány</TeamItemName>
-                  <Splitter>&nbsp;/&nbsp;</Splitter>
-                  <TeamItemJob>Motion Design</TeamItemJob>
-                </TeamItemDetails>
-              </TeamItem>
+              <TeamItemWrap>
+                <TeamItem>
+                  <TeamItemPic />
+                  <TeamItemDetails>
+                    <TeamItemName>Ondrej Solčány</TeamItemName>
+                    <Splitter>&nbsp;/&nbsp;</Splitter>
+                    <TeamItemJob>Motion Design</TeamItemJob>
+                  </TeamItemDetails>
+                </TeamItem>
+              </TeamItemWrap>
 
-              <TeamItem>
-                <TeamItemPic />
-                <TeamItemDetails>
-                  <TeamItemName>Wouter Kooij</TeamItemName>
-                  <Splitter>&nbsp;/&nbsp;</Splitter>
-                  <TeamItemJob>Webflow Development</TeamItemJob>
-                </TeamItemDetails>
-              </TeamItem>
+              <TeamItemWrap>
+                <TeamItem>
+                  <TeamItemPic />
+                  <TeamItemDetails>
+                    <TeamItemName>Wouter Kooij</TeamItemName>
+                    <Splitter>&nbsp;/&nbsp;</Splitter>
+                    <TeamItemJob>Webflow Development</TeamItemJob>
+                  </TeamItemDetails>
+                </TeamItem>
+              </TeamItemWrap>
 
-              <TeamItem>
-                <TeamItemPic />
-                <TeamItemDetails>
-                  <TeamItemName>Viktor Goliáš</TeamItemName>
-                  <Splitter>&nbsp;/&nbsp;</Splitter>
-                  <TeamItemJob>UX Design</TeamItemJob>
-                </TeamItemDetails>
-              </TeamItem>
+              <TeamItemWrap>
+                <TeamItem>
+                  <TeamItemPic />
+                  <TeamItemDetails>
+                    <TeamItemName>Viktor Goliáš</TeamItemName>
+                    <Splitter>&nbsp;/&nbsp;</Splitter>
+                    <TeamItemJob>UX Design</TeamItemJob>
+                  </TeamItemDetails>
+                </TeamItem>
+              </TeamItemWrap>
 
-              <TeamItem>
-                <TeamItemPic />
-                <TeamItemDetails>
-                  <TeamItemName>Iveta Beranová</TeamItemName>
-                  <Splitter>&nbsp;/&nbsp;</Splitter>
-                  <TeamItemJob>Copywriter</TeamItemJob>
-                </TeamItemDetails>
-              </TeamItem>
+              <TeamItemWrap>
+                <TeamItem>
+                  <TeamItemPic />
+                  <TeamItemDetails>
+                    <TeamItemName>Iveta Beranová</TeamItemName>
+                    <Splitter>&nbsp;/&nbsp;</Splitter>
+                    <TeamItemJob>Copywriter</TeamItemJob>
+                  </TeamItemDetails>
+                </TeamItem>
+              </TeamItemWrap>
             </TeamSection>
           </SectionWrap>
         </Container>

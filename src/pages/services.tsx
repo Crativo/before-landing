@@ -5,54 +5,83 @@ import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import styled from 'styled-components'
 import theme from '../styles/theme'
-
-const ServicesHeadline = styled.h2`
-  font-size: 8rem;
-  letter-spacing: -0.08rem;
-  line-height: 8.8rem;
-  max-width: 96.3rem;
-  margin-top: 20rem;
-  margin-bottom: 20rem;
-`
+import { PageHeadline } from '../components/PageHeadline'
+import { mq } from '../styles/media'
 
 const ProvidedServices = styled.div`
   display: flex;
-  margin-bottom: 20rem;
+  flex-direction: column;
+
+  ${mq.tablet} {
+    flex-direction: row;
+    margin-bottom: 20rem;
+  }
 `
 
 const ServiceItem = styled.div`
-  margin-right: 10rem;
+  ${mq.desktop} {
+    width: 25%;
+    margin-right: 10rem;
+  }
 `
 
-const ServiceTitle = styled.div`
-  font-size: 4rem;
-  letter-spacing: -0.04rem;
-  line-height: 5.6rem;
+const ServiceTitle = styled.h3`
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+  ${mq.desktop} {
+    font-size: 4rem;
+    letter-spacing: -0.04rem;
+    line-height: 5.6rem;
+  }
 `
 
 const ServiceDetails = styled.div`
   font-size: 2rem;
   line-height: 3.2rem;
+
+  ${mq.desktop} {
+    font-size: 2rem;
+  }
 `
 
 const ProcessSection = styled.div`
   display: flex;
-  margin-bottom: 20rem;
+  flex-direction: column;
+  margin-bottom: 8rem;
+
+  ${mq.tablet} {
+    flex-direction: row;
+    margin-bottom: 20rem;
+  }
 `
 
-const ProcessSectionLeft = styled.h2`
+const ProcessSectionLeft = styled.div`
   font-size: 8rem;
   letter-spacing: -0.08rem;
   line-height: 8.8rem;
-  width: 50%;
+
+  ${mq.tablet} {
+    width: 50%;
+  }
 `
 
 const ProcessSectionRight = styled.div`
-  width: 50%;
+  ${mq.tablet} {
+    width: 50%;
+  }
 `
 
 const ProcessItem = styled.div`
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
+
+  ${mq.tablet} {
+    margin-bottom: 2rem;
+  }
+  
+  ${mq.desktop} {
+    margin-bottom: 4rem;
+  }
 `
 
 const ProcessItemTitle = styled.div`
@@ -74,9 +103,9 @@ class Services extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <ServicesHeadline>
+            <PageHeadline>
               Simplified communication and intuitive controls, before anything else.
-            </ServicesHeadline>
+            </PageHeadline>
 
             <ProvidedServices>
               <ServiceItem>
@@ -107,7 +136,9 @@ class Services extends Component<{ data: any }> {
 
             <ProcessSection>
               <ProcessSectionLeft>
-                A problem well stated is a problem half-solved.
+                <PageHeadline>
+                  A problem well stated is a problem half-solved.
+                </PageHeadline>
               </ProcessSectionLeft>
 
               <ProcessSectionRight>

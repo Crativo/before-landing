@@ -1,20 +1,11 @@
 import React, { Fragment, Component } from 'react'
-import { graphql } from 'gatsby'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import styled from 'styled-components'
 import theme from '../styles/theme'
-
-const ContactHeadline = styled.h2`
-  font-size: 8rem;
-  letter-spacing: -0.08rem;
-  line-height: 8.8rem;
-  max-width: 122.5rem;
-  margin-top: 20rem;
-  margin-bottom: 20rem;
-`
+import { PageHeadline } from '../components/PageHeadline'
 
 const CardList = styled.div`
   display: flex;
@@ -42,9 +33,9 @@ class Contact extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <ContactHeadline>
+            <PageHeadline>
               Contact us if your business can't afford being misunderstood. We'll ensure that won't happen.
-            </ContactHeadline>
+            </PageHeadline>
 
             <CardList>
               <CardItem>

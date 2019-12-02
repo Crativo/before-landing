@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { FeaturedCaseStudy } from '../components/LandingPage/FeaturedCaseStudy'
-import { BriefAboutSection } from '../components/LandingPage/BriefAboutSection'
+import { PageHeadline } from '../components/PageHeadline'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import { FeaturedFour } from '../components/LandingPage/FeaturedFour'
@@ -18,7 +18,9 @@ class Landing extends Component<{ data: any }> {
         <Container>
           <SectionWrap>
             <FeaturedCaseStudy image="" name="Scheuermann" actionText="see case study ->" />
-            <BriefAboutSection text="Small design studio helping brands being understood by a viewer on the other side of the screen." />
+            <PageHeadline>
+              Small design studio helping brands being understood by a viewer on the other side of the screen.
+            </PageHeadline>
             <FeaturedFour caseStudies={caseStudies.slice(0, 4)} />
           </SectionWrap>
         </Container>
