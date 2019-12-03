@@ -1,11 +1,6 @@
 {
   "pageName": "landing",
-  "title": "Before",
-  "intro": "Developer",
-  "quote": "\"I build stuff that sells\"",
-  "about": "**Lorem ipsum dolor sit **amet, consectetur adipiscing elit. Nullam ut lacinia leo. Aliquam in ornare arcu. Vestibulum blandit lobortis velit vitae rhoncus. Donec vestibulum fringilla leo sed viverra. \n\nPellentesque convallis turpis ex, id varius odio porta eget. Nullam accumsan lectus sed mattis feugiat. Aenean ac ligula in sem viverra ultrices. Proin feugiat nec est eu lobortis. Proin mollis tempus libero, vitae hendrerit mauris sodales ac.\n\nProin sit amet quam enim. Nullam vel luctus quam, quis tincidunt odio. Pellentesque rhoncus ante quis neque scelerisque egestas.",
-  "endQuote": "Like what you see?",
-  "endNote": "Pellentesque convallis turpis ex, id varius odio porta eget. Nullam accumsan lectus sed mattis feugiat. Aenean ac ligula in sem viverra ultrices. Proin feugiat nec est eu lobortis. Proin mollis tempus libero, vitae hendrerit mauris sodales ac.\n\nThank you,\n\nHave a great day :)",
+  "pageHeadline": "Small design studio helping brands being understood by a viewer on the other side of the screen.",
   "social": [
     {
       "network": "linkedin",

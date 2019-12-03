@@ -17,7 +17,7 @@ class Landing extends Component<{ data: any }> {
         <Container>
           <SectionWrap>
             <PageHeadline>
-              Small design studio helping brands being understood by a viewer on the other side of the screen.
+              {this.props.data.landing.edges[0].node.pageHeadline}
             </PageHeadline>
             <FeaturedFour caseStudies={caseStudies.slice(0, 4)} />
           </SectionWrap>
@@ -34,12 +34,7 @@ export const query = graphql`
       edges {
         node {
           id
-          title
-          intro
-          quote
-          about
-          endQuote
-          endNote
+          pageHeadline
           social {
             network
             link
