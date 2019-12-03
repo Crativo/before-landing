@@ -19,9 +19,8 @@ export const StyledFooter = styled.div`
 `
 
 const ActionSection = styled.div`
-  font-size: 2.4rem;
-  margin-top: 6rem;
-  margin-bottom: 10rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 
   ${mq.tablet} {
     font-size: 4rem;
@@ -31,17 +30,18 @@ const ActionSection = styled.div`
 `
 
 const FooterActionTitle = styled.div`
-  font-size: 4rem;
+  font-size: 2rem;
+  font-weight: ${theme.fontWeight.medium};
 `
 
 const FooterAction = styled.div`
+  font-size: 2rem;
+  font-weight: ${theme.fontWeight.medium};
+  line-height: 6.6rem;
   color: ${theme.colors.primary};
 `
 
 const FooterFoot = styled.div`
-  display: flex;
-  justify-content: space-between;
-  max-width: 80rem;
 `
 
 const FooterLogo = styled.div`
@@ -49,24 +49,26 @@ const FooterLogo = styled.div`
 `
 
 const FooterNav = styled.div`
-  display: flex;
+  margin-top: 8rem;
 `
 
 export const StyledLink = styled(Link)`
-  margin-left: 8rem;
-  padding: 0.5rem 0.25rem;
-
-  &:nth-child(1) {
-    margin-left: 0;
-  }
+  margin-bottom: 4rem;
+  color: ${theme.colors.darkerGrey};
 `
 
 export const StyledNavigation = styled.header`
   display: flex;
+  flex-direction: column;
   font-size: 2rem;
   letter-spacing: 0.1rem;
   line-height: 3rem;
   color: ${theme.colors.black};
+
+  ${mq.tablet} {
+    flex-direction: row;
+  }
+
 `
 
 

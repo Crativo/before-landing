@@ -4,7 +4,7 @@ const theme = {
     black: '#1A1A1A',
     white: '#fff',
     grey: '#DDDDDD',
-    darkerGrey: '#B7B7B7',
+    darkerGrey: '#AFAFAF',
     greyBorder: '#404345',
     greyDark: '#282B2D',
   },
@@ -16,6 +16,7 @@ const theme = {
   fontWeight: {
     light: 300,
     regular: 400,
+    medium: 600,
     semibold: 600,
     bold: 700,
   },

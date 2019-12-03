@@ -2,7 +2,6 @@ import React, { Fragment, Component } from 'react'
 import { graphql } from 'gatsby'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { FeaturedCaseStudy } from '../components/LandingPage/FeaturedCaseStudy'
 import { PageHeadline } from '../components/PageHeadline'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
@@ -17,7 +16,6 @@ class Landing extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <FeaturedCaseStudy image="" name="Scheuermann" actionText="see case study ->" />
             <PageHeadline>
               Small design studio helping brands being understood by a viewer on the other side of the screen.
             </PageHeadline>
@@ -49,6 +47,7 @@ export const query = graphql`
         }
       }
     }
+
     work: allPagesJson(filter: {pageName: {eq: "work"}}) {
       edges {
         node {

@@ -41,7 +41,7 @@ const CaseStudyWrap = styled.div`
 const CaseStudyImage = styled.img`
   width: 100%;
   height: 300px;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem;
 
   ${mq.tablet} {
     margin-bottom: 3.2rem;
@@ -50,7 +50,8 @@ const CaseStudyImage = styled.img`
 
 const CaseStudyFoot = styled.div`
   display: flex;
-  font-size: 2.4rem;
+  font-size: 2rem;
+  line-height: 3.2rem;
 
 
   ${mq.desktop} {
