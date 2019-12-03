@@ -153,4 +153,21 @@ class About extends Component<{ data: any }> {
   }
 }
 
+export const query = graphql`
+  query AboutQuery {
+    about: allPagesJson(filter: {pageName: {eq: "about"}}) {
+      edges {
+        node {
+          id
+          pageHeadline
+          people {
+            name
+            position
+          }
+        }
+      }
+    }
+  }
+`
+
 export default About

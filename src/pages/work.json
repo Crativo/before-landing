@@ -1,6 +1,6 @@
 {
   "pageName": "work",
-  "title": "Our Work",
+  "pageHeadline": "Our Work",
   "caseStudies": [
     { "brandName": "ease", "workType": "Full-scale branding"},
     { "brandName": "EMCO", "workType": "Eshop"},

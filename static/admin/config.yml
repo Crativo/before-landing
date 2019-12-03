@@ -10,7 +10,7 @@ collections:
         name: "landing"
         file: "src/pages/landing.json"
         fields:
-          - {label: PageHeadline, name: title, widget: string}
+          - {label: PageHeadline, name: pageHeadline, widget: string}
           - label: "Social Links"
             name: "social"
             widget: "list"
@@ -27,8 +27,7 @@ collections:
         name: "work"
         file: "src/pages/work.json"
         fields:
-          - {label: PageName, name: pageName, widget: hidden, default: "landing"}
-          - {label: Title, name: title, widget: string}
+          - {label: PageHeadline, name: pageHeadline, widget: string}
           - label: "Case Studies"
             name: "caseStudies"
             widget: "list"
@@ -39,5 +38,20 @@ collections:
                 fields:
                 - { label: "Brand Name", value: "brandName" }
                 - { label: "Work Type", value: "workType" }
+      - label: "About Page"
+        name: "about"
+        file: "src/pages/about.json"
+        fields:
+          - {label: PageHeadline, name: pageHeadline, widget: string}
+          - label: "People"
+            name: "people"
+            widget: "list"
+            fields:
+              - label: Person
+                name: person
+                widget: list
+                fields:
+                - { label: "Name", value: "name", widget: string}
+                - { label: "Position", value: "position", widget: string}
 media_folder: static/img
 public_folder: /img
