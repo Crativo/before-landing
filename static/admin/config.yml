@@ -13,18 +13,18 @@ collections:
       - { label: "Name", name: "name", widget: string }
       - { label: "Position", name: "position", widget: string }
   - label: "Case Studies"
-  name: "caseStudies"
-  folder: "src/case-studies"
-  create: true
-  fields:
-    - label: Study
-      name: study
-      widget: list
-      fields:
-      - { label: "Brand Name", value: "brandName" }
-      - { label: "Work Type", value: "workType" }
+    name: "caseStudies"
+    folder: "src/case-studies"
+    create: true
     slug: "{{slug}}"
     identifier_field: brandName
+    fields:
+      - label: Study
+        name: study
+        widget: list
+        fields:
+        - { label: "Brand Name", value: "brandName" }
+        - { label: "Work Type", value: "workType" }
   - label: "Pages"
     name: "pages"
     files:
