@@ -7,12 +7,16 @@ collections:
     name: "people"
     folder: "src/people"
     create: true
-    slug: "{{field.fname}}-{{field.lname}}"
+    slug: "{{name}}"
+    identifier_field: name
     fields:
       - { label: "Title", name: "title", widget: "hidden" }
-      - { label: "First Name", name: "fname", widget: string }
-      - { label: "Last Name", name: "lname", widget: string }
       - { label: "Position", name: "position", widget: string }
+      - label: "Name"
+        name: "name"
+        fields:
+        - { label: "First Name", name: "fname", widget: string }
+        - { label: "Last Name", name: "lname", widget: string }
   - label: "Pages"
     name: "pages"
     files:
