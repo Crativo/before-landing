@@ -23,8 +23,8 @@ collections:
         name: study
         widget: list
         fields:
-        - { label: "Brand Name", value: "brandName" }
-        - { label: "Work Type", value: "workType" }
+        - { label: "Brand Name", name: "brandName", widget: string }
+        - { label: "Work Type", name: "workType", widget: string }
   - label: "Pages"
     name: "pages"
     files:
