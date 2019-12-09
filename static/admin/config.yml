@@ -12,6 +12,19 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: string }
       - { label: "Position", name: "position", widget: string }
+  - label: "Case Studies"
+  name: "caseStudies"
+  folder: "src/case-studies"
+  create: true
+  fields:
+    - label: Study
+      name: study
+      widget: list
+      fields:
+      - { label: "Brand Name", value: "brandName" }
+      - { label: "Work Type", value: "workType" }
+    slug: "{{slug}}"
+    identifier_field: brandName
   - label: "Pages"
     name: "pages"
     files:
@@ -37,16 +50,6 @@ collections:
         file: "src/pages/work.json"
         fields:
           - {label: PageHeadline, name: pageHeadline, widget: string}
-          - label: "Case Studies"
-            name: "caseStudies"
-            widget: "list"
-            fields:
-              - label: Study
-                name: study
-                widget: list
-                fields:
-                - { label: "Brand Name", value: "brandName" }
-                - { label: "Work Type", value: "workType" }
       - label: "About Page"
         name: "about"
         file: "src/pages/about.json"
