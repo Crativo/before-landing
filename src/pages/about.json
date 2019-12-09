@@ -1,7 +1,4 @@
 {
   "pageName": "about",
-  "pageHeadline": "About",
-  "people": [
-    { "name": "ease", "position": "Full-scale branding"}
-  ]
+  "pageHeadline": "About"
 }

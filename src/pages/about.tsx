@@ -160,6 +160,12 @@ export const query = graphql`
         node {
           id
           pageHeadline
+        }
+      }
+    }
+    people: allPagesJson(filter: {pageName: {eq: "people"}}) {
+      edges {
+        node {
           people {
             name
             position
