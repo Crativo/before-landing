@@ -7,7 +7,7 @@ collections:
     name: "people"
     folder: "src/people"
     create: true
-    slug: "{{name}}"
+    slug: "{{name.fname}}"
     identifier_field: name
     fields:
       - { label: "Title", name: "title", widget: "hidden" }
