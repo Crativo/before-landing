@@ -19,12 +19,8 @@ collections:
     slug: "{{slug}}"
     identifier_field: brandName
     fields:
-      - label: Study
-        name: study
-        widget: list
-        fields:
-        - { label: "Brand Name", name: "brandName", widget: string }
-        - { label: "Work Type", name: "workType", widget: string }
+      - { label: "Brand Name", name: "brandName", widget: string }
+      - { label: "Work Type", name: "workType", widget: string }
   - label: "Pages"
     name: "pages"
     files:
