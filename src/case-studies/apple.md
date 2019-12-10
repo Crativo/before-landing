@@ -1,5 +1,0 @@
----
-brandName: Apple
-workType: Design
----
-

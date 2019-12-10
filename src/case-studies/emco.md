@@ -1,5 +1,0 @@
----
-brandName: EMCO
-workType: Eshop
----
-
