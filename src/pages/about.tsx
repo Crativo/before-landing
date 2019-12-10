@@ -58,7 +58,7 @@ const TeamItemJob = styled.div`
 class About extends Component<{ data: any }> {
   render() {
     const people = this.props.data.people.edges
-    const aboutPage = this.props.data.aboutPage.edges[0]
+    const aboutPage = this.props.data.aboutPage.edges[0].node
 
     return (
       <Fragment>
