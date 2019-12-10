@@ -57,93 +57,31 @@ const TeamItemJob = styled.div`
 
 class About extends Component<{ data: any }> {
   render() {
+    const people = this.props.data.people.edges
+    const aboutPage = this.props.data.aboutPage.edges[0]
+
     return (
       <Fragment>
         <Header />
         <Container>
           <SectionWrap>
             <PageHeadline>
-              A small collective of international designers who share the same
-              city.
+              {aboutPage.pageHeadline}
             </PageHeadline>
 
             <TeamSection>
-              <TeamItemWrap>
-                <TeamItem>
-                  <TeamItemPic />
-                  <TeamItemDetails>
-                    <TeamItemName>Jeff Gee</TeamItemName>
-                    <Splitter>&nbsp;/&nbsp;</Splitter>
-                    <TeamItemJob>Art Direction</TeamItemJob>
-                  </TeamItemDetails>
-                </TeamItem>
-              </TeamItemWrap>
-
-              <TeamItemWrap>
-                <TeamItem>
-                  <TeamItemPic />
-                  <TeamItemDetails>
-                    <TeamItemName>Michal Ivanecký</TeamItemName>
-                    <Splitter>&nbsp;/&nbsp;</Splitter>
-                    <TeamItemJob>Visual Design</TeamItemJob>
-                  </TeamItemDetails>
-                </TeamItem>
-              </TeamItemWrap>
-
-              <TeamItemWrap>
-                <TeamItem>
-                  <TeamItemPic />
-                  <TeamItemDetails>
-                    <TeamItemName>Miroslav Priščák</TeamItemName>
-                    <Splitter>&nbsp;/&nbsp;</Splitter>
-                    <TeamItemJob>Content Strategist</TeamItemJob>
-                  </TeamItemDetails>
-                </TeamItem>
-              </TeamItemWrap>
-
-              <TeamItemWrap>
-                <TeamItem>
-                  <TeamItemPic />
-                  <TeamItemDetails>
-                    <TeamItemName>Ondrej Solčány</TeamItemName>
-                    <Splitter>&nbsp;/&nbsp;</Splitter>
-                    <TeamItemJob>Motion Design</TeamItemJob>
-                  </TeamItemDetails>
-                </TeamItem>
-              </TeamItemWrap>
-
-              <TeamItemWrap>
-                <TeamItem>
-                  <TeamItemPic />
-                  <TeamItemDetails>
-                    <TeamItemName>Wouter Kooij</TeamItemName>
-                    <Splitter>&nbsp;/&nbsp;</Splitter>
-                    <TeamItemJob>Webflow Development</TeamItemJob>
-                  </TeamItemDetails>
-                </TeamItem>
-              </TeamItemWrap>
-
-              <TeamItemWrap>
-                <TeamItem>
-                  <TeamItemPic />
-                  <TeamItemDetails>
-                    <TeamItemName>Viktor Goliáš</TeamItemName>
-                    <Splitter>&nbsp;/&nbsp;</Splitter>
-                    <TeamItemJob>UX Design</TeamItemJob>
-                  </TeamItemDetails>
-                </TeamItem>
-              </TeamItemWrap>
-
-              <TeamItemWrap>
-                <TeamItem>
-                  <TeamItemPic />
-                  <TeamItemDetails>
-                    <TeamItemName>Iveta Beranová</TeamItemName>
-                    <Splitter>&nbsp;/&nbsp;</Splitter>
-                    <TeamItemJob>Copywriter</TeamItemJob>
-                  </TeamItemDetails>
-                </TeamItem>
-              </TeamItemWrap>
+              {people.map((person: any) => (
+                <TeamItemWrap>
+                  <TeamItem>
+                    <TeamItemPic />
+                    <TeamItemDetails>
+                      <TeamItemName>{person.node.name}</TeamItemName>
+                      <Splitter>&nbsp;/&nbsp;</Splitter>
+                      <TeamItemJob>{person.node.position}</TeamItemJob>
+                    </TeamItemDetails>
+                  </TeamItem>
+                </TeamItemWrap>
+              ))}
             </TeamSection>
           </SectionWrap>
         </Container>
@@ -155,7 +93,7 @@ class About extends Component<{ data: any }> {
 
 export const query = graphql`
   query AboutQuery {
-    about: allPagesJson(filter: {pageName: {eq: "about"}}) {
+    aboutPage: allPagesJson(filter: {pageName: {eq: "about"}}) {
       edges {
         node {
           id
@@ -163,13 +101,12 @@ export const query = graphql`
         }
       }
     }
-    people: allPagesJson(filter: {pageName: {eq: "people"}}) {
+    people: allPeopleJson {
       edges {
         node {
-          people {
-            name
-            position
-          }
+          id
+          name
+          position
         }
       }
     }

@@ -8,7 +8,8 @@ import { FeaturedFour } from '../components/LandingPage/FeaturedFour'
 
 class Work extends Component<{ data: any }> {
   render() {
-    const { caseStudies } = this.props.data.work.edges[0].node
+    const caseStudies = this.props.data.caseStudies.edges
+    const workPage = this.props.data.work.edges[0]
 
     return (
       <Fragment>
@@ -26,15 +27,20 @@ class Work extends Component<{ data: any }> {
 
 export const query = graphql`
   query WorkQuery {
+    caseStudies: allCaseStudiesJson {
+      edges {
+        node {
+          id
+          brandName
+          workType
+        }
+      }
+    }
     work: allPagesJson(filter: {pageName: {eq: "work"}}) {
       edges {
         node {
           id
           pageHeadline
-          caseStudies {
-            brandName
-            workType
-          }
         }
       }
     }

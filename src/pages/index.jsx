@@ -7,9 +7,10 @@ import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import { FeaturedFour } from '../components/LandingPage/FeaturedFour'
 
-class Landing extends Component<{ data: any }> {
+class Landing extends Component {
   render() {
-    const { caseStudies } = this.props.data.work.edges[0].node
+    const caseStudies = this.props.data.caseStudies.edges
+    const landingPage = this.props.data.landingPage.edges[0].node
 
     return (
       <Fragment>
@@ -17,7 +18,7 @@ class Landing extends Component<{ data: any }> {
         <Container>
           <SectionWrap>
             <PageHeadline>
-              {this.props.data.landing.edges[0].node.pageHeadline}
+              {landingPage.pageHeadline}
             </PageHeadline>
             <FeaturedFour caseStudies={caseStudies.slice(0, 4)} />
           </SectionWrap>
@@ -30,7 +31,7 @@ class Landing extends Component<{ data: any }> {
 
 export const query = graphql`
   query IndexQuery {
-    landing: allPagesJson(filter: {pageName: {eq: "landing"}}) {
+    landingPage: allPagesJson(filter: {pageName: {eq: "landing"}}) {
       edges {
         node {
           id
@@ -43,15 +44,12 @@ export const query = graphql`
       }
     }
 
-    work: allPagesJson(filter: {pageName: {eq: "work"}}) {
+    caseStudies: allCaseStudiesJson {
       edges {
         node {
           id
-          pageHeadline
-          caseStudies {
-            brandName
-            workType
-          }
+          brandName
+          workType
         }
       }
     }

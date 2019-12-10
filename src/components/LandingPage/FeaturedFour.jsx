@@ -71,16 +71,7 @@ const WorkType = styled.div`
   color: ${theme.colors.darkerGrey};
 `
 
-interface ICaseStudy {
-  brandName: string;
-  workType: string;
-}
-
-interface IFeaturedFourProps {
-  caseStudies: ICaseStudy[]
-}
-
-export const FeaturedFour = ({ caseStudies }: IFeaturedFourProps) => (
+export const FeaturedFour = ({ caseStudies }) => (
   <Container>
     <StyledFeaturedFour>
       {caseStudies.map((caseStudy) => (
@@ -88,9 +79,9 @@ export const FeaturedFour = ({ caseStudies }: IFeaturedFourProps) => (
           <CaseStudy>
             <CaseStudyImage />
             <CaseStudyFoot>
-              <BrandName>{caseStudy.brandName}</BrandName>
+              <BrandName>{caseStudy.node.brandName}</BrandName>
               <Splitter>&nbsp;/&nbsp;</Splitter>
-              <WorkType>{caseStudy.workType}</WorkType>
+              <WorkType>{caseStudy.node.workType}</WorkType>
             </CaseStudyFoot>
           </CaseStudy>
         </CaseStudyWrap>
