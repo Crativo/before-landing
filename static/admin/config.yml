@@ -9,6 +9,7 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: name
+    extension: json
     fields:
       - { label: "Name", name: "name", widget: string }
       - { label: "Position", name: "position", widget: string }
@@ -18,6 +19,7 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: brandName
+    extension: json
     fields:
       - { label: "Brand Name", name: "brandName", widget: string }
       - { label: "Work Type", name: "workType", widget: string }
