@@ -32,21 +32,28 @@ const TeamSection = styled.div`
   }
 `
 
-const TeamItemPic = styled.div`
-  background: ${theme.colors.grey};
+const PicParent = styled.div`
   width: 100%;
-  height: 400px;
+  max-width: 400px;
+`
+
+const StyledImg = styled.img`
+  display: block;
+  width: 100%;
+  height: auto;
 `
 
 const TeamItemDetails = styled.div`
   display: flex;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  margin-top: 2.4rem;
-`
+  flex-direction: column;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-top: 2rem;
 
-const Splitter = styled.div`
-  color: ${theme.colors.darkerGrey};
+  ${mq.desktop} {
+    line-height: 4.4rem;
+    font-size: 3rem;
+  }
 `
 
 const TeamItemName = styled.div``
@@ -54,6 +61,12 @@ const TeamItemName = styled.div``
 const TeamItemJob = styled.div`
   color: ${theme.colors.darkerGrey};
 `
+
+const TeamItemPic = ({ src }: any) => (
+  <PicParent>
+    <StyledImg src={src} />
+  </PicParent>
+)
 
 class About extends Component<{ data: any }> {
   render() {
@@ -71,12 +84,11 @@ class About extends Component<{ data: any }> {
 
             <TeamSection>
               {people.map((person: any) => (
-                <TeamItemWrap>
+                <TeamItemWrap key={person.node.id}>
                   <TeamItem>
-                    <TeamItemPic />
+                    <TeamItemPic src={person.node.profileImage} />
                     <TeamItemDetails>
                       <TeamItemName>{person.node.name}</TeamItemName>
-                      <Splitter>&nbsp;/&nbsp;</Splitter>
                       <TeamItemJob>{person.node.position}</TeamItemJob>
                     </TeamItemDetails>
                   </TeamItem>
@@ -107,6 +119,7 @@ export const query = graphql`
           id
           name
           position
+          profileImage
         }
       }
     }
