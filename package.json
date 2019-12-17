@@ -24,6 +24,7 @@
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.2.2",
     "react-reveal": "^1.2.2",
+    "react-focus-lock": "^2.2.1",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {

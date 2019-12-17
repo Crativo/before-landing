@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { LogoIcon } from '../LogoIcon'
 import Container from '../Container'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 import { Link } from 'gatsby'
+import FocusLock from 'react-focus-lock'
 import { SectionWrap } from '../SectionWrap'
 import { mq } from '../../styles/media'
+import { useOnClickOutside } from '../hooks'
+import Burger from '../Burger/Burger'
+import Menu from '../Menu/Menu'
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -35,20 +39,32 @@ export const StyledLink = styled(Link)`
   }
 `
 
-const Header = () => (
-  <Container>
-    <SectionWrap>
-      <StyledHeader>
-        <Link to="/"><LogoIcon /></Link>        
-        <StyledNavigation>
-          <StyledLink to="/work">work</StyledLink>
-          <StyledLink to="/services">services</StyledLink>
-          <StyledLink to="/about">about</StyledLink>
-          <StyledLink to="/contact">contact</StyledLink>
-        </StyledNavigation>
-      </StyledHeader>
-    </SectionWrap>
-  </Container>
-)
+const Header = () => {
+  const [open, setOpen] = useState(false)
+  const node = useRef()
+  const menuId = "main-menu"
+
+  useOnClickOutside(node, () => setOpen(false))
+
+  return (
+    <Container>
+      <SectionWrap>
+        <StyledHeader>
+          <Link to="/"><LogoIcon /></Link>        
+          <StyledNavigation>
+            <StyledLink to="/work">work</StyledLink>
+            <StyledLink to="/services">services</StyledLink>
+            <StyledLink to="/about">about</StyledLink>
+            <StyledLink to="/contact">contact</StyledLink>
+          </StyledNavigation>
+          <FocusLock disabled={!open}>
+            <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+            <Menu open={open} setOpen={setOpen} id={menuId} />
+          </FocusLock>
+        </StyledHeader>
+      </SectionWrap>
+    </Container>
+  )
+}
 
 export default Header
