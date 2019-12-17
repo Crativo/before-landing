@@ -15,7 +15,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   position: absolute;
   top: 0;
   right: 0;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   width: 100%;
 
   ${mq.tablet} {

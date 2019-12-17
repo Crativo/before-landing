@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-expressions */
 import { createGlobalStyle } from 'styled-components'
-// import theme from 'styles/theme'
 import fontFaces from './fontFaces'
 import theme from './theme'
 
@@ -24,9 +22,8 @@ export default createGlobalStyle`
   }
 
   body {
-    /* font-family: 'Lora', serif; */
-
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif ;
+    font-weight: ${theme.fontWeight.regular};
     color: ${theme.colors.black};
     margin: 0;
 

@@ -16,16 +16,12 @@ export const StyledBurger = styled.button<{ open: boolean }>`
   padding: 0;
   z-index: 10;
 
-  ${mq.tablet} {
-    display: none;
-  }
-
   span {
     width: 2rem;
     height: 0.25rem;
     background: ${({ open }) => open ? theme.colors.white : theme.colors.primary};
     border-radius: 10px;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     position: relative;
     transform-origin: 1px;
     :first-child {

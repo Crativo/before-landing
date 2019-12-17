@@ -9,7 +9,7 @@ import { SectionWrap } from '../SectionWrap'
 import { mq } from '../../styles/media'
 import { useOnClickOutside } from '../hooks'
 import Burger from '../Burger/Burger'
-import Menu from '../Menu/Menu'
+import Menu from '../BurgerMenu/BurgerMenu'
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -39,6 +39,14 @@ export const StyledLink = styled(Link)`
   }
 `
 
+export const StyledWrapBurger = styled.div`
+  display: inline-block;
+
+  ${mq.tablet} {
+    display: none;
+  }
+`
+
 const Header = () => {
   const [open, setOpen] = useState(false)
   const node = useRef()
@@ -57,10 +65,12 @@ const Header = () => {
             <StyledLink to="/about">about</StyledLink>
             <StyledLink to="/contact">contact</StyledLink>
           </StyledNavigation>
-          <FocusLock disabled={!open}>
-            <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-            <Menu open={open} setOpen={setOpen} id={menuId} />
-          </FocusLock>
+          <StyledWrapBurger>
+            <FocusLock disabled={!open}>
+              <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+              <Menu open={open} setOpen={setOpen} id={menuId} />
+            </FocusLock>
+          </StyledWrapBurger>
         </StyledHeader>
       </SectionWrap>
     </Container>
