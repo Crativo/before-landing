@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 import Container from '../Container'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
@@ -74,17 +75,19 @@ const WorkType = styled.div`
 export const FeaturedFour = ({ caseStudies }) => (
   <Container>
     <StyledFeaturedFour>
-      {caseStudies.map((caseStudy) => (
+      {caseStudies.map((caseStudy, index) => (
         <CaseStudyWrap>
-          <CaseStudy>
-            <CaseStudyImage />
-            <CaseStudyFoot>
-              <BrandName>{caseStudy.node.brandName}</BrandName>
-              <Splitter>&nbsp;/&nbsp;</Splitter>
-              <WorkType>{caseStudy.node.workType}</WorkType>
-            </CaseStudyFoot>
-          </CaseStudy>
-        </CaseStudyWrap>
+          <Fade bottom key={index}>
+            <CaseStudy>
+              <CaseStudyImage />
+              <CaseStudyFoot>
+                <BrandName>{caseStudy.node.brandName}</BrandName>
+                <Splitter>&nbsp;/&nbsp;</Splitter>
+                <WorkType>{caseStudy.node.workType}</WorkType>
+              </CaseStudyFoot>
+            </CaseStudy>
+          </Fade>
+          </CaseStudyWrap>
       ))}
     </StyledFeaturedFour>
   </Container>

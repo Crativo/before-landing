@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react'
+import Fade from 'react-reveal/Fade'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Container from '../components/Container'
@@ -33,37 +34,45 @@ class Contact extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <PageHeadline>
-              Contact us if your business can't afford being misunderstood. We'll ensure that won't happen.
-            </PageHeadline>
+            <Fade bottom>
+              <PageHeadline>
+                Contact us if your business can't afford being misunderstood. We'll ensure that won't happen.
+              </PageHeadline>
+            </Fade>
 
             <CardList>
-              <CardItem>
-                <CardTitle>Contact person</CardTitle>
-                <CardInfo>
-                  <div>Michal Ivanecký</div>
-                  <div>+ 420 601 097 043</div>
-                  <div>michal@before.cz</div>
-                </CardInfo>
-              </CardItem>
+              <Fade bottom delay={700}>
+                <CardItem>
+                  <CardTitle>Contact person</CardTitle>
+                  <CardInfo>
+                    <div>Michal Ivanecký</div>
+                    <div>+ 420 601 097 043</div>
+                    <div>michal@before.cz</div>
+                  </CardInfo>
+                </CardItem>
+              </Fade>
 
-              <CardItem>
-                <CardTitle>Headquarters</CardTitle>
-                <CardInfo>
-                  <div>Slavíkova 1611/5</div>
-                  <div>120 00 Vinohrady</div>
-                  <div>Prague, Czech Republic</div>
-                </CardInfo>
-              </CardItem>
+              <Fade bottom delay={1000}>
+                <CardItem>
+                  <CardTitle>Headquarters</CardTitle>
+                  <CardInfo>
+                    <div>Slavíkova 1611/5</div>
+                    <div>120 00 Vinohrady</div>
+                    <div>Prague, Czech Republic</div>
+                  </CardInfo>
+                </CardItem>
+              </Fade>
 
-              <CardItem>
-                <CardTitle>Company details</CardTitle>
-                <CardInfo>
-                  <div>Chopsticks s.r.o.</div>
-                  <div>IC: 03604080</div>
-                  <div>DIC: CZ03604080</div>
-                </CardInfo>
-              </CardItem>
+              <Fade bottom>
+                <CardItem>
+                  <CardTitle>Company details</CardTitle>
+                  <CardInfo>
+                    <div>Chopsticks s.r.o.</div>
+                    <div>IC: 03604080</div>
+                    <div>DIC: CZ03604080</div>
+                  </CardInfo>
+                </CardItem>
+              </Fade>
             </CardList>
           </SectionWrap>
         </Container>

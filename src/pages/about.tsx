@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import { graphql } from 'gatsby'
+import Fade from 'react-reveal/Fade'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Container from '../components/Container'
@@ -78,20 +79,24 @@ class About extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <PageHeadline>
-              {aboutPage.pageHeadline}
-            </PageHeadline>
+            <Fade bottom>
+              <PageHeadline>
+                {aboutPage.pageHeadline}
+              </PageHeadline>
+            </Fade>
 
             <TeamSection>
               {people.map((person: any) => (
                 <TeamItemWrap key={person.node.id}>
-                  <TeamItem>
-                    <TeamItemPic src={person.node.profileImage} />
-                    <TeamItemDetails>
-                      <TeamItemName>{person.node.name}</TeamItemName>
-                      <TeamItemJob>{person.node.position}</TeamItemJob>
-                    </TeamItemDetails>
-                  </TeamItem>
+                  <Fade bottom delay={1000}>
+                    <TeamItem>
+                      <TeamItemPic src={person.node.profileImage} />
+                      <TeamItemDetails>
+                        <TeamItemName>{person.node.name}</TeamItemName>
+                        <TeamItemJob>{person.node.position}</TeamItemJob>
+                      </TeamItemDetails>
+                    </TeamItem>
+                  </Fade>
                 </TeamItemWrap>
               ))}
             </TeamSection>

@@ -42,10 +42,4 @@ export default createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
-
-  .reveal,
-  .reveal--delay1,
-  .reveal--delay2 {
-    visibility: hidden;
-  }
 `

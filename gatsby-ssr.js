@@ -9,6 +9,9 @@
 import React from 'react'
 import GlobalStyles from './src/styles/global'
 import Layout from './src/components/Layout'
+import config from 'react-reveal/globals'
+
+config({ ssrFadeout: true })
 
 // eslint-disable-next-line
 export const wrapRootElement = ({ element }) => {

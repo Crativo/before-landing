@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Fade from 'react-reveal/Fade'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import styled from 'styled-components'
@@ -109,70 +110,93 @@ class Services extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <PageHeadline>
-              Simplified communication and intuitive controls, before anything else.
-            </PageHeadline>
+            <Fade bottom>
+              <PageHeadline>
+                Simplified communication and intuitive controls, before anything else.
+              </PageHeadline>
+            </Fade>
 
             <ProvidedServices>
-              <ServiceItem>
-                <ServiceTitle>Branding</ServiceTitle>
-                <ServiceDetails>Naming</ServiceDetails>
-                <ServiceDetails>Visual Identity</ServiceDetails>
-                <ServiceDetails>Brand Strategy</ServiceDetails>
-              </ServiceItem>
-              <ServiceItem>
-                <ServiceTitle>Motion</ServiceTitle>
-                <ServiceDetails>Explainer</ServiceDetails>
-                <ServiceDetails>Presentation</ServiceDetails>
-                <ServiceDetails>Infographics</ServiceDetails>
-              </ServiceItem>
-              <ServiceItem>
-                <ServiceTitle>Interactive</ServiceTitle>
-                <ServiceDetails>Website / Eshop</ServiceDetails>
-                <ServiceDetails>Mobile / Web App</ServiceDetails>
-                <ServiceDetails>Game</ServiceDetails>
-              </ServiceItem>
-              <ServiceItem>
-                <ServiceTitle>Photography</ServiceTitle>
-                <ServiceDetails>Product</ServiceDetails>
-                <ServiceDetails>Lifestyle</ServiceDetails>
-                <ServiceDetails>Food</ServiceDetails>
-              </ServiceItem>
+              <Fade bottom>
+                <ServiceItem>
+                  <ServiceTitle>Branding</ServiceTitle>
+                  <ServiceDetails>Naming</ServiceDetails>
+                  <ServiceDetails>Visual Identity</ServiceDetails>
+                  <ServiceDetails>Brand Strategy</ServiceDetails>
+                </ServiceItem>
+              </Fade>
+
+              <Fade bottom>
+                <ServiceItem>
+                  <ServiceTitle>Motion</ServiceTitle>
+                  <ServiceDetails>Explainer</ServiceDetails>
+                  <ServiceDetails>Presentation</ServiceDetails>
+                  <ServiceDetails>Infographics</ServiceDetails>
+                </ServiceItem>
+              </Fade>
+
+              <Fade bottom>
+                <ServiceItem>
+                  <ServiceTitle>Interactive</ServiceTitle>
+                  <ServiceDetails>Website / Eshop</ServiceDetails>
+                  <ServiceDetails>Mobile / Web App</ServiceDetails>
+                  <ServiceDetails>Game</ServiceDetails>
+                </ServiceItem>
+              </Fade>
+
+              <Fade bottom>
+                <ServiceItem>
+                  <ServiceTitle>Photography</ServiceTitle>
+                  <ServiceDetails>Product</ServiceDetails>
+                  <ServiceDetails>Lifestyle</ServiceDetails>
+                  <ServiceDetails>Food</ServiceDetails>
+                </ServiceItem>
+              </Fade>
             </ProvidedServices>
 
             <ProcessSection>
               <ProcessSectionLeft>
-                <PageHeadline>
-                  A problem well stated is a problem half-solved.
-                </PageHeadline>
+                <Fade bottom>
+                  <PageHeadline>
+                    A problem well stated is a problem half-solved.
+                  </PageHeadline>
+                </Fade>
               </ProcessSectionLeft>
 
               <ProcessSectionRight>
-                <ProcessItem>
-                  <ProcessItemTitle>1. Understand & Define</ProcessItemTitle>
-                  <ProcessItemDetails>
-                    <li>Communication / usability audit</li>
-                    <li>Define a problem</li>
-                    <li>Research (market & client)</li>
-                    <li>Final problem statement</li>
-                  </ProcessItemDetails>
-                </ProcessItem>
-                <ProcessItem>
-                  <ProcessItemTitle>2. Strategize</ProcessItemTitle>
-                  <ProcessItemDetails>
-                    <li>Establishing messages</li>
-                    <li>Structuring information</li>
-                    <li>Prototyping wireframes</li>
-                  </ProcessItemDetails>
-                </ProcessItem>
-                <ProcessItem>
-                  <ProcessItemTitle>3. Design & Evaluate</ProcessItemTitle>
-                  <ProcessItemDetails>
-                    <li>Visual draft</li>
-                    <li>Full visual design</li>
-                    <li>Simplifying</li>
-                  </ProcessItemDetails>
-                </ProcessItem>
+                <Fade bottom>
+                  <ProcessItem>
+                    <ProcessItemTitle>1. Understand & Define</ProcessItemTitle>
+                    <ProcessItemDetails>
+                      <li>Communication / usability audit</li>
+                      <li>Define a problem</li>
+                      <li>Research (market & client)</li>
+                      <li>Final problem statement</li>
+                    </ProcessItemDetails>
+                  </ProcessItem>
+                </Fade>
+
+                <Fade bottom>
+                  <ProcessItem>
+                    <ProcessItemTitle>2. Strategize</ProcessItemTitle>
+                    <ProcessItemDetails>
+                      <li>Establishing messages</li>
+                      <li>Structuring information</li>
+                      <li>Prototyping wireframes</li>
+                    </ProcessItemDetails>
+                  </ProcessItem>
+                </Fade>
+
+                <Fade bottom>
+                  <ProcessItem>
+                    <ProcessItemTitle>3. Design & Evaluate</ProcessItemTitle>
+                    <ProcessItemDetails>
+                      <li>Visual draft</li>
+                      <li>Full visual design</li>
+                      <li>Simplifying</li>
+                    </ProcessItemDetails>
+                  </ProcessItem>
+                </Fade>
               </ProcessSectionRight>
             </ProcessSection>
           </SectionWrap>

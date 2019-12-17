@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 import { mq } from '../../styles/media'
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
@@ -17,6 +17,9 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   right: 0;
   transition: transform 0.2s ease-in-out;
   width: 100%;
+  z-index: 1;
+
+  ${({ open }) => open ? 'display: flex;' : 'display: none;'};
 
   ${mq.tablet} {
     display: none;
