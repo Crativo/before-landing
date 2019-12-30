@@ -4,6 +4,7 @@ import Container from '../Container'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 import { mq } from '../../styles/media'
+import { Link } from 'gatsby'
 
 const StyledFeaturedFour = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ const StyledFeaturedFour = styled.div`
   }
 `
 
-const CaseStudy = styled.div`
+const CaseStudy = styled(Link)`
   ${mq.tablet} {
     margin-right: 1.5rem;
   }
@@ -76,14 +77,14 @@ export const FeaturedFour = ({ caseStudies }) => (
   <Container>
     <StyledFeaturedFour>
       {caseStudies.map((caseStudy, index) => (
-        <CaseStudyWrap>
-          <Fade bottom key={index}>
-            <CaseStudy>
+        <CaseStudyWrap key={index}>
+          <Fade bottom>
+            <CaseStudy to={`/work/${caseStudy.parent.name}`}>
               <CaseStudyImage />
               <CaseStudyFoot>
-                <BrandName>{caseStudy.node.brandName}</BrandName>
+                <BrandName>{caseStudy.brandName}</BrandName>
                 <Splitter>&nbsp;/&nbsp;</Splitter>
-                <WorkType>{caseStudy.node.workType}</WorkType>
+                <WorkType>{caseStudy.workType}</WorkType>
               </CaseStudyFoot>
             </CaseStudy>
           </Fade>

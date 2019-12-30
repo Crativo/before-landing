@@ -22,6 +22,7 @@ collections:
     identifier_field: brandName
     extension: json
     fields:
+      - { label: "Slug", name: "slug", widget: string }
       - { label: "Brand Name", name: "brandName", widget: string }
       - { label: "Work Type", name: "workType", widget: string }
       - { label: "Cover Image Square", name: "coverImageSquare", widget: image }

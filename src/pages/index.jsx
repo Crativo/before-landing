@@ -10,7 +10,7 @@ import { FeaturedFour } from '../components/LandingPage/FeaturedFour'
 
 class Landing extends Component {
   render() {
-    const caseStudies = this.props.data.caseStudies.edges
+    const caseStudies = this.props.data.caseStudies.nodes
     const landingPage = this.props.data.landingPage.edges[0].node
 
     return (
@@ -48,11 +48,15 @@ export const query = graphql`
     }
 
     caseStudies: allCaseStudiesJson {
-      edges {
-        node {
-          id
-          brandName
-          workType
+      nodes {
+        id
+        brandName
+        workType
+        parent {
+          ... on File {
+            id
+            name
+          }
         }
       }
     }
