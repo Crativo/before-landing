@@ -12,6 +12,7 @@ import { mq } from '../styles/media'
 const ProvidedServices = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   ${mq.tablet} {
     flex-direction: row;
@@ -56,7 +57,10 @@ const ServiceDetails = styled.div`
 `
 
 const ProcessSection = styled.div`
-  display: flex;
+  /* width: 100%;
+  max-width: 150rem; */
+  /* margin: 0 auto; */
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 8rem;
@@ -64,43 +68,49 @@ const ProcessSection = styled.div`
   ${mq.desktop} {
     flex-direction: row;
     margin-bottom: 20rem;
-  }
+  } */
 `
 
-const ProcessSectionLeft = styled.div`
+const CreativeProcessText = styled.h3`
   font-size: 8rem;
   letter-spacing: -0.08rem;
   line-height: 8.8rem;
-
-  ${mq.desktop} {
-    width: 50%;
-  }
+  color: ${theme.colors.primary};
 `
 
-const ProcessSectionRight = styled.div`
-  ${mq.desktop} {
-    padding-left: 4rem;
-  }
+const ProcessSectionDetails = styled.div`
+  background: ${theme.colors.primary};
+  padding: 16rem 0;
 `
 
 const ProcessItem = styled.div`
+  max-width: 35rem;
   margin-bottom: 1rem;
-  
+
   ${mq.desktop} {
     margin-bottom: 4rem;
   }
 `
 
+const ProcessItemNumber = styled.div`
+  color: ${theme.colors.white};
+  ${mq.tablet} {
+    font-size: 14.6rem;
+    line-height: 20rem;
+  }
+`
+
 const ProcessItemTitle = styled.div`
+  color: ${theme.colors.white};
   font-size: 3.2rem;
   margin-bottom: 0.5rem;
 `
 
-const ProcessItemDetails = styled.ul`
-  font-size: 2rem;
-  line-height: 4rem;
+const ProcessItemDetails = styled.div`
+  color: ${theme.colors.primaryLight};
+  font-size: 3.2rem;
+  line-height: 4.4rem;
   margin-bottom: 3rem;
-  color: ${theme.colors.darkerGrey};
 `
 
 class Services extends Component<{ data: any }> {
@@ -112,7 +122,8 @@ class Services extends Component<{ data: any }> {
           <SectionWrap>
             <Fade bottom>
               <PageHeadline>
-                Simplified communication and intuitive controls, before anything else.
+                Simplified communication and intuitive controls, before anything
+                else.
               </PageHeadline>
             </Fade>
 
@@ -153,54 +164,70 @@ class Services extends Component<{ data: any }> {
                 </ServiceItem>
               </Fade>
             </ProvidedServices>
-
-            <ProcessSection>
-              <ProcessSectionLeft>
-                <Fade bottom>
-                  <PageHeadline>
-                    A problem well stated is a problem half-solved.
-                  </PageHeadline>
-                </Fade>
-              </ProcessSectionLeft>
-
-              <ProcessSectionRight>
-                <Fade bottom>
-                  <ProcessItem>
-                    <ProcessItemTitle>1. Understand & Define</ProcessItemTitle>
-                    <ProcessItemDetails>
-                      <li>Communication / usability audit</li>
-                      <li>Define a problem</li>
-                      <li>Research (market & client)</li>
-                      <li>Final problem statement</li>
-                    </ProcessItemDetails>
-                  </ProcessItem>
-                </Fade>
-
-                <Fade bottom>
-                  <ProcessItem>
-                    <ProcessItemTitle>2. Strategize</ProcessItemTitle>
-                    <ProcessItemDetails>
-                      <li>Establishing messages</li>
-                      <li>Structuring information</li>
-                      <li>Prototyping wireframes</li>
-                    </ProcessItemDetails>
-                  </ProcessItem>
-                </Fade>
-
-                <Fade bottom>
-                  <ProcessItem>
-                    <ProcessItemTitle>3. Design & Evaluate</ProcessItemTitle>
-                    <ProcessItemDetails>
-                      <li>Visual draft</li>
-                      <li>Full visual design</li>
-                      <li>Simplifying</li>
-                    </ProcessItemDetails>
-                  </ProcessItem>
-                </Fade>
-              </ProcessSectionRight>
-            </ProcessSection>
           </SectionWrap>
         </Container>
+
+        <ProcessSection>
+          <Container>
+            <SectionWrap>
+              <Fade bottom>
+                <CreativeProcessText>
+                  Creative process we follow
+                </CreativeProcessText>
+              </Fade>
+            </SectionWrap>
+          </Container>
+
+          <ProcessSectionDetails>
+            <Container>
+              <SectionWrap>
+                <Fade bottom>
+                  <ProcessItem>
+                    <ProcessItemNumber>1</ProcessItemNumber>
+                    <ProcessItemTitle>Understand</ProcessItemTitle>
+                    <ProcessItemDetails>
+                      We dive deep into the problem we're trynig to solve and we
+                      define it.
+                    </ProcessItemDetails>
+                  </ProcessItem>
+                </Fade>
+
+                <Fade bottom>
+                  <ProcessItem>
+                    <ProcessItemNumber>2</ProcessItemNumber>
+                    <ProcessItemTitle>Strategize</ProcessItemTitle>
+                    <ProcessItemDetails>
+                      We set a key message, structure of information and
+                      strategy to achieve understanding.
+                    </ProcessItemDetails>
+                  </ProcessItem>
+                </Fade>
+
+                <Fade bottom>
+                  <ProcessItem>
+                    <ProcessItemNumber>3</ProcessItemNumber>
+                    <ProcessItemTitle>Concept</ProcessItemTitle>
+                    <ProcessItemDetails>
+                      We prepare a visual concept to make sure we're on the same
+                      page.
+                    </ProcessItemDetails>
+                  </ProcessItem>
+                </Fade>
+
+                <Fade bottom>
+                  <ProcessItem>
+                    <ProcessItemNumber>4</ProcessItemNumber>
+                    <ProcessItemTitle>Design</ProcessItemTitle>
+                    <ProcessItemDetails>
+                      After we agreed on a concept and strategy, we proceed to
+                      make it all happen.
+                    </ProcessItemDetails>
+                  </ProcessItem>
+                </Fade>
+              </SectionWrap>
+            </Container>
+          </ProcessSectionDetails>
+        </ProcessSection>
         <Footer />
       </Fragment>
     )
