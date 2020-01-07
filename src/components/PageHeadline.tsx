@@ -25,7 +25,16 @@ export const PageHeadline = styled.h2`
     margin-top: 16rem;
     margin-bottom: 16rem;
 
-    font-size: 16rem;
+    font-size: 8rem;
+    letter-spacing: -0.04rem;
+    line-height: 9rem;
+  }
+
+  ${mq.desktopWide} {
+    margin-top: 16rem;
+    margin-bottom: 16rem;
+
+    font-size: 8rem;
     letter-spacing: -0.06rem;
     line-height: 15.3rem;
   }
