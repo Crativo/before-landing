@@ -27,6 +27,15 @@ collections:
       - { label: "Work Type", name: "workType", widget: string }
       - { label: "Cover Image Square", name: "coverImageSquare", widget: image }
       - { label: "Cover Image Horizontal", name: "coverImageHorizontal", widget: image }
+      - label: "Sections"
+        name: "content"
+        widget: list
+        fields:
+          - label: "Rows"
+            name: "rows"
+            widget: list
+            fields:
+              - { label: "Image Item", name: "imageItem", widget: image }
   - label: "Pages"
     name: "pages"
     files:
