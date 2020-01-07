@@ -36,28 +36,42 @@ const StyledImageItem = styled.img`
   width: 100%;
 `
 
+const Row = styled.div`
+  width: 100%;
+  display: flex;
+`
+
+const Col = styled.div`
+`
+
 class CaseStudy extends Component<{ pageContext: any }> {
   render() {
     const caseStudy = this.props.pageContext.node
-    
+
     return (
       <Fragment>
         <Header />
         <Container>
           <SectionWrap>
             <StyledTop>
-              <PageHeadline>Lovebrands also need their own eshop, sometimes.</PageHeadline>
+              <PageHeadline>
+                Lovebrands also need their own eshop, sometimes.
+              </PageHeadline>
               <BrandName>{caseStudy.brandName}</BrandName>
               <WorkType>{caseStudy.workType}</WorkType>
             </StyledTop>
           </SectionWrap>
 
           <SectionWrap>
-            {caseStudy.rows.map((row: any) => {
-              return row.cols.map((col: any) => (
-                <StyledImageItem src={col.imageSrc} />
-              ))
-            })}
+            {caseStudy.rows.map((row: any) => (
+              <Row>
+                {row.cols.map((col: any) => (
+                  <Col>
+                    <StyledImageItem src={col.imageSrc} />
+                  </Col>
+                ))}
+              </Row>
+            ))}
           </SectionWrap>
         </Container>
         <Footer />
