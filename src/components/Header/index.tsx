@@ -24,6 +24,7 @@ export const StyledNavigation = styled.header`
   letter-spacing: 0.1rem;
   line-height: 3rem;
   color: ${theme.colors.black};
+  font-weight: ${theme.fontWeight.medium};
 
   ${mq.tablet} {
     display: flex;

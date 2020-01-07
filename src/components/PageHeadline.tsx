@@ -25,8 +25,8 @@ export const PageHeadline = styled.h2`
     margin-top: 16rem;
     margin-bottom: 16rem;
 
-    font-size: 8rem;
-    letter-spacing: -0.08rem;
-    line-height: 8.8rem;
+    font-size: 16rem;
+    letter-spacing: -0.06rem;
+    line-height: 15.3rem;
   }
 `
