@@ -1,5 +1,16 @@
 {
-    "slug": "axe-capital",
-    "brandName": "Axe Capital",
-    "workType": "Website"
+  "slug": "axe-capital",
+  "brandName": "Axe Capital",
+  "workType": "Website",
+  "coverImageSquare": "/img/130602_faceplant_skate_final01.png",
+  "coverImageHorizontal": "/img/130602_faceplant_skate_final01.png",
+  "content": [
+    {
+      "rows": [
+        {
+          "imageItem": "/img/detail-produktu.png"
+        }
+      ]
+    }
+  ]
 }
