@@ -15,6 +15,14 @@ const BrandName = styled.div`
   }
 `
 
+const StyledTop = styled.div`
+  margin-bottom: 8rem;
+
+  ${mq.desktop} {
+    margin-bottom: 16rem;
+  }
+`
+
 const WorkType = styled.div`
   color: ${theme.colors.darkerGrey};
 
@@ -22,6 +30,10 @@ const WorkType = styled.div`
     font-size: 3.2rem;
     line-height: 4.4rem;
   }
+`
+
+const StyledImageItem = styled.img`
+  width: 100%;
 `
 
 class CaseStudy extends Component<{ pageContext: any }> {
@@ -33,9 +45,19 @@ class CaseStudy extends Component<{ pageContext: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <PageHeadline>Lovebrands also need their own eshop, sometimes.</PageHeadline>
-            <BrandName>{caseStudy.brandName}</BrandName>
-            <WorkType>{caseStudy.workType}</WorkType>
+            <StyledTop>
+              <PageHeadline>Lovebrands also need their own eshop, sometimes.</PageHeadline>
+              <BrandName>{caseStudy.brandName}</BrandName>
+              <WorkType>{caseStudy.workType}</WorkType>
+            </StyledTop>
+          </SectionWrap>
+
+          <SectionWrap>
+            {caseStudy.rows.map((row: any) => {
+              return row.cols.map((col: any) => (
+                <StyledImageItem src={col.imageSrc} />
+              ))
+            })}
           </SectionWrap>
         </Container>
         <Footer />

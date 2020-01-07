@@ -22,6 +22,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             brandName
             workType
+            rows {
+              cols {
+                imageSrc
+              }
+            }
             parent {
               ... on File {
                 id

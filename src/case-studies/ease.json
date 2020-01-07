@@ -1,5 +1,14 @@
 {
     "slug": "ease",
     "brandName": "ease",
-    "workType": "Full-scale branding"
+    "workType": "Full-scale branding",
+    "rows": [
+      {
+        "cols": [
+            {
+              "imageSrc": "/img/detail-produktu.png"
+            }
+          ]
+        }
+    ]
 }

@@ -1,5 +1,14 @@
 {
     "slug": "party-gods",
     "brandName": "Party Gods",
-    "workType": "Mobile Game"
+    "workType": "Mobile Game",
+    "rows": [
+        {
+    "cols": [
+            {
+              "imageSrc": "/img/detail-produktu.png"
+            }
+          ]
+        }
+    ]
 }

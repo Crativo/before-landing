@@ -1,5 +1,14 @@
 {
     "slug": "emco",
     "brandName": "EMCO",
-    "workType": "Eshop"
+    "workType": "Eshop",
+    "rows": [
+        {
+    "cols": [
+            {
+              "imageSrc": "/img/detail-produktu.png"
+            }
+          ]
+        }
+    ]
 }

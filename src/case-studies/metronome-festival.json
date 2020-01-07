@@ -1,5 +1,14 @@
 {
     "slug": "metronome-festival",
     "brandName": "Metronome Festival",
-    "workType": "Website"
+    "workType": "Website",
+    "rows": [
+        {
+    "cols": [
+            {
+              "imageSrc": "/img/detail-produktu.png"
+            }
+          ]
+        }
+    ]
 }

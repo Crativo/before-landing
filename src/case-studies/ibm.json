@@ -1,5 +1,14 @@
 {
     "slug": "ibm",
     "brandName": "IBM",
-    "workType": "Explanation Video"
+    "workType": "Explanation Video",
+    "rows": [
+        {
+    "cols": [
+            {
+              "imageSrc": "/img/detail-produktu.png"
+            }
+          ]
+        }
+    ]
 }
