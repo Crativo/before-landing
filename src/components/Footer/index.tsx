@@ -32,6 +32,12 @@ const ActionSection = styled.div`
 const FooterActionTitle = styled.div`
   font-size: 2rem;
   font-weight: ${theme.fontWeight.medium};
+
+  ${mq.tablet} {
+    font-size: 4.8rem;
+    letter-spacing: -0.048rem;
+    line-height: 5.6rem;
+  }
 `
 
 const FooterAction = styled.div`
@@ -39,22 +45,49 @@ const FooterAction = styled.div`
   font-weight: ${theme.fontWeight.medium};
   line-height: 6.6rem;
   color: ${theme.colors.primary};
+
+  ${mq.tablet} {
+    font-size: 4.8rem;
+    letter-spacing: -0.096rem;
+    line-height: 6.6rem;
+  }
 `
 
 const FooterFoot = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${mq.tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 `
 
 const FooterLogo = styled.div`
-  
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8rem;
+
+  ${mq.tablet} {
+    flex-direction: row;
+    margin-right: 8rem;
+  }
 `
 
-const FooterNav = styled.div`
-  margin-top: 8rem;
-`
+const FooterNav = styled.div``
 
 export const StyledLink = styled(Link)`
   margin-bottom: 4rem;
-  color: ${theme.colors.darkerGrey};
+  color: ${theme.colors.black};
+  font-weight: ${theme.fontWeight.medium};
+  
+  ${mq.tablet} {
+    margin-right: 8rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 0.01rem;
+  }
 `
 
 export const StyledNavigation = styled.header`
@@ -68,9 +101,7 @@ export const StyledNavigation = styled.header`
   ${mq.tablet} {
     flex-direction: row;
   }
-
 `
-
 
 const Navigation = () => (
   <StyledNavigation>
@@ -78,6 +109,12 @@ const Navigation = () => (
     <StyledLink to="/services">services</StyledLink>
     <StyledLink to="/about">about</StyledLink>
     <StyledLink to="/contact">contact</StyledLink>
+  </StyledNavigation>
+)
+
+const SocialLinks = () => (
+  <StyledNavigation>
+    <StyledLink to="http://instagram.com">instagram</StyledLink>
   </StyledNavigation>
 )
 
@@ -92,6 +129,7 @@ const Footer = () => (
         <FooterFoot>
           <FooterLogo><LogoIcon /></FooterLogo>
           <FooterNav><Navigation /></FooterNav>
+          <FooterNav><SocialLinks /></FooterNav>
         </FooterFoot>
       </SectionWrap>
     </Container>
