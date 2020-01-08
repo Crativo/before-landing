@@ -1,14 +1,16 @@
 {
-    "slug": "emco",
-    "brandName": "EMCO",
-    "workType": "Eshop",
-    "rows": [
+  "slug": "emco",
+  "brandName": "EMCO",
+  "workType": "Eshop",
+  "coverImageSquare": "/img/square_cover.png",
+  "coverImageHorizontal": "/img/cover.png",
+  "rows": [
+    {
+      "cols": [
         {
-    "cols": [
-            {
-              "imageSrc": "/img/detail-produktu.png"
-            }
-          ]
+          "imageSrc": "/img/detail-produktu.png"
         }
-    ]
+      ]
+    }
+  ]
 }
