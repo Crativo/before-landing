@@ -1,14 +1,16 @@
 {
-    "slug": "ease",
-    "brandName": "ease",
-    "workType": "Full-scale branding",
-    "rows": [
-      {
-        "cols": [
-            {
-              "imageSrc": "/img/detail-produktu.png"
-            }
-          ]
+  "slug": "ease",
+  "brandName": "ease",
+  "workType": "Full-scale branding",
+  "coverImageSquare": "/img/square_cover.png",
+  "coverImageHorizontal": "/img/cover.png",
+  "rows": [
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/detail-produktu.png"
         }
-    ]
+      ]
+    }
+  ]
 }
