@@ -1,14 +1,50 @@
 {
-    "slug": "metronome-festival",
-    "brandName": "Metronome Festival",
-    "workType": "Website",
-    "rows": [
+  "slug": "metronome-festival",
+  "brandName": "Metronome Festival",
+  "workType": "UX / UI Design",
+  "coverImageSquare": "/img/mask-group-202.png",
+  "coverImageHorizontal": "/img/mask-group-184.png",
+  "rows": [
+    {
+      "cols": [
         {
-    "cols": [
-            {
-              "imageSrc": "/img/detail-produktu.png"
-            }
-          ]
+          "imageSrc": "/img/group-1468.png"
         }
-    ]
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1467.png"
+        },
+        {
+          "imageSrc": "/img/group-1466.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1465.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1464.png"
+        },
+        {
+          "imageSrc": "/img/group-1463.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1462.png"
+        }
+      ]
+    }
+  ]
 }
