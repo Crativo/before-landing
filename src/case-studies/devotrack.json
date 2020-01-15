@@ -1,0 +1,44 @@
+{
+  "slug": "devotrack",
+  "brandName": "Devotrack",
+  "workType": "Logo / Web Design / Illustrations",
+  "coverImageSquare": "/img/devotrack-–-3.png",
+  "coverImageHorizontal": "/img/devotrack-–-4.png",
+  "rows": [
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1366.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1469.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1470.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1471.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1472.png"
+        }
+      ]
+    }
+  ]
+}
