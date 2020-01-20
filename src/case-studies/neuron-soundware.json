@@ -1,0 +1,40 @@
+{
+  "slug": "neuron-soundware",
+  "brandName": "Neuron Soundware",
+  "workType": "Corporate Identity",
+  "coverImageSquare": "/img/mask-group-204.png",
+  "coverImageHorizontal": "/img/mask-group-203.png",
+  "rows": [
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1366.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-194.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1364.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1474.png"
+        },
+        {
+          "imageSrc": "/img/group-1473.png"
+        }
+      ]
+    }
+  ]
+}
