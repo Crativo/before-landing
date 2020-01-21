@@ -1,15 +1,7 @@
 {
-    "slug": "trime",
-    "brandName": "Trime",
-    "workType": "Eshop & Packaging",
-    "spacing": 0,
-    "rows": [
-        {
-    "cols": [
-            {
-              "imageSrc": "/img/detail-produktu.png"
-            }
-          ]
-        }
-    ]
+  "slug": "trime",
+  "brandName": "Trime",
+  "workType": "Eshop & Packaging",
+  "spacing": 0,
+  "rows": []
 }
