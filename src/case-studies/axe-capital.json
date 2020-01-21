@@ -3,23 +3,5 @@
   "brandName": "Axe Capital",
   "workType": "Website",
   "spacing": 0,
-  "rows": [
-    {
-      "cols": [
-        {
-          "imageSrc": "/img/detail-produktu.png"
-        }
-      ]
-    },
-    {
-      "cols": [
-        {
-          "imageSrc": "/img/detail-produktu.png"
-        },
-        {
-          "imageSrc": "/img/detail-produktu.png"
-        }
-      ]
-    }
-  ]
+  "rows": []
 }
