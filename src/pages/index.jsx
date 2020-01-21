@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import { PageHeadline } from '../components/PageHeadline'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
-import { FeaturedFour } from '../components/LandingPage/FeaturedFour'
+import { FeaturedFour } from '../components/FeaturedFour'
 
 class Landing extends Component {
   render() {
@@ -52,6 +52,8 @@ export const query = graphql`
         id
         brandName
         workType
+        coverImageSquare
+        coverImageHorizontal
         parent {
           ... on File {
             id

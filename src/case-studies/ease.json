@@ -4,6 +4,7 @@
   "workType": "Full-scale branding",
   "coverImageSquare": "/img/square_cover.png",
   "coverImageHorizontal": "/img/cover.png",
+  "spacing": 0,
   "rows": [
     {
       "cols": [

@@ -1,10 +1,56 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import Container from '../Container'
-import styled from 'styled-components'
-import theme from '../../styles/theme'
-import { mq } from '../../styles/media'
+import Container from './Container'
+import styled, { css } from 'styled-components'
+import theme from '../styles/theme'
+import { mq } from '../styles/media'
 import { Link } from 'gatsby'
+
+const CaseStudy = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  /* height: 100%; */
+
+  ${mq.tablet} {
+    margin-bottom: 3.2rem;
+    margin-right: 2rem;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+`
+
+const CaseStudyImage = styled.img`
+  width: 100%;
+`
+
+const CaseStudyImageWrap = styled.div`
+  margin-bottom: 2rem;
+  overflow: hidden;
+  /* max-width: 60rem; */
+  max-height: 30rem;
+  width: auto;
+  height: auto;
+  
+  ${mq.tablet} {
+    margin-bottom: 3.2rem;
+  }
+`
+
+const CaseStudyWrap = styled.div`
+  /* margin-bottom: 4rem; */
+  width: 100%;
+
+  ${mq.tablet} {
+    width: 50%;
+  }
+
+  ${mq.desktop} {
+    /* background: green; */
+  }
+`
 
 const StyledFeaturedFour = styled.div`
   display: flex;
@@ -15,38 +61,6 @@ const StyledFeaturedFour = styled.div`
     flex-wrap: wrap;
     flex-direction: row;
     margin-bottom: 12rem;
-  }
-`
-
-const CaseStudy = styled(Link)`
-  ${mq.tablet} {
-    margin-right: 1.5rem;
-  }
-`
-
-const CaseStudyWrap = styled.div`
-  margin-bottom: 4rem;
-
-  ${mq.tablet} {
-    width: 50%;
-    margin-bottom: 8rem;
-
-    &:nth-child(even) {
-      ${CaseStudy} {
-        margin-left: 1.5rem;
-        margin-right: 0;
-      }
-    }
-  }
-`
-
-const CaseStudyImage = styled.img`
-  width: 100%;
-  height: 300px;
-  margin-bottom: 2rem;
-
-  ${mq.tablet} {
-    margin-bottom: 3.2rem;
   }
 `
 
@@ -73,14 +87,16 @@ const WorkType = styled.div`
   color: ${theme.colors.darkerGrey};
 `
 
-export const FeaturedFour = ({ caseStudies }) => (
+export const FeaturedFour = ({ caseStudies }: any) => (
   <Container>
     <StyledFeaturedFour>
-      {caseStudies.map((caseStudy, index) => (
+      {caseStudies.map((caseStudy: any, index: number) => (
         <CaseStudyWrap key={index}>
           <Fade bottom>
             <CaseStudy to={`/work/${caseStudy.parent.name}`}>
-              <CaseStudyImage />
+              <CaseStudyImageWrap>
+                <CaseStudyImage src={caseStudy.coverImageHorizontal || '/img/nocover.png'} />
+              </CaseStudyImageWrap>
               <CaseStudyFoot>
                 <BrandName>{caseStudy.brandName}</BrandName>
                 <Splitter>&nbsp;/&nbsp;</Splitter>

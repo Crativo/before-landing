@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             brandName
             workType
+            spacing
             rows {
               cols {
                 imageSrc

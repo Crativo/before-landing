@@ -2,6 +2,7 @@
     "slug": "tribe-of-mokha",
     "brandName": "Tribes of Mokha",
     "workType": "Eshop",
+    "spacing": 0,
     "rows": [
         {
     "cols": [

@@ -5,7 +5,7 @@ import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import theme from '../styles/theme'
 
 const BrandName = styled.div`
@@ -34,14 +34,31 @@ const WorkType = styled.div`
 
 const StyledImageItem = styled.img`
   width: 100%;
+  height: auto;
 `
 
-const Row = styled.div`
+const Row = styled.div<{ spacing: number}>`
+  ${({spacing}) => spacing && css`
+    margin-bottom: ${spacing/10}rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    } 
+  `}
   width: 100%;
   display: flex;
+  justify-content: flex-start;
 `
 
-const Col = styled.div`
+const Col = styled.div<{ spacing: number}>`
+  ${({spacing}) => spacing && css`
+    margin-right: ${spacing/10}rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    } 
+  `}
+  width: 100%;
 `
 
 class CaseStudy extends Component<{ pageContext: any }> {
@@ -64,9 +81,9 @@ class CaseStudy extends Component<{ pageContext: any }> {
 
           <SectionWrap>
             {caseStudy.rows.map((row: any) => (
-              <Row>
+              <Row spacing={caseStudy.spacing}>
                 {row.cols.map((col: any) => (
-                  <Col>
+                  <Col spacing={caseStudy.spacing}>
                     <StyledImageItem src={col.imageSrc} />
                   </Col>
                 ))}

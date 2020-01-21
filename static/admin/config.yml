@@ -27,6 +27,7 @@ collections:
       - { label: "Work Type", name: "workType", widget: string }
       - { label: "Cover Image Square", name: "coverImageSquare", widget: image }
       - { label: "Cover Image Horizontal", name: "coverImageHorizontal", widget: image }
+      - { label: "Row/Col Spacing (px)", name: "spacing", widget: number, default: 0, valueType: "int", min: 0, max: 200 }
       - label: "Rows"
         name: "rows"
         widget: list

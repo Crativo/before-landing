@@ -2,6 +2,7 @@
     "slug": "ibm",
     "brandName": "IBM",
     "workType": "Explanation Video",
+    "spacing": 0,
     "rows": [
         {
     "cols": [

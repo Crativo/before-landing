@@ -4,6 +4,7 @@
   "workType": "Corporate Identity",
   "coverImageSquare": "/img/mask-group-204.png",
   "coverImageHorizontal": "/img/mask-group-203.png",
+  "spacing": 0,
   "rows": [
     {
       "cols": [

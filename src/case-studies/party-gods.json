@@ -2,6 +2,7 @@
     "slug": "party-gods",
     "brandName": "Party Gods",
     "workType": "Mobile Game",
+    "spacing": 0,
     "rows": [
         {
     "cols": [

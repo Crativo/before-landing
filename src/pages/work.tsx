@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
-import { FeaturedFour } from '../components/LandingPage/FeaturedFour'
+import { FeaturedFour } from '../components/FeaturedFour'
 
 class Work extends Component<{ data: any }> {
   render() {
@@ -33,6 +33,8 @@ export const query = graphql`
         id
         brandName
         workType
+        coverImageSquare
+        coverImageHorizontal
         parent {
           ... on File {
             id
