@@ -1,15 +1,7 @@
 {
-    "slug": "esten",
-    "brandName": "ESTEN",
-    "workType": "Branding & Website",
-    "spacing": 0,
-    "rows": [
-        {
-    "cols": [
-            {
-              "imageSrc": "/img/detail-produktu.png"
-            }
-          ]
-        }
-    ]
+  "slug": "esten",
+  "brandName": "ESTEN",
+  "workType": "Branding & Website",
+  "spacing": 0,
+  "rows": []
 }
