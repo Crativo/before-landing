@@ -9,13 +9,14 @@ const CoverImage = styled.img`
 `
 
 const CaseStudyPreview = ({ entry }) => {
+    const caseStudy = entry.toJS().data
     return (
         <StyleSheetInjector>
             <React.Fragment>
                 <GlobalStyles />
-                <CoverImage src={entry.toJS().data.coverImageHorizontal} />
-                <CoverImage src={entry.toJS().data.coverImageSquare} />
-                <CaseStudy caseStudy={entry.toJS().data} />
+                <CoverImage src={caseStudy.coverImageHorizontal} />
+                <CoverImage src={caseStudy.coverImageSquare} />
+                <CaseStudy caseStudy={caseStudy} />
             </React.Fragment>
         </StyleSheetInjector>
     )

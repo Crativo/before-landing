@@ -35,57 +35,80 @@ const StyledImageItem = styled.img`
   height: auto;
 `
 
-const Row = styled.div<{ spacing: number}>`
-  ${({spacing}) => spacing && css`
-    margin-bottom: ${spacing/10}rem;
+const Row = styled.div<{ spacing: number }>`
+  ${({ spacing }) =>
+    spacing &&
+    css`
+      margin-bottom: ${spacing / 10}rem;
 
-    &:last-of-type {
-      margin-right: 0;
-    } 
-  `}
+      &:last-of-type {
+        margin-right: 0;
+      }
+    `}
   width: 100%;
   display: flex;
   justify-content: flex-start;
 `
 
-const Col = styled.div<{ spacing: number}>`
-  ${({spacing}) => spacing && css`
-    margin-right: ${spacing/10}rem;
+const Col = styled.div<{ spacing: number }>`
+  ${({ spacing }) =>
+    spacing &&
+    css`
+      margin-right: ${spacing / 10}rem;
 
-    &:last-of-type {
-      margin-right: 0;
-    } 
-  `}
+      &:last-of-type {
+        margin-right: 0;
+      }
+    `}
   width: 100%;
 `
 
-class CaseStudyTemplate extends Component<{ caseStudy: any}> {
+interface Col {
+  imageSrc: string
+}
+interface Row {
+  cols: [Col]
+}
+interface CaseStudy {
+  rows: [Row]
+  spacing: number
+}
+
+class CaseStudyTemplate extends Component<{ caseStudy: any }> {
+  renderRows(caseStudy: CaseStudy) {
+    if (caseStudy && caseStudy.rows) {
+      return caseStudy.rows.map((row, rowIndex) => {
+        if (row.cols) {
+          return (
+            <Row spacing={caseStudy.spacing} key={rowIndex}>
+              {row.cols.map((col, colIndex) => (
+                <Col spacing={caseStudy.spacing} key={colIndex}>
+                  <StyledImageItem src={col.imageSrc} />
+                </Col>
+              ))}
+            </Row>
+          )
+        }
+      })
+    }
+  }
   render() {
     const { caseStudy } = this.props
-    return (
-        <Container>
-          <SectionWrap>
-            <StyledTop>
-              <PageHeadline>
-                Lovebrands also need their own eshop, sometimes.
-              </PageHeadline>
-              <BrandName>{caseStudy.brandName}</BrandName>
-              <WorkType>{caseStudy.workType}</WorkType>
-            </StyledTop>
-          </SectionWrap>
 
-          <SectionWrap>
-            {caseStudy.rows.map((row: any, rowIndex: number) => (
-              <Row spacing={caseStudy.spacing} key={rowIndex}>
-                {row.cols.map((col: any, colIndex: number) => (
-                  <Col spacing={caseStudy.spacing} key={colIndex}>
-                    <StyledImageItem src={col.imageSrc} />
-                  </Col>
-                ))}
-              </Row>
-            ))}
-          </SectionWrap>
-        </Container>
+    return (
+      <Container>
+        <SectionWrap>
+          <StyledTop>
+            <PageHeadline>
+              Lovebrands also need their own eshop, sometimes.
+            </PageHeadline>
+            <BrandName>{caseStudy.brandName}</BrandName>
+            <WorkType>{caseStudy.workType}</WorkType>
+          </StyledTop>
+        </SectionWrap>
+
+        <SectionWrap>{this.renderRows(caseStudy)}</SectionWrap>
+      </Container>
     )
   }
 }
