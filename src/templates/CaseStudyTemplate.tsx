@@ -72,38 +72,33 @@ interface Row {
 interface CaseStudy {
   rows: [Row]
   spacing: number
+  brandPageHeadline: string
+  brandName: string
+  workType: string
 }
 
-class CaseStudyTemplate extends Component<{ caseStudy: any }> {
+class CaseStudyTemplate extends Component<{ caseStudy: CaseStudy }> {
   renderRows(caseStudy: CaseStudy) {
-    if (caseStudy && caseStudy.rows) {
-      return caseStudy.rows.map((row, rowIndex) => {
-        if (row.cols) {
-          return (
-            <Row spacing={caseStudy.spacing} key={rowIndex}>
-              {row.cols.map((col, colIndex) => (
-                <Col spacing={caseStudy.spacing} key={colIndex}>
-                  <StyledImageItem src={col.imageSrc} />
-                </Col>
-              ))}
-            </Row>
-          )
-        }
-      })
-    }
+    return caseStudy?.rows?.map((row, rowIndex) => (
+      <Row spacing={caseStudy.spacing} key={rowIndex}>
+        {row?.cols?.map((col, colIndex) => (
+          <Col spacing={caseStudy.spacing} key={colIndex}>
+            <StyledImageItem src={col.imageSrc} />
+          </Col>
+        ))}
+      </Row>
+    ))
   }
   render() {
-    const { caseStudy } = this.props
+    const caseStudy = this.props.caseStudy
 
     return (
       <Container>
         <SectionWrap>
           <StyledTop>
-            <PageHeadline>
-              Lovebrands also need their own eshop, sometimes.
-            </PageHeadline>
-            <BrandName>{caseStudy.brandName}</BrandName>
-            <WorkType>{caseStudy.workType}</WorkType>
+            <PageHeadline>{caseStudy?.brandPageHeadline}</PageHeadline>
+            <BrandName>{caseStudy?.brandName}</BrandName>
+            <WorkType>{caseStudy?.workType}</WorkType>
           </StyledTop>
         </SectionWrap>
 

@@ -24,6 +24,7 @@ collections:
     fields:
       - { label: "Slug", name: "slug", widget: string }
       - { label: "Brand Name", name: "brandName", widget: string }
+      - { label: "Page Headline", name: "brandPageHeadline", widget: string }
       - { label: "Work Type", name: "workType", widget: string }
       - { label: "Cover Image Horizontal", name: "coverImageHorizontal", widget: image, required: false }
       - { label: "Cover Image Square", name: "coverImageSquare", widget: image, required: false }

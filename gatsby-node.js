@@ -56,7 +56,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path,
       component: CaseStudyTemplate,
       context: {
-        path,
         node,
       },
     })
