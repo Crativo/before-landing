@@ -25,8 +25,8 @@ collections:
       - { label: "Slug", name: "slug", widget: string }
       - { label: "Brand Name", name: "brandName", widget: string }
       - { label: "Work Type", name: "workType", widget: string }
-      - { label: "Cover Image Horizontal", name: "coverImageHorizontal", widget: image }
-      - { label: "Cover Image Square", name: "coverImageSquare", widget: image }
+      - { label: "Cover Image Horizontal", name: "coverImageHorizontal", widget: image, required: false }
+      - { label: "Cover Image Square", name: "coverImageSquare", widget: image, required: false }
       - { label: "Row/Col Spacing (px)", name: "spacing", widget: number, default: 0, valueType: "int", min: 0, max: 200 }
       - label: "Rows"
         name: "rows"
