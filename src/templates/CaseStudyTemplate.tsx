@@ -7,10 +7,8 @@ import styled, { css } from 'styled-components'
 import theme from '../styles/theme'
 
 const BrandName = styled.div`
-  ${mq.tablet} {
-    font-size: 3.2rem;
-    line-height: 4.4rem;
-  }
+  font-size: 3.2rem;
+  line-height: 4.4rem;
 `
 
 const StyledTop = styled.div`
@@ -24,10 +22,8 @@ const StyledTop = styled.div`
 const WorkType = styled.div`
   color: ${theme.colors.darkerGrey};
 
-  ${mq.tablet} {
-    font-size: 3.2rem;
-    line-height: 4.4rem;
-  }
+  font-size: 3.2rem;
+  line-height: 4.4rem;
 `
 
 const StyledImageItem = styled.img`

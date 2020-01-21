@@ -19,14 +19,11 @@ export const StyledFooter = styled.div`
 `
 
 const ActionSection = styled.div`
+  font-size: 3.2rem;
+  letter-spacing: -0.032rem;
+  line-height: 5.6rem;
   margin-top: 8rem;
   margin-bottom: 8rem;
-
-  ${mq.tablet} {
-    font-size: 3.2rem;
-    letter-spacing: -0.032rem;
-    line-height: 5.6rem;
-  }
 `
 
 const FooterActionTitle = styled.div`
@@ -91,14 +88,6 @@ export const StyledNavigation = styled.div`
   }
 `
 
-// export const StyledLinks = styled.div`
-//   max-width: 60rem;
-//   display: flex;
-//   justify-content: space-between;
-//   flex-direction: column;
-// `
-
-
 export const StyledSocialNavigation = styled.div`
   display: flex;
   flex: 0 1 auto;
@@ -116,12 +105,10 @@ export const StyledSocialNavigation = styled.div`
 
 const Navigation = () => (
   <StyledNavigation>
-    {/* <StyledLinks> */}
-      <StyledLink to="/work">work</StyledLink>
-      <StyledLink to="/services">services</StyledLink>
-      <StyledLink to="/about">about</StyledLink>
-      <StyledLink to="/contact">contact</StyledLink>
-    {/* </StyledLinks> */}
+    <StyledLink to="/work">work</StyledLink>
+    <StyledLink to="/services">services</StyledLink>
+    <StyledLink to="/about">about</StyledLink>
+    <StyledLink to="/contact">contact</StyledLink>
   </StyledNavigation>
 )
 
@@ -137,7 +124,7 @@ const Footer = () => (
       <SectionWrap>
         <ActionSection>
           <FooterActionTitle>What can we help you with?</FooterActionTitle>
-          <FooterAction>see our services -></FooterAction>
+          <Link to="/services"><FooterAction>see our services -></FooterAction></Link>
         </ActionSection>
         <FooterFoot>
           <FooterLogo><LogoIcon /></FooterLogo>

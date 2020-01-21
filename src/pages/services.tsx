@@ -85,10 +85,15 @@ const ProcessSection = styled.div`
 `
 
 const CreativeProcessText = styled.h3`
-  font-size: 8rem;
-  letter-spacing: -0.08rem;
-  line-height: 8.8rem;
+  font-size: 6rem;
+  line-height: 6.5rem;
   color: ${theme.colors.primary};
+
+  ${mq.tablet} {
+    letter-spacing: -0.08rem;
+    line-height: 8.8rem;
+    font-size: 8rem;
+  }
 `
 
 const ProcessSectionDetails = styled.div`
@@ -106,6 +111,7 @@ const ProcessItem = styled.div`
 `
 
 const ProcessItemNumber = styled.div`
+  font-size: 8rem;
   color: ${theme.colors.white};
   ${mq.tablet} {
     font-size: 14.6rem;
@@ -121,8 +127,8 @@ const ProcessItemTitle = styled.div`
 
 const ProcessItemDetails = styled.div`
   color: ${theme.colors.primaryLight};
-  font-size: 3.2rem;
-  line-height: 4.4rem;
+  font-size: 3rem;
+  line-height: 4rem;
   margin-bottom: 3rem;
 `
 
