@@ -9,11 +9,9 @@ import { Link } from 'gatsby'
 const CaseStudy = styled(Link)`
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
-  /* height: 100%; */
 
   ${mq.tablet} {
-    margin-bottom: 3.2rem;
+    margin-bottom: 2rem;
     margin-right: 2rem;
 
     &:nth-child(even) {
@@ -29,7 +27,6 @@ const CaseStudyImage = styled.img`
 const CaseStudyImageWrap = styled.div`
   margin-bottom: 2rem;
   overflow: hidden;
-  /* max-width: 60rem; */
   max-height: 30rem;
   width: auto;
   height: auto;
@@ -40,7 +37,7 @@ const CaseStudyImageWrap = styled.div`
 `
 
 const CaseStudyWrap = styled.div`
-  /* margin-bottom: 4rem; */
+  margin-bottom: 4rem;
   width: 100%;
 
   ${mq.tablet} {
@@ -48,19 +45,16 @@ const CaseStudyWrap = styled.div`
   }
 
   ${mq.desktop} {
-    /* background: green; */
   }
 `
 
 const StyledFeaturedFour = styled.div`
   display: flex;
-  margin-bottom: 6rem;
   flex-direction: column;
 
   ${mq.tablet} {
     flex-wrap: wrap;
     flex-direction: row;
-    margin-bottom: 12rem;
   }
 `
 
@@ -71,7 +65,7 @@ const CaseStudyFoot = styled.div`
 
 
   ${mq.desktop} {
-    font-size: 3.2rem;
+    font-size: 2rem;
   }
 `
 

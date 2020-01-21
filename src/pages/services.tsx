@@ -11,34 +11,47 @@ import { mq } from '../styles/media'
 
 const ProvidedServices = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   ${mq.tablet} {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 
   ${mq.desktop} {
-    flex-direction: row;
+    /* flex-direction: row;
     flex-wrap: nowrap;
-    margin-bottom: 20rem;
+    margin-bottom: 20rem; */
   }
 `
 
 const ServiceItem = styled.div`
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+  margin-bottom: 2rem;
+  margin-right: 1.6rem;
+  
   ${mq.tablet} {
-    width: 50%;
+    min-width: auto;
+    margin-right: 3rem;
   }
+/* 
 
   ${mq.desktop} {
-    width: 25%;
-  }
+    flex: 1 0 20%;
+  } */
 `
 
 const ServiceTitle = styled.h3`
-  font-size: 3rem;
+
   margin-bottom: 1rem;
+
+
+    font-size: 3rem;
+    letter-spacing: -0.03rem;
+    line-height: 4rem;
 
   ${mq.desktop} {
     font-size: 4rem;
@@ -48,7 +61,7 @@ const ServiceTitle = styled.h3`
 `
 
 const ServiceDetails = styled.div`
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 3.2rem;
 
   ${mq.desktop} {
@@ -128,14 +141,14 @@ class Services extends Component<{ data: any }> {
             </Fade>
 
             <ProvidedServices>
-              <Fade bottom>
+                  <Fade bottom>
                 <ServiceItem>
                   <ServiceTitle>Branding</ServiceTitle>
                   <ServiceDetails>Naming</ServiceDetails>
                   <ServiceDetails>Visual Identity</ServiceDetails>
                   <ServiceDetails>Brand Strategy</ServiceDetails>
                 </ServiceItem>
-              </Fade>
+                  </Fade>
 
               <Fade bottom>
                 <ServiceItem>

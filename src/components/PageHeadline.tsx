@@ -16,18 +16,18 @@ export const PageHeadline = styled.h2`
     margin-top: 12rem;
     margin-bottom: 12rem;
 
-    font-size: 6rem;
+    font-size: 7.8rem;
     letter-spacing: -0.04rem;
-    line-height: 6.6rem;
+    line-height: 7.8rem;
   }
 
   ${mq.desktop} {
     margin-top: 16rem;
     margin-bottom: 16rem;
 
-    font-size: 8rem;
-    letter-spacing: -0.04rem;
-    line-height: 9rem;
+    font-size: 9.6rem;
+    letter-spacing: 0;
+    line-height: 9.6rem;
   }
 
   ${mq.desktopWide} {
