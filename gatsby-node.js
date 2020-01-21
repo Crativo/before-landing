@@ -21,6 +21,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           nodes {
             id
             brandName
+            brandPageHeadline
             workType
             spacing
             rows {
