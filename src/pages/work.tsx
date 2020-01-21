@@ -9,8 +9,6 @@ import { FeaturedFour } from '../components/FeaturedFour'
 class Work extends Component<{ data: any }> {
   render() {
     const caseStudies = this.props.data.caseStudies.nodes
-    console.log(caseStudies)
-    const workPage = this.props.data.work.edges[0]
 
     return (
       <Fragment>

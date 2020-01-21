@@ -5,6 +5,7 @@ module.exports = {
     title: 'Portfolio',
   },
   plugins: [
+    'gatsby-plugin-typescript',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
@@ -18,7 +19,12 @@ module.exports = {
         // icon: 'static/assets/android-chrome-512x512.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-netlify-cms',
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
@@ -47,6 +53,5 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
-    'gatsby-plugin-typescript',
   ],
 }

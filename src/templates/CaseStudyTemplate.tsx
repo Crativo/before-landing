@@ -1,6 +1,4 @@
-import React, { Fragment, Component } from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import React, { Component } from 'react'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import { PageHeadline } from '../components/PageHeadline'
@@ -61,13 +59,10 @@ const Col = styled.div<{ spacing: number}>`
   width: 100%;
 `
 
-class CaseStudy extends Component<{ pageContext: any }> {
+class CaseStudyTemplate extends Component<{ caseStudy: any}> {
   render() {
-    const caseStudy = this.props.pageContext.node
-
+    const { caseStudy } = this.props
     return (
-      <Fragment>
-        <Header />
         <Container>
           <SectionWrap>
             <StyledTop>
@@ -80,10 +75,10 @@ class CaseStudy extends Component<{ pageContext: any }> {
           </SectionWrap>
 
           <SectionWrap>
-            {caseStudy.rows.map((row: any) => (
-              <Row spacing={caseStudy.spacing}>
-                {row.cols.map((col: any) => (
-                  <Col spacing={caseStudy.spacing}>
+            {caseStudy.rows.map((row: any, rowIndex: number) => (
+              <Row spacing={caseStudy.spacing} key={rowIndex}>
+                {row.cols.map((col: any, colIndex: number) => (
+                  <Col spacing={caseStudy.spacing} key={colIndex}>
                     <StyledImageItem src={col.imageSrc} />
                   </Col>
                 ))}
@@ -91,23 +86,8 @@ class CaseStudy extends Component<{ pageContext: any }> {
             ))}
           </SectionWrap>
         </Container>
-        <Footer />
-      </Fragment>
     )
   }
 }
 
-// export const query = graphql`
-//   query CaseStudyQuery {
-//     caseStudy: allCaseStudiesJson {
-//       edges {
-//         node {
-//           id
-//           brandName
-//         }
-//       }
-//     }
-//   }
-// `
-
-export default CaseStudy
+export default CaseStudyTemplate
