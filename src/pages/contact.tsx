@@ -11,16 +11,23 @@ import { mq } from '../styles/media'
 
 const CardList = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin-bottom: 4rem;
+  justify-content: space-between;
+  width: 100%;
+
+  ${mq.tablet} {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `
 
 const CardItem = styled.div`
   margin-bottom: 4rem;
 
   ${mq.tablet} {
-    margin-bottom: 0;
-    margin-right: 10rem;
+    width: 33%;
+    margin-bottom: 4;
   }
 `
 
@@ -30,19 +37,32 @@ const CardTitle = styled.h3`
   line-height: 2.8rem;
 
   ${mq.tablet} {
+    margin-right: 4rem;
+  }
+
+  ${mq.desktop} {
     font-size: 3.2rem;
-    line-height: 3.8rem;
+    line-height: 4.4rem;
+    letter-spacing: 0;
+    margin-right: 4rem;
   }
 `
 
 const CardInfo = styled.div`
   font-size: 2rem;
   line-height: 2.8rem;
+  letter-spacing: -0.02rem;
   color: ${theme.colors.darkerGrey};
 
   ${mq.tablet} {
+    margin-right: 4rem;
+  }
+
+  ${mq.desktop} {
     font-size: 3.2rem;
-    line-height: 3.8rem;
+    line-height: 4.4rem;
+    letter-spacing: 0;
+    margin-right: 4rem;
   }
 `
 
@@ -59,8 +79,8 @@ class Contact extends Component<{ data: any }> {
               </PageHeadline>
             </Fade>
 
-            <CardList>
               <Fade bottom delay={700}>
+            <CardList>
                 <CardItem>
                   <CardTitle>Contact us</CardTitle>
                   <CardInfo>
@@ -69,30 +89,28 @@ class Contact extends Component<{ data: any }> {
                     <div>michal@before.cz</div>
                   </CardInfo>
                 </CardItem>
-              </Fade>
 
-              <Fade bottom delay={1000}>
                 <CardItem>
-                  <CardTitle>Headquarters</CardTitle>
+                  <CardTitle>Meet us</CardTitle>
                   <CardInfo>
                     <div>Slavíkova 1611/5</div>
                     <div>120 00 Vinohrady</div>
                     <div>Prague, Czech Republic</div>
                   </CardInfo>
                 </CardItem>
-              </Fade>
 
-              <Fade bottom>
+
+
                 <CardItem>
-                  <CardTitle>Company details</CardTitle>
+                  <CardTitle>Sue us</CardTitle>
                   <CardInfo>
                     <div>Chopsticks s.r.o.</div>
                     <div>IC: 03604080</div>
                     <div>DIC: CZ03604080</div>
                   </CardInfo>
                 </CardItem>
-              </Fade>
             </CardList>
+              </Fade>
           </SectionWrap>
         </Container>
         <Footer />

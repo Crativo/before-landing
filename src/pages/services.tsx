@@ -213,62 +213,53 @@ class Services extends Component<{ data: any }> {
 
           <ProcessSectionDetails>
             <Container>
-              <SectionWrap>
-                <Fade bottom>
+              <Fade bottom>
+                <SectionWrap>
                   <ProcessItem>
                     <ProcessItemNumber>1</ProcessItemNumber>
                     <ProcessInfo>
-                    <ProcessItemTitle>Understand</ProcessItemTitle>
-                    <ProcessItemDetails>
-                      We dive deep into the problem we're trynig to solve and we
-                      define it.
-                    </ProcessItemDetails>
+                      <ProcessItemTitle>Understand</ProcessItemTitle>
+                      <ProcessItemDetails>
+                        We dive deep into the problem we're trynig to solve and
+                        we define it.
+                      </ProcessItemDetails>
                     </ProcessInfo>
                   </ProcessItem>
-                </Fade>
 
-                <Fade bottom>
                   <ProcessItem>
                     <ProcessItemNumber>2</ProcessItemNumber>
                     <ProcessInfo>
-                    <ProcessItemTitle>Strategize</ProcessItemTitle>
-                    <ProcessItemDetails>
-                      We set a key message, structure of information and
-                      strategy to achieve understanding.
-                    </ProcessItemDetails>
-
+                      <ProcessItemTitle>Strategize</ProcessItemTitle>
+                      <ProcessItemDetails>
+                        We set a key message, structure of information and
+                        strategy to achieve understanding.
+                      </ProcessItemDetails>
                     </ProcessInfo>
                   </ProcessItem>
-                </Fade>
 
-                <Fade bottom>
                   <ProcessItem>
                     <ProcessItemNumber>3</ProcessItemNumber>
                     <ProcessInfo>
-
-                    <ProcessItemTitle>Concept</ProcessItemTitle>
-                    <ProcessItemDetails>
-                      We prepare a visual concept to make sure we're on the same
-                      page.
-                    </ProcessItemDetails>
+                      <ProcessItemTitle>Concept</ProcessItemTitle>
+                      <ProcessItemDetails>
+                        We prepare a visual concept to make sure we're on the
+                        same page.
+                      </ProcessItemDetails>
                     </ProcessInfo>
                   </ProcessItem>
-                </Fade>
 
-                <Fade bottom>
                   <ProcessItem>
                     <ProcessItemNumber>4</ProcessItemNumber>
                     <ProcessInfo>
-
-                    <ProcessItemTitle>Design</ProcessItemTitle>
-                    <ProcessItemDetails>
-                      After we agreed on a concept and strategy, we proceed to
-                      make it all happen.
-                    </ProcessItemDetails>
+                      <ProcessItemTitle>Design</ProcessItemTitle>
+                      <ProcessItemDetails>
+                        After we agreed on a concept and strategy, we proceed to
+                        make it all happen.
+                      </ProcessItemDetails>
                     </ProcessInfo>
                   </ProcessItem>
-                </Fade>
-              </SectionWrap>
+                </SectionWrap>
+              </Fade>
             </Container>
           </ProcessSectionDetails>
         </ProcessSection>
@@ -280,7 +271,7 @@ class Services extends Component<{ data: any }> {
 
 export const query = graphql`
   query ServicesQuery {
-    landingPage: allPagesJson(filter: {pageName: {eq: "services"}}) {
+    landingPage: allPagesJson(filter: { pageName: { eq: "services" } }) {
       edges {
         node {
           id

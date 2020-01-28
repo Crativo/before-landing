@@ -32,11 +32,15 @@ export const StyledNavigation = styled.header`
 `
 
 export const StyledLink = styled(Link)`
-  margin-left: 8rem;
+  margin-left: 4rem;
   padding: 0.5rem 0.25rem;
-
+  
   &:nth-child(1) {
     margin-left: 0;
+  }
+
+  ${mq.desktop} {
+    margin-left: 8rem;
   }
 `
 
