@@ -11,11 +11,11 @@ import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
 
 const TeamItemWrap = styled.div`
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 `
 
 const TeamItem = styled.div`
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
 `
 
 const TeamSection = styled.div`
@@ -47,8 +47,8 @@ const StyledImg = styled.img`
 const TeamItemDetails = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 2.5rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
   margin-top: 2rem;
 
   ${mq.desktop} {

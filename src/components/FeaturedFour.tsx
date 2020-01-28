@@ -51,6 +51,7 @@ const CaseStudyWrap = styled.div`
 const StyledFeaturedFour = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
 
   ${mq.tablet} {
     flex-wrap: wrap;

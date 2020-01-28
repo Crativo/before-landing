@@ -19,11 +19,19 @@ export const StyledFooter = styled.div`
 `
 
 const ActionSection = styled.div`
-  font-size: 3.2rem;
+  font-size: 2rem;
   letter-spacing: -0.032rem;
-  line-height: 5.6rem;
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  line-height: 3.5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  ${mq.tablet} {
+    font-size: 3.2rem;
+    letter-spacing: -0.032rem;
+    line-height: 5.6rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
 `
 
 const FooterActionTitle = styled.div`
@@ -57,9 +65,7 @@ const FooterLogo = styled.div`
 `
 
 export const StyledLink = styled(Link)`
-  margin-bottom: 4rem;
-  color: ${theme.colors.black};
-  font-weight: ${theme.fontWeight.medium};
+  margin-bottom: 2.8rem;
   
   ${mq.tablet} {
     margin-right: 1rem;
@@ -76,10 +82,11 @@ export const StyledNavigation = styled.div`
   flex-direction: column;
   
   max-width: 40rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   letter-spacing: 0.1rem;
   line-height: 3rem;
-  color: ${theme.colors.black};
+  font-weight: ${theme.fontWeight.medium};
+  color: ${theme.colors.darkerGrey};
 
   ${mq.tablet} {
   }
@@ -93,10 +100,11 @@ export const StyledSocialNavigation = styled.div`
   flex: 0 1 auto;
   justify-content: space-between;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 1.6rem;
   letter-spacing: 0.1rem;
   line-height: 3rem;
-  color: ${theme.colors.black};
+  font-weight: ${theme.fontWeight.medium};
+  color: ${theme.colors.darkerGrey};
 
   ${mq.tablet} {
     flex-direction: row;
@@ -114,7 +122,7 @@ const Navigation = () => (
 
 const SocialLinks = () => (
   <StyledSocialNavigation>
-    <StyledLink to="http://instagram.com">instagram</StyledLink>
+    <a href="http://instagram.com" target="_blank">instagram</a>
   </StyledSocialNavigation>
 )
 

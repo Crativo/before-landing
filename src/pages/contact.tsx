@@ -7,24 +7,43 @@ import { SectionWrap } from '../components/SectionWrap'
 import styled from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
+import { mq } from '../styles/media'
 
 const CardList = styled.div`
   display: flex;
-  margin-bottom: 20rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
 `
 
 const CardItem = styled.div`
-  margin-right: 10rem;
+  margin-bottom: 4rem;
+
+  ${mq.tablet} {
+    margin-bottom: 0;
+    margin-right: 10rem;
+  }
 `
 
 const CardTitle = styled.h3`
-  font-size: 3.2rem;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 2.8rem;
+
+  ${mq.tablet} {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
 `
 
 const CardInfo = styled.div`
   font-size: 2rem;
-  line-height: 3.2rem;
+  line-height: 2.8rem;
   color: ${theme.colors.darkerGrey};
+
+  ${mq.tablet} {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
 `
 
 class Contact extends Component<{ data: any }> {
@@ -36,14 +55,14 @@ class Contact extends Component<{ data: any }> {
           <SectionWrap>
             <Fade bottom>
               <PageHeadline>
-                Contact us if your business can't afford being misunderstood. We'll ensure that won't happen.
+                Contact us if your business can't afford being misunderstood.
               </PageHeadline>
             </Fade>
 
             <CardList>
               <Fade bottom delay={700}>
                 <CardItem>
-                  <CardTitle>Contact person</CardTitle>
+                  <CardTitle>Contact us</CardTitle>
                   <CardInfo>
                     <div>Michal Ivanecký</div>
                     <div>+ 420 601 097 043</div>

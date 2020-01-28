@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
+import { graphql } from 'gatsby'
 
 const ProvidedServices = styled.div`
   display: flex;
@@ -45,13 +46,11 @@ const ServiceItem = styled.div`
 `
 
 const ServiceTitle = styled.h3`
-
   margin-bottom: 1rem;
 
-
-    font-size: 3rem;
-    letter-spacing: -0.03rem;
-    line-height: 4rem;
+  font-size: 3rem;
+  letter-spacing: -0.03rem;
+  line-height: 4rem;
 
   ${mq.desktop} {
     font-size: 4rem;
@@ -61,8 +60,9 @@ const ServiceTitle = styled.h3`
 `
 
 const ServiceDetails = styled.div`
-  font-size: 1.6rem;
-  line-height: 3.2rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  color: ${theme.colors.darkerGrey};
 
   ${mq.desktop} {
     font-size: 2rem;
@@ -85,8 +85,8 @@ const ProcessSection = styled.div`
 `
 
 const CreativeProcessText = styled.h3`
-  font-size: 6rem;
-  line-height: 6.5rem;
+  font-size: 4rem;
+  line-height: 4rem;
   color: ${theme.colors.primary};
 
   ${mq.tablet} {
@@ -98,10 +98,11 @@ const CreativeProcessText = styled.h3`
 
 const ProcessSectionDetails = styled.div`
   background: ${theme.colors.primary};
-  padding: 16rem 0;
+  padding: 8rem 0;
 `
 
 const ProcessItem = styled.div`
+  display: flex;
   max-width: 35rem;
   margin-bottom: 1rem;
 
@@ -110,25 +111,38 @@ const ProcessItem = styled.div`
   }
 `
 
+const ProcessInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  font-size: 2rem;
+  line-height: 2.8rem;
+  margin-top: 0.8rem;
+  margin-left: 1.8rem;
+`
+
 const ProcessItemNumber = styled.div`
-  font-size: 8rem;
+  font-size: 6.5rem;
+  line-height: 6.5rem;
+  padding: none;
+  margin: none;
   color: ${theme.colors.white};
   ${mq.tablet} {
-    font-size: 14.6rem;
-    line-height: 20rem;
+    /* font-size: 14.6rem; */
+    /* line-height: 20rem; */
   }
 `
 
 const ProcessItemTitle = styled.div`
   color: ${theme.colors.white};
-  font-size: 3.2rem;
-  margin-bottom: 0.5rem;
+  /* font-size: 3.2rem; */
+  /* margin-bottom: 0.5rem; */
 `
 
 const ProcessItemDetails = styled.div`
   color: ${theme.colors.primaryLight};
-  font-size: 3rem;
-  line-height: 4rem;
+  /* font-size: 3rem; */
+  /* line-height: 4rem; */
   margin-bottom: 3rem;
 `
 
@@ -147,14 +161,14 @@ class Services extends Component<{ data: any }> {
             </Fade>
 
             <ProvidedServices>
-                  <Fade bottom>
+              <Fade bottom>
                 <ServiceItem>
                   <ServiceTitle>Branding</ServiceTitle>
                   <ServiceDetails>Naming</ServiceDetails>
                   <ServiceDetails>Visual Identity</ServiceDetails>
                   <ServiceDetails>Brand Strategy</ServiceDetails>
                 </ServiceItem>
-                  </Fade>
+              </Fade>
 
               <Fade bottom>
                 <ServiceItem>
@@ -203,44 +217,55 @@ class Services extends Component<{ data: any }> {
                 <Fade bottom>
                   <ProcessItem>
                     <ProcessItemNumber>1</ProcessItemNumber>
+                    <ProcessInfo>
                     <ProcessItemTitle>Understand</ProcessItemTitle>
                     <ProcessItemDetails>
                       We dive deep into the problem we're trynig to solve and we
                       define it.
                     </ProcessItemDetails>
+                    </ProcessInfo>
                   </ProcessItem>
                 </Fade>
 
                 <Fade bottom>
                   <ProcessItem>
                     <ProcessItemNumber>2</ProcessItemNumber>
+                    <ProcessInfo>
                     <ProcessItemTitle>Strategize</ProcessItemTitle>
                     <ProcessItemDetails>
                       We set a key message, structure of information and
                       strategy to achieve understanding.
                     </ProcessItemDetails>
+
+                    </ProcessInfo>
                   </ProcessItem>
                 </Fade>
 
                 <Fade bottom>
                   <ProcessItem>
                     <ProcessItemNumber>3</ProcessItemNumber>
+                    <ProcessInfo>
+
                     <ProcessItemTitle>Concept</ProcessItemTitle>
                     <ProcessItemDetails>
                       We prepare a visual concept to make sure we're on the same
                       page.
                     </ProcessItemDetails>
+                    </ProcessInfo>
                   </ProcessItem>
                 </Fade>
 
                 <Fade bottom>
                   <ProcessItem>
                     <ProcessItemNumber>4</ProcessItemNumber>
+                    <ProcessInfo>
+
                     <ProcessItemTitle>Design</ProcessItemTitle>
                     <ProcessItemDetails>
                       After we agreed on a concept and strategy, we proceed to
                       make it all happen.
                     </ProcessItemDetails>
+                    </ProcessInfo>
                   </ProcessItem>
                 </Fade>
               </SectionWrap>
@@ -252,5 +277,18 @@ class Services extends Component<{ data: any }> {
     )
   }
 }
+
+export const query = graphql`
+  query ServicesQuery {
+    landingPage: allPagesJson(filter: {pageName: {eq: "services"}}) {
+      edges {
+        node {
+          id
+          pageHeadline
+        }
+      }
+    }
+  }
+`
 
 export default Services
