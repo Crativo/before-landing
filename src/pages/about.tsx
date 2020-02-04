@@ -9,6 +9,7 @@ import styled from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
+import { standardText } from '../styles/text'
 
 const TeamItemWrap = styled.div`
   margin-bottom: 4rem;
@@ -45,16 +46,10 @@ const StyledImg = styled.img`
 `
 
 const TeamItemDetails = styled.div`
+  ${standardText}
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
-  line-height: 2.8rem;
   margin-top: 2rem;
-
-  ${mq.desktop} {
-    line-height: 4.4rem;
-    font-size: 3rem;
-  }
 `
 
 const TeamItemName = styled.div``

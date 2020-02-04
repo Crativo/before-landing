@@ -10,6 +10,7 @@ import { mq } from '../../styles/media'
 import { useOnClickOutside } from '../hooks'
 import Burger from '../Burger/Burger'
 import Menu from '../BurgerMenu/BurgerMenu'
+import { standardText } from '../../styles/text'
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -19,10 +20,8 @@ export const StyledHeader = styled.header`
 `
 
 export const StyledNavigation = styled.header`
+  ${standardText}
   display: none;
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
-  line-height: 3rem;
   color: ${theme.colors.black};
   font-weight: ${theme.fontWeight.medium};
 
@@ -37,6 +36,7 @@ export const StyledLink = styled(Link)`
 
   &:hover {
     opacity: 0.5;
+    /* color: ${theme.colors.primary}; */
   }
   
   &:nth-child(1) {

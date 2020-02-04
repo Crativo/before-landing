@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components'
 import theme from '../styles/theme'
 import { mq } from '../styles/media'
 import { Link } from 'gatsby'
+import { standardText } from '../styles/text'
 
 const CaseStudy = styled(Link)`
   display: flex;
@@ -60,14 +61,8 @@ const StyledFeaturedFour = styled.div`
 `
 
 const CaseStudyFoot = styled.div`
+  ${standardText}
   display: flex;
-  font-size: 2rem;
-  line-height: 3.2rem;
-
-
-  ${mq.desktop} {
-    font-size: 2rem;
-  }
 `
 
 const BrandName = styled.div`

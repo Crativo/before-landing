@@ -2,6 +2,11 @@ import React, { Fragment, Component } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CaseStudyTemplate from './CaseStudyTemplate'
+import styled from 'styled-components'
+
+const StyledCaseStudyTemplate = styled.div`
+  margin-bottom: 12rem;
+` 
 
 class CaseStudyPageTemplate extends Component<{ pageContext: any}> {
   render() {
@@ -10,7 +15,7 @@ class CaseStudyPageTemplate extends Component<{ pageContext: any}> {
     return (
       <Fragment>
         <Header />
-          <CaseStudyTemplate caseStudy={caseStudy} />
+          <StyledCaseStudyTemplate><CaseStudyTemplate caseStudy={caseStudy} /></StyledCaseStudyTemplate>
         <Footer />
       </Fragment>
     )

@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
+import { standardText } from '../styles/text'
 
 const CardList = styled.div`
   display: flex;
@@ -32,26 +33,20 @@ const CardItem = styled.div`
 `
 
 const CardTitle = styled.h3`
+  ${standardText}
   margin: 0;
-  font-size: 2rem;
-  line-height: 2.8rem;
 
   ${mq.tablet} {
     margin-right: 4rem;
   }
 
   ${mq.desktop} {
-    font-size: 3.2rem;
-    line-height: 4.4rem;
-    letter-spacing: 0;
     margin-right: 4rem;
   }
 `
 
 const CardInfo = styled.div`
-  font-size: 2rem;
-  line-height: 2.8rem;
-  letter-spacing: -0.02rem;
+  ${standardText}
   color: ${theme.colors.darkerGrey};
 
   ${mq.tablet} {
@@ -59,9 +54,6 @@ const CardInfo = styled.div`
   }
 
   ${mq.desktop} {
-    font-size: 3.2rem;
-    line-height: 4.4rem;
-    letter-spacing: 0;
     margin-right: 4rem;
   }
 `

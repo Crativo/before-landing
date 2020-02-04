@@ -6,6 +6,7 @@ import { SectionWrap } from '../SectionWrap'
 import { LogoIcon } from '../LogoIcon'
 import { Link } from 'gatsby'
 import { mq } from '../../styles/media'
+import { standardText } from '../../styles/text'
 
 export const StyledFooter = styled.div`
   padding-top: 4rem;
@@ -13,15 +14,13 @@ export const StyledFooter = styled.div`
   background: ${theme.colors.grey};
 
   ${mq.tablet} {
-    padding-top: 10rem;
+    padding-top: 4rem;
     padding-bottom: 5.6rem;
   }
 `
 
 const ActionSection = styled.div`
-  font-size: 2rem;
-  letter-spacing: -0.032rem;
-  line-height: 3.5rem;
+  ${standardText}
   margin-top: 4rem;
   margin-bottom: 4rem;
 
@@ -30,7 +29,7 @@ const ActionSection = styled.div`
     letter-spacing: -0.032rem;
     line-height: 3.8rem;
     margin-top: 8rem;
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
   }
 `
 
@@ -42,11 +41,18 @@ const FooterAction = styled.div`
 `
 
 const FooterFoot = styled.div`
+  ${standardText}
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
   ${mq.tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  ${mq.desktop} {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -58,10 +64,16 @@ const FooterLogo = styled.div`
   display: flex;
   flex: 0 1 auto;
   flex-direction: column;
+  margin-bottom: 4rem;
 
   ${mq.tablet} {
     flex-direction: row;
     margin-right: 5rem;
+  }
+
+  ${mq.desktop} {
+    flex-direction: row;
+    margin-bottom: 0;
   }
 `
 
@@ -73,9 +85,6 @@ export const StyledLink = styled(Link)`
   
   ${mq.tablet} {
     margin-right: 1rem;
-    font-size: 2rem;
-    line-height: 3rem;
-    letter-spacing: 0.01rem;
   }
 `
 
@@ -84,13 +93,7 @@ export const StyledNavigation = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  
   max-width: 40rem;
-  font-size: 1.6rem;
-  letter-spacing: 0.1rem;
-  line-height: 3rem;
-  font-weight: ${theme.fontWeight.medium};
-  color: ${theme.colors.black};
 
   ${mq.tablet} {
     flex: 1 0 auto;
@@ -105,11 +108,6 @@ export const StyledSocialNavigation = styled.div`
   flex: 0 1 auto;
   justify-content: space-between;
   flex-direction: column;
-  font-size: 1.6rem;
-  letter-spacing: 0.1rem;
-  line-height: 3rem;
-  font-weight: ${theme.fontWeight.medium};
-  color: ${theme.colors.black};
 
   a {
     &:hover {
@@ -118,9 +116,6 @@ export const StyledSocialNavigation = styled.div`
 
     ${mq.tablet} {
       margin-right: 1rem;
-      font-size: 2rem;
-      line-height: 3rem;
-      letter-spacing: 0.01rem;
     }
   }
 

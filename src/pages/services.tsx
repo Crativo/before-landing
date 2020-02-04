@@ -9,6 +9,7 @@ import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
 import { graphql } from 'gatsby'
+import { standardText } from '../styles/text'
 
 const ProvidedServices = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ const ProvidedServices = styled.div`
 `
 
 const ServiceItem = styled.div`
+  ${standardText}
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -33,40 +35,21 @@ const ServiceItem = styled.div`
   margin-bottom: 2rem;
   margin-right: 1.6rem;
 
-  font-size: 2rem;
-  line-height: 2.8rem;
-  color: ${theme.colors.darkerGrey};
-
-  ${mq.desktop} {
-    font-size: 2rem;
-  }
-
   ${mq.tablet} {
     min-width: auto;
     margin-right: 3rem;
   }
 `
 
-const serviceStyles = css`
-  margin: 0;
-  font-size: 2rem;
-  line-height: 2.8rem;
-  color: ${theme.colors.darkerGrey};
-  font-weight: ${theme.fontWeight.medium};
 
-  ${mq.desktop} {
-    font-size: 3rem;
-    line-height: 3.8rem;
-  }
-`
 
 const ServiceTitle = styled.h3`
-  ${serviceStyles}
-  color: ${theme.colors.black};
+  ${standardText}
 `
 
 const ServiceDetails = styled.div`
-  ${serviceStyles}
+  ${standardText}
+  color: ${theme.colors.black};
 `
 
 const ProcessSection = styled.div`
