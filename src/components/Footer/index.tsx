@@ -13,8 +13,8 @@ export const StyledFooter = styled.div`
   background: ${theme.colors.grey};
 
   ${mq.tablet} {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 10rem;
+    padding-bottom: 5.6rem;
   }
 `
 
@@ -28,7 +28,7 @@ const ActionSection = styled.div`
   ${mq.tablet} {
     font-size: 3.2rem;
     letter-spacing: -0.032rem;
-    line-height: 5.6rem;
+    line-height: 3.8rem;
     margin-top: 8rem;
     margin-bottom: 8rem;
   }
@@ -66,6 +66,10 @@ const FooterLogo = styled.div`
 
 export const StyledLink = styled(Link)`
   margin-bottom: 2.8rem;
+
+  &:hover {
+    opacity: 0.5;
+  }
   
   ${mq.tablet} {
     margin-right: 1rem;
@@ -86,7 +90,7 @@ export const StyledNavigation = styled.div`
   letter-spacing: 0.1rem;
   line-height: 3rem;
   font-weight: ${theme.fontWeight.medium};
-  color: ${theme.colors.darkerGrey};
+  color: ${theme.colors.black};
 
   ${mq.tablet} {
   }
@@ -104,7 +108,22 @@ export const StyledSocialNavigation = styled.div`
   letter-spacing: 0.1rem;
   line-height: 3rem;
   font-weight: ${theme.fontWeight.medium};
-  color: ${theme.colors.darkerGrey};
+  color: ${theme.colors.black};
+
+  a {
+    margin-bottom: 2.8rem;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    ${mq.tablet} {
+      margin-right: 1rem;
+      font-size: 2rem;
+      line-height: 3rem;
+      letter-spacing: 0.01rem;
+    }
+  }
 
   ${mq.tablet} {
     flex-direction: row;

@@ -1,7 +1,18 @@
-import React from 'react'
 import styled from 'styled-components'
 import { mq } from '../styles/media'
 import theme from '../styles/theme'
+
+export const PageHeadlineSpace = styled.div`
+    /* height: 70vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 30rem;
+
+    ${mq.tablet} {
+      max-height: initial;
+    } */
+`
 
 export const PageHeadline = styled.h2`
   margin-top: 1rem;
@@ -15,7 +26,6 @@ export const PageHeadline = styled.h2`
   ${mq.tablet} {
     margin-top: 12rem;
     margin-bottom: 12rem;
-
     font-size: 7.8rem;
     letter-spacing: -0.04rem;
     line-height: 7.8rem;
@@ -24,7 +34,6 @@ export const PageHeadline = styled.h2`
   ${mq.desktop} {
     margin-top: 16rem;
     margin-bottom: 16rem;
-
     font-size: 9.6rem;
     letter-spacing: 0;
     line-height: 9.6rem;
@@ -33,8 +42,7 @@ export const PageHeadline = styled.h2`
   ${mq.desktopWide} {
     margin-top: 16rem;
     margin-bottom: 16rem;
-
-    font-size: 8rem;
+    font-size: 9.6rem;
     letter-spacing: -0.06rem;
     line-height: 15.3rem;
   }

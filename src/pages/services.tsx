@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import Fade from 'react-reveal/Fade'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
@@ -15,14 +15,13 @@ const ProvidedServices = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 2rem;
 
   ${mq.tablet} {
+    margin-bottom: 10rem;
   }
 
   ${mq.desktop} {
-    /* flex-direction: row;
-    flex-wrap: nowrap;
-    margin-bottom: 20rem; */
   }
 `
 
@@ -33,33 +32,7 @@ const ServiceItem = styled.div`
   min-width: 20rem;
   margin-bottom: 2rem;
   margin-right: 1.6rem;
-  
-  ${mq.tablet} {
-    min-width: auto;
-    margin-right: 3rem;
-  }
-/* 
 
-  ${mq.desktop} {
-    flex: 1 0 20%;
-  } */
-`
-
-const ServiceTitle = styled.h3`
-  margin-bottom: 1rem;
-
-  font-size: 3rem;
-  letter-spacing: -0.03rem;
-  line-height: 4rem;
-
-  ${mq.desktop} {
-    font-size: 4rem;
-    letter-spacing: -0.04rem;
-    line-height: 5.6rem;
-  }
-`
-
-const ServiceDetails = styled.div`
   font-size: 2rem;
   line-height: 2.8rem;
   color: ${theme.colors.darkerGrey};
@@ -67,38 +40,69 @@ const ServiceDetails = styled.div`
   ${mq.desktop} {
     font-size: 2rem;
   }
+
+  ${mq.tablet} {
+    min-width: auto;
+    margin-right: 3rem;
+  }
+`
+
+const serviceStyles = css`
+  margin: 0;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  color: ${theme.colors.darkerGrey};
+  font-weight: ${theme.fontWeight.medium};
+
+  ${mq.desktop} {
+    font-size: 3rem;
+    line-height: 3.8rem;
+  }
+`
+
+const ServiceTitle = styled.h3`
+  ${serviceStyles}
+  color: ${theme.colors.black};
+`
+
+const ServiceDetails = styled.div`
+  ${serviceStyles}
 `
 
 const ProcessSection = styled.div`
-  /* width: 100%;
-  max-width: 150rem; */
-  /* margin: 0 auto; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 8rem;
-
-  ${mq.desktop} {
-    flex-direction: row;
-    margin-bottom: 20rem;
-  } */
+  background: ${theme.colors.primary};
+  padding: 8rem 0;
 `
 
 const CreativeProcessText = styled.h3`
   font-size: 4rem;
   line-height: 4rem;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.white};
+  margin-bottom: 10rem;
 
   ${mq.tablet} {
+    letter-spacing: -0.056rem;
+    line-height: 6.4rem;
+    font-size: 5.6rem;
+  }
+
+  ${mq.tabletWide} {
+    letter-spacing: -0.056rem;
+    line-height: 6.4rem;
+    font-size: 5.6rem;
+  }
+
+  ${mq.desktop} {
+    letter-spacing: -0.07rem;
+    line-height: 7.8rem;
+    font-size: 7rem;
+  }
+
+  ${mq.desktopWide} {
     letter-spacing: -0.08rem;
     line-height: 8.8rem;
     font-size: 8rem;
   }
-`
-
-const ProcessSectionDetails = styled.div`
-  background: ${theme.colors.primary};
-  padding: 8rem 0;
 `
 
 const ProcessItem = styled.div`
@@ -127,6 +131,7 @@ const ProcessItemNumber = styled.div`
   padding: none;
   margin: none;
   color: ${theme.colors.white};
+
   ${mq.tablet} {
     /* font-size: 14.6rem; */
     /* line-height: 20rem; */
@@ -144,6 +149,39 @@ const ProcessItemDetails = styled.div`
   /* font-size: 3rem; */
   /* line-height: 4rem; */
   margin-bottom: 3rem;
+`
+
+const CreativeRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ${mq.tabletWide} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`
+
+const CreativeLeft = styled.div`
+  max-width: 50rem;
+
+  ${mq.tablet} {
+    max-width: 60rem;
+  }
+
+  ${mq.desktop} {
+    max-width: 80rem;
+  }
+`
+
+const CreativeRight = styled.div`
+  ${mq.tabletWide} {
+    padding-left: 5rem;
+  }
+
+  ${mq.desktop} {
+    padding-left: 10rem;
+  }
 `
 
 class Services extends Component<{ data: any }> {
@@ -203,65 +241,65 @@ class Services extends Component<{ data: any }> {
         <ProcessSection>
           <Container>
             <SectionWrap>
-              <Fade bottom>
-                <CreativeProcessText>
-                  Creative process we follow
-                </CreativeProcessText>
-              </Fade>
+              <CreativeRow>
+                <CreativeLeft>
+                  <Fade bottom>
+                    <CreativeProcessText>
+                      Following process to make sure we deliver design that
+                      actually serves you
+                    </CreativeProcessText>
+                  </Fade>
+                </CreativeLeft>
+                <CreativeRight>
+                  <Fade bottom>
+                    <ProcessItem>
+                      <ProcessItemNumber>1</ProcessItemNumber>
+                      <ProcessInfo>
+                        <ProcessItemTitle>Understand</ProcessItemTitle>
+                        <ProcessItemDetails>
+                          We dive deep into the problem we're trynig to solve
+                          and we define it.
+                        </ProcessItemDetails>
+                      </ProcessInfo>
+                    </ProcessItem>
+
+                    <ProcessItem>
+                      <ProcessItemNumber>2</ProcessItemNumber>
+                      <ProcessInfo>
+                        <ProcessItemTitle>Strategize</ProcessItemTitle>
+                        <ProcessItemDetails>
+                          We set a key message, structure of information and
+                          strategy to achieve understanding.
+                        </ProcessItemDetails>
+                      </ProcessInfo>
+                    </ProcessItem>
+
+                    <ProcessItem>
+                      <ProcessItemNumber>3</ProcessItemNumber>
+                      <ProcessInfo>
+                        <ProcessItemTitle>Concept</ProcessItemTitle>
+                        <ProcessItemDetails>
+                          We prepare a visual concept to make sure we're on the
+                          same page.
+                        </ProcessItemDetails>
+                      </ProcessInfo>
+                    </ProcessItem>
+
+                    <ProcessItem>
+                      <ProcessItemNumber>4</ProcessItemNumber>
+                      <ProcessInfo>
+                        <ProcessItemTitle>Design</ProcessItemTitle>
+                        <ProcessItemDetails>
+                          After we agreed on a concept and strategy, we proceed
+                          to make it all happen.
+                        </ProcessItemDetails>
+                      </ProcessInfo>
+                    </ProcessItem>
+                  </Fade>
+                </CreativeRight>
+              </CreativeRow>
             </SectionWrap>
           </Container>
-
-          <ProcessSectionDetails>
-            <Container>
-              <Fade bottom>
-                <SectionWrap>
-                  <ProcessItem>
-                    <ProcessItemNumber>1</ProcessItemNumber>
-                    <ProcessInfo>
-                      <ProcessItemTitle>Understand</ProcessItemTitle>
-                      <ProcessItemDetails>
-                        We dive deep into the problem we're trynig to solve and
-                        we define it.
-                      </ProcessItemDetails>
-                    </ProcessInfo>
-                  </ProcessItem>
-
-                  <ProcessItem>
-                    <ProcessItemNumber>2</ProcessItemNumber>
-                    <ProcessInfo>
-                      <ProcessItemTitle>Strategize</ProcessItemTitle>
-                      <ProcessItemDetails>
-                        We set a key message, structure of information and
-                        strategy to achieve understanding.
-                      </ProcessItemDetails>
-                    </ProcessInfo>
-                  </ProcessItem>
-
-                  <ProcessItem>
-                    <ProcessItemNumber>3</ProcessItemNumber>
-                    <ProcessInfo>
-                      <ProcessItemTitle>Concept</ProcessItemTitle>
-                      <ProcessItemDetails>
-                        We prepare a visual concept to make sure we're on the
-                        same page.
-                      </ProcessItemDetails>
-                    </ProcessInfo>
-                  </ProcessItem>
-
-                  <ProcessItem>
-                    <ProcessItemNumber>4</ProcessItemNumber>
-                    <ProcessInfo>
-                      <ProcessItemTitle>Design</ProcessItemTitle>
-                      <ProcessItemDetails>
-                        After we agreed on a concept and strategy, we proceed to
-                        make it all happen.
-                      </ProcessItemDetails>
-                    </ProcessInfo>
-                  </ProcessItem>
-                </SectionWrap>
-              </Fade>
-            </Container>
-          </ProcessSectionDetails>
         </ProcessSection>
         <Footer />
       </Fragment>

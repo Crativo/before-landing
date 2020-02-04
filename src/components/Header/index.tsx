@@ -34,6 +34,10 @@ export const StyledNavigation = styled.header`
 export const StyledLink = styled(Link)`
   margin-left: 4rem;
   padding: 0.5rem 0.25rem;
+
+  &:hover {
+    opacity: 0.5;
+  }
   
   &:nth-child(1) {
     margin-left: 0;
