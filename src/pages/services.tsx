@@ -78,6 +78,7 @@ const CreativeProcessText = styled.h3`
   font-size: 4rem;
   line-height: 4rem;
   color: ${theme.colors.white};
+  margin-top: 0;
   margin-bottom: 10rem;
 
   ${mq.tablet} {
@@ -155,6 +156,7 @@ const CreativeRow = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 7rem;
 
   ${mq.tabletWide} {
     flex-direction: row;

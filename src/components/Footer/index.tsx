@@ -44,11 +44,13 @@ const FooterAction = styled.div`
 const FooterFoot = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   ${mq.tablet} {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
   }
 `
 
@@ -56,7 +58,6 @@ const FooterLogo = styled.div`
   display: flex;
   flex: 0 1 auto;
   flex-direction: column;
-  margin-bottom: 8rem;
 
   ${mq.tablet} {
     flex-direction: row;
@@ -65,8 +66,7 @@ const FooterLogo = styled.div`
 `
 
 export const StyledLink = styled(Link)`
-  margin-bottom: 2.8rem;
-
+  flex: 0 1 auto;
   &:hover {
     opacity: 0.5;
   }
@@ -80,7 +80,7 @@ export const StyledLink = styled(Link)`
 `
 
 export const StyledNavigation = styled.div`
-  flex: 1 0 auto;
+  flex: 0 1 auto;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -93,6 +93,7 @@ export const StyledNavigation = styled.div`
   color: ${theme.colors.black};
 
   ${mq.tablet} {
+    flex: 1 0 auto;
   }
   ${mq.desktop} {
     flex-direction: row;
@@ -111,8 +112,6 @@ export const StyledSocialNavigation = styled.div`
   color: ${theme.colors.black};
 
   a {
-    margin-bottom: 2.8rem;
-
     &:hover {
       opacity: 0.5;
     }
