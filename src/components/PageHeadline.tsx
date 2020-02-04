@@ -34,16 +34,13 @@ export const PageHeadline = styled.h2`
   ${mq.desktop} {
     margin-top: 16rem;
     margin-bottom: 16rem;
-    font-size: 9.6rem;
-    letter-spacing: 0;
-    line-height: 9.6rem;
+    font-size: 8rem;
+    letter-spacing: -0.08;
+    line-height: 8.8rem;
   }
 
   ${mq.desktopWide} {
-    margin-top: 16rem;
-    margin-bottom: 16rem;
-    font-size: 9.6rem;
-    letter-spacing: -0.06rem;
-    line-height: 15.3rem;
+    margin-top: 19rem;
+    margin-bottom: 19rem;
   }
 `

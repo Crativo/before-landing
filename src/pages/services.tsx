@@ -9,14 +9,14 @@ import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
 import { graphql } from 'gatsby'
-import { standardText } from '../styles/text'
+import { standardText, standardTextLG } from '../styles/text'
 
 const ProvidedServices = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 
   ${mq.tablet} {
     margin-bottom: 10rem;
@@ -27,12 +27,12 @@ const ProvidedServices = styled.div`
 `
 
 const ServiceItem = styled.div`
-  ${standardText}
+  ${standardTextLG}
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   min-width: 20rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
   margin-right: 1.6rem;
 
   ${mq.tablet} {
@@ -44,12 +44,12 @@ const ServiceItem = styled.div`
 
 
 const ServiceTitle = styled.h3`
-  ${standardText}
+  ${standardTextLG}
 `
 
 const ServiceDetails = styled.div`
-  ${standardText}
-  color: ${theme.colors.black};
+  ${standardTextLG}
+  color: ${theme.colors.darkerGrey};
 `
 
 const ProcessSection = styled.div`
@@ -91,20 +91,19 @@ const CreativeProcessText = styled.h3`
 
 const ProcessItem = styled.div`
   display: flex;
-  max-width: 35rem;
   margin-bottom: 1rem;
+  max-width: 35rem;
 
   ${mq.desktop} {
+    max-width: 45rem;
     margin-bottom: 4rem;
   }
 `
 
 const ProcessInfo = styled.div`
+  ${standardTextLG}
   display: flex;
   flex-direction: column;
-
-  font-size: 2rem;
-  line-height: 2.8rem;
   margin-top: 0.8rem;
   margin-left: 1.8rem;
 `
@@ -115,23 +114,15 @@ const ProcessItemNumber = styled.div`
   padding: none;
   margin: none;
   color: ${theme.colors.white};
-
-  ${mq.tablet} {
-    /* font-size: 14.6rem; */
-    /* line-height: 20rem; */
-  }
 `
 
 const ProcessItemTitle = styled.div`
   color: ${theme.colors.white};
-  /* font-size: 3.2rem; */
-  /* margin-bottom: 0.5rem; */
 `
 
 const ProcessItemDetails = styled.div`
+  width: 100%;
   color: ${theme.colors.primaryLight};
-  /* font-size: 3rem; */
-  /* line-height: 4rem; */
   margin-bottom: 3rem;
 `
 
@@ -166,6 +157,7 @@ const CreativeRight = styled.div`
 
   ${mq.desktop} {
     padding-left: 10rem;
+    width: 40rem;
   }
 `
 

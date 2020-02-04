@@ -9,6 +9,10 @@ export const standardText = css`
   letter-spacing: -0.02rem;
   color: ${theme.colors.black};
   font-weight: ${theme.fontWeight.medium};
+`
+
+export const standardTextLG = css`
+  ${standardText}
 
   ${mq.desktopWide} {
     font-size: 3rem;

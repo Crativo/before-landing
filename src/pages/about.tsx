@@ -9,7 +9,7 @@ import styled from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
-import { standardText } from '../styles/text'
+import { standardText, standardTextLG } from '../styles/text'
 
 const TeamItemWrap = styled.div`
   margin-bottom: 4rem;
@@ -46,7 +46,7 @@ const StyledImg = styled.img`
 `
 
 const TeamItemDetails = styled.div`
-  ${standardText}
+  ${standardTextLG}
   display: flex;
   flex-direction: column;
   margin-top: 2rem;

@@ -61,14 +61,23 @@ const FooterFoot = styled.div`
 `
 
 const FooterLogo = styled.div`
+  order: 4;
   display: flex;
   flex: 0 1 auto;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-top: 4rem;
 
   ${mq.tablet} {
+    margin-top: 0;
+    order: 0;
     flex-direction: row;
     margin-right: 5rem;
+  }
+
+  ${mq.tabletWide} {
+    flex-direction: row;
+    margin-right: 5rem;
+    margin-bottom: 4rem;
   }
 
   ${mq.desktop} {
@@ -79,12 +88,18 @@ const FooterLogo = styled.div`
 
 export const StyledLink = styled(Link)`
   flex: 0 1 auto;
+  margin-bottom: 1rem;
+
   &:hover {
     opacity: 0.5;
   }
   
   ${mq.tablet} {
     margin-right: 1rem;
+  }
+
+  ${mq.desktop} {
+    margin-right: 4rem;
   }
 `
 
@@ -108,6 +123,7 @@ export const StyledSocialNavigation = styled.div`
   flex: 0 1 auto;
   justify-content: space-between;
   flex-direction: column;
+  margin-top: 2rem;
 
   a {
     &:hover {
@@ -121,6 +137,7 @@ export const StyledSocialNavigation = styled.div`
 
   ${mq.tablet} {
     flex-direction: row;
+    margin-top: 0;
   }
 `
 

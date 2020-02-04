@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
-import { standardText } from '../styles/text'
+import { standardText, standardTextLG } from '../styles/text'
 
 const CardList = styled.div`
   display: flex;
@@ -33,7 +33,7 @@ const CardItem = styled.div`
 `
 
 const CardTitle = styled.h3`
-  ${standardText}
+  ${standardTextLG}
   margin: 0;
 
   ${mq.tablet} {
@@ -46,7 +46,7 @@ const CardTitle = styled.h3`
 `
 
 const CardInfo = styled.div`
-  ${standardText}
+  ${standardTextLG}
   color: ${theme.colors.darkerGrey};
 
   ${mq.tablet} {

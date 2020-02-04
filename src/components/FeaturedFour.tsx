@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components'
 import theme from '../styles/theme'
 import { mq } from '../styles/media'
 import { Link } from 'gatsby'
-import { standardText } from '../styles/text'
+import { standardText, standardTextLG } from '../styles/text'
 
 const CaseStudy = styled(Link)`
   display: flex;
@@ -33,7 +33,16 @@ const CaseStudyImageWrap = styled.div`
   height: auto;
   
   ${mq.tablet} {
+    max-height: 38rem;
     margin-bottom: 3.2rem;
+  }
+
+  ${mq.desktop} {
+    max-height: 44rem;
+  }
+
+  ${mq.desktopWide} {
+    max-height: 50rem;
   }
 `
 
@@ -46,6 +55,11 @@ const CaseStudyWrap = styled.div`
   }
 
   ${mq.desktop} {
+    margin-bottom: 5rem;
+  }
+
+  ${mq.desktopWide} {
+    margin-bottom: 6rem;
   }
 `
 
@@ -61,7 +75,7 @@ const StyledFeaturedFour = styled.div`
 `
 
 const CaseStudyFoot = styled.div`
-  ${standardText}
+  ${standardTextLG}
   display: flex;
 `
 
