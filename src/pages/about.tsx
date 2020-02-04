@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import { graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade'
+import Fade from '../components/Fade'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Container from '../components/Container'
@@ -9,7 +9,7 @@ import styled from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
-import { standardText, standardTextLG } from '../styles/text'
+import { standardTextLG } from '../styles/text'
 
 const TeamItemWrap = styled.div`
   margin-bottom: 4rem;
@@ -74,7 +74,7 @@ class About extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <Fade bottom>
+            <Fade>
               <PageHeadline>
                 {aboutPage.pageHeadline}
               </PageHeadline>
@@ -83,7 +83,7 @@ class About extends Component<{ data: any }> {
             <TeamSection>
               {people.map((person: any) => (
                 <TeamItemWrap key={person.node.id}>
-                  <Fade bottom delay={1000}>
+                  <Fade>
                     <TeamItem>
                       <TeamItemPic src={person.node.profileImage} />
                       <TeamItemDetails>

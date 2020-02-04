@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Fade from 'react-reveal/Fade'
+import Fade from '../components/Fade'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import styled, { css } from 'styled-components'
@@ -40,8 +40,6 @@ const ServiceItem = styled.div`
     margin-right: 3rem;
   }
 `
-
-
 
 const ServiceTitle = styled.h3`
   ${standardTextLG}
@@ -168,7 +166,7 @@ class Services extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <Fade bottom>
+            <Fade>
               <PageHeadline>
                 Simplified communication and intuitive controls, before anything
                 else.
@@ -176,7 +174,7 @@ class Services extends Component<{ data: any }> {
             </Fade>
 
             <ProvidedServices>
-              <Fade bottom>
+              <Fade>
                 <ServiceItem>
                   <ServiceTitle>Branding</ServiceTitle>
                   <ServiceDetails>Naming</ServiceDetails>
@@ -185,7 +183,7 @@ class Services extends Component<{ data: any }> {
                 </ServiceItem>
               </Fade>
 
-              <Fade bottom>
+              <Fade>
                 <ServiceItem>
                   <ServiceTitle>Motion</ServiceTitle>
                   <ServiceDetails>Explainer</ServiceDetails>
@@ -194,7 +192,7 @@ class Services extends Component<{ data: any }> {
                 </ServiceItem>
               </Fade>
 
-              <Fade bottom>
+              <Fade>
                 <ServiceItem>
                   <ServiceTitle>Interactive</ServiceTitle>
                   <ServiceDetails>Website / Eshop</ServiceDetails>
@@ -203,7 +201,7 @@ class Services extends Component<{ data: any }> {
                 </ServiceItem>
               </Fade>
 
-              <Fade bottom>
+              <Fade>
                 <ServiceItem>
                   <ServiceTitle>Photography</ServiceTitle>
                   <ServiceDetails>Product</ServiceDetails>
@@ -220,7 +218,7 @@ class Services extends Component<{ data: any }> {
             <SectionWrap>
               <CreativeRow>
                 <CreativeLeft>
-                  <Fade bottom>
+                  <Fade>
                     <CreativeProcessText>
                       Following process to make sure we deliver design that
                       actually serves you
@@ -228,7 +226,7 @@ class Services extends Component<{ data: any }> {
                   </Fade>
                 </CreativeLeft>
                 <CreativeRight>
-                  <Fade bottom>
+                  <Fade>
                     <ProcessItem>
                       <ProcessItemNumber>1</ProcessItemNumber>
                       <ProcessInfo>

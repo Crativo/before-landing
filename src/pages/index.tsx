@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import { graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade'
+import Fade from '../components/Fade'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { PageHeadline, PageHeadlineSpace } from '../components/PageHeadline'
@@ -18,7 +18,7 @@ class Landing extends Component<{data: any}> {
         <Header />
         <Container>
           <SectionWrap>
-            <Fade bottom>
+            <Fade>
               <PageHeadlineSpace>
                 <PageHeadline>
                   {landingPage.pageHeadline}

@@ -1,11 +1,11 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade'
+import Fade from './Fade'
 import Container from './Container'
 import styled, { css } from 'styled-components'
 import theme from '../styles/theme'
 import { mq } from '../styles/media'
 import { Link } from 'gatsby'
-import { standardText, standardTextLG } from '../styles/text'
+import { standardTextLG } from '../styles/text'
 
 const CaseStudy = styled(Link)`
   display: flex;
@@ -96,7 +96,7 @@ export const FeaturedFour = ({ caseStudies }: any) => (
     <StyledFeaturedFour>
       {caseStudies.map((caseStudy: any, index: number) => (
         <CaseStudyWrap key={index}>
-          <Fade bottom>
+          <Fade>
             <CaseStudy to={`/work/${caseStudy.parent.name}`}>
               <CaseStudyImageWrap>
                 <CaseStudyImage src={caseStudy.coverImageHorizontal || '/img/nocover.png'} />

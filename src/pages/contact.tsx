@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from 'react'
-import Fade from 'react-reveal/Fade'
+import Fade from '../components/Fade'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Container from '../components/Container'
@@ -65,13 +65,13 @@ class Contact extends Component<{ data: any }> {
         <Header />
         <Container>
           <SectionWrap>
-            <Fade bottom>
+            <Fade>
               <PageHeadline>
                 Contact us if your business can't afford being misunderstood.
               </PageHeadline>
             </Fade>
 
-              <Fade bottom delay={700}>
+              <Fade>
             <CardList>
                 <CardItem>
                   <CardTitle>Contact us</CardTitle>
