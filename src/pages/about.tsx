@@ -81,9 +81,9 @@ class About extends Component<{ data: any }> {
             </Fade>
 
             <TeamSection>
-              {people.map((person: any) => (
+              {people.map((person: any, index: number) => (
                 <TeamItemWrap key={person.node.id}>
-                  <Fade key={person.node.id}>
+                  <Fade key={index} delay={index * 200}>
                     <TeamItem>
                       <TeamItemPic src={person.node.profileImage} />
                       <TeamItemDetails>

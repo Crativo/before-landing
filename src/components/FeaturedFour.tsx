@@ -97,7 +97,7 @@ export const FeaturedFour = ({ caseStudies }: any) => (
     <StyledFeaturedFour>
         {caseStudies.map((caseStudy: any, index: number) => (
           <CaseStudyWrap key={index}>
-            <Fade key={index}>
+            <Fade key={index} delay={index * 200}>
               <CaseStudy to={`/work/${caseStudy.parent.name}`}>
                 <CaseStudyImageWrap>
                   <CaseStudyImage

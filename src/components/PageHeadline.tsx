@@ -3,15 +3,6 @@ import { mq } from '../styles/media'
 import theme from '../styles/theme'
 
 export const PageHeadlineSpace = styled.div`
-    /* height: 70vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 30rem;
-
-    ${mq.tablet} {
-      max-height: initial;
-    } */
 `
 
 export const PageHeadline = styled.h2`
