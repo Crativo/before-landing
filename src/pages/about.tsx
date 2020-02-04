@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import { graphql } from 'gatsby'
+import TransitionGroup from 'react-transition-group/TransitionGroup'
 import Fade from '../components/Fade'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -16,10 +17,9 @@ const TeamItemWrap = styled.div`
 `
 
 const TeamItem = styled.div`
-  /* margin-bottom: 6rem; */
 `
 
-const TeamSection = styled.div`
+const TeamSection = styled(TransitionGroup)`
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 10px;
@@ -83,7 +83,7 @@ class About extends Component<{ data: any }> {
             <TeamSection>
               {people.map((person: any) => (
                 <TeamItemWrap key={person.node.id}>
-                  <Fade>
+                  <Fade key={person.node.id}>
                     <TeamItem>
                       <TeamItemPic src={person.node.profileImage} />
                       <TeamItemDetails>

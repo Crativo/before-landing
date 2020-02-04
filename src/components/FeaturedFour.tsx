@@ -2,6 +2,7 @@ import React from 'react'
 import Fade from './Fade'
 import Container from './Container'
 import styled, { css } from 'styled-components'
+import TransitionGroup from 'react-transition-group/TransitionGroup'
 import theme from '../styles/theme'
 import { mq } from '../styles/media'
 import { Link } from 'gatsby'
@@ -31,7 +32,7 @@ const CaseStudyImageWrap = styled.div`
   max-height: 30rem;
   width: auto;
   height: auto;
-  
+
   ${mq.tablet} {
     max-height: 38rem;
     margin-bottom: 3.2rem;
@@ -63,7 +64,7 @@ const CaseStudyWrap = styled.div`
   }
 `
 
-const StyledFeaturedFour = styled.div`
+const StyledFeaturedFour = styled(TransitionGroup)`
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
@@ -94,22 +95,24 @@ const WorkType = styled.div`
 export const FeaturedFour = ({ caseStudies }: any) => (
   <Container>
     <StyledFeaturedFour>
-      {caseStudies.map((caseStudy: any, index: number) => (
-        <CaseStudyWrap key={index}>
-          <Fade>
-            <CaseStudy to={`/work/${caseStudy.parent.name}`}>
-              <CaseStudyImageWrap>
-                <CaseStudyImage src={caseStudy.coverImageHorizontal || '/img/nocover.png'} />
-              </CaseStudyImageWrap>
-              <CaseStudyFoot>
-                <BrandName>{caseStudy.brandName}</BrandName>
-                <Splitter>&nbsp;/&nbsp;</Splitter>
-                <WorkType>{caseStudy.workType}</WorkType>
-              </CaseStudyFoot>
-            </CaseStudy>
-          </Fade>
+        {caseStudies.map((caseStudy: any, index: number) => (
+          <CaseStudyWrap key={index}>
+            <Fade key={index}>
+              <CaseStudy to={`/work/${caseStudy.parent.name}`}>
+                <CaseStudyImageWrap>
+                  <CaseStudyImage
+                    src={caseStudy.coverImageHorizontal || '/img/nocover.png'}
+                  />
+                </CaseStudyImageWrap>
+                <CaseStudyFoot>
+                  <BrandName>{caseStudy.brandName}</BrandName>
+                  <Splitter>&nbsp;/&nbsp;</Splitter>
+                  <WorkType>{caseStudy.workType}</WorkType>
+                </CaseStudyFoot>
+              </CaseStudy>
+            </Fade>
           </CaseStudyWrap>
-      ))}
+        ))}
     </StyledFeaturedFour>
   </Container>
 )
