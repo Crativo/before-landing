@@ -7,6 +7,23 @@ import { PageHeadline, PageHeadlineSpace } from '../components/PageHeadline'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import { FeaturedFour } from '../components/FeaturedFour'
+import styled from 'styled-components'
+import { mq } from '../styles/media'
+
+const StyledPageHeadline = styled(PageHeadline)`
+  ${mq.desktop} {
+    font-size: 10rem;
+    letter-spacing: -0.08;
+    line-height: 9.6rem;
+  }
+
+  ${mq.desktopWide} {
+    font-size: 16rem;
+    letter-spacing: -0.16rem;
+    line-height: 15.3rem;
+    max-width: 146.6rem;
+  }
+`
 
 class Landing extends Component<{data: any}> {
   render() {
@@ -20,9 +37,9 @@ class Landing extends Component<{data: any}> {
           <SectionWrap>
             <Fade>
               <PageHeadlineSpace>
-                <PageHeadline>
+                <StyledPageHeadline>
                   {landingPage.pageHeadline}
-                </PageHeadline>
+                </StyledPageHeadline>
               </PageHeadlineSpace>
             </Fade>
             <FeaturedFour caseStudies={caseStudies.slice(0, 4)} />
