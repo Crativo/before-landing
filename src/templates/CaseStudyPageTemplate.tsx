@@ -6,16 +6,18 @@ import styled from 'styled-components'
 
 const StyledCaseStudyTemplate = styled.div`
   margin-bottom: 12rem;
-` 
+`
 
-class CaseStudyPageTemplate extends Component<{ pageContext: any}> {
+class CaseStudyPageTemplate extends Component<{ pageContext: any }> {
   render() {
     const caseStudy = this.props.pageContext.node
 
     return (
       <Fragment>
         <Header />
-          <StyledCaseStudyTemplate><CaseStudyTemplate caseStudy={caseStudy} /></StyledCaseStudyTemplate>
+        <StyledCaseStudyTemplate>
+          <CaseStudyTemplate caseStudy={caseStudy} />
+        </StyledCaseStudyTemplate>
         <Footer />
       </Fragment>
     )

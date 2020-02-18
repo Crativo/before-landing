@@ -23,6 +23,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             brandName
             brandPageHeadline
             workType
+            workDetails
             spacing
             rows {
               cols {

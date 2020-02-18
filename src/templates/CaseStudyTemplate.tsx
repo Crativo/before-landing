@@ -70,7 +70,7 @@ interface CaseStudy {
   spacing: number
   brandPageHeadline: string
   brandName: string
-  workType: string
+  workDetails: string
 }
 
 class CaseStudyTemplate extends Component<{ caseStudy: CaseStudy }> {
@@ -94,7 +94,7 @@ class CaseStudyTemplate extends Component<{ caseStudy: CaseStudy }> {
           <StyledTop>
             <PageHeadline>{caseStudy?.brandPageHeadline}</PageHeadline>
             <BrandName>{caseStudy?.brandName}</BrandName>
-            <WorkType>{caseStudy?.workType}</WorkType>
+            <WorkType>{caseStudy?.workDetails}</WorkType>
           </StyledTop>
         </SectionWrap>
 
