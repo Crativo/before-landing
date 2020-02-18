@@ -57,6 +57,7 @@ const ProcessSection = styled.div`
 
 const CreativeProcessText = styled.h3`
   font-size: 4rem;
+  font-weight: ${theme.fontWeight.medium};
   line-height: 4rem;
   color: ${theme.colors.white};
   margin-top: 0;
