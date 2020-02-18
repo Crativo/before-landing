@@ -22,29 +22,32 @@ export const StyledHeader = styled.header`
 export const StyledNavigation = styled.header`
   ${standardText}
   display: none;
-  color: ${theme.colors.black};
   font-weight: ${theme.fontWeight.medium};
 
   ${mq.tablet} {
     display: flex;
   }
-`
 
-export const StyledLink = styled(Link)`
-  margin-left: 4rem;
-  padding: 0.5rem 0.25rem;
+  .router-link {
+    margin-left: 4rem;
+    padding: 0.5rem 0.25rem;
+    color: ${theme.colors.darkerGrey};
 
-  &:hover {
-    opacity: 0.5;
-    /* color: ${theme.colors.primary}; */
+    &:hover {
+      color: ${theme.colors.black};
+    }
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    ${mq.desktop} {
+      margin-left: 8rem;
+    }
   }
-  
-  &:nth-child(1) {
-    margin-left: 0;
-  }
 
-  ${mq.desktop} {
-    margin-left: 8rem;
+  .active {
+    color: ${theme.colors.black};
   }
 `
 
@@ -56,10 +59,20 @@ export const StyledWrapBurger = styled.div`
   }
 `
 
+const isPartiallyActive = ({
+  isPartiallyCurrent,
+}: {
+  isPartiallyCurrent: boolean
+}) => {
+  return isPartiallyCurrent
+    ? { className: 'router-link active' }
+    : { className: 'router-link' }
+}
+
 const Header = () => {
   const [open, setOpen] = useState(false)
   const node = useRef()
-  const menuId = "main-menu"
+  const menuId = 'main-menu'
 
   useOnClickOutside(node, () => setOpen(false))
 
@@ -67,12 +80,22 @@ const Header = () => {
     <Container>
       <SectionWrap>
         <StyledHeader>
-          <Link to="/"><LogoIcon /></Link>        
+          <Link to="/">
+            <LogoIcon />
+          </Link>
           <StyledNavigation>
-            <StyledLink to="/work">work</StyledLink>
-            <StyledLink to="/services">services</StyledLink>
-            <StyledLink to="/about">about</StyledLink>
-            <StyledLink to="/contact">contact</StyledLink>
+            <Link to="/work" getProps={isPartiallyActive}>
+              work
+            </Link>
+            <Link to="/services" getProps={isPartiallyActive}>
+              services
+            </Link>
+            <Link to="/about" getProps={isPartiallyActive}>
+              about
+            </Link>
+            <Link to="/contact" getProps={isPartiallyActive}>
+              contact
+            </Link>
           </StyledNavigation>
           <StyledWrapBurger>
             <FocusLock disabled={!open}>

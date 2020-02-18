@@ -4,12 +4,12 @@ import Footer from '../components/Footer'
 import Fade from '../components/Fade'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
 import { graphql } from 'gatsby'
-import { standardText, standardTextLG } from '../styles/text'
+import { standardTextLG } from '../styles/text'
 
 const ProvidedServices = styled.div`
   display: flex;
