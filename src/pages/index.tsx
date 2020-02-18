@@ -71,6 +71,7 @@ export const query = graphql`
         id
         brandName
         workType
+        workDetails
         coverImageSquare
         coverImageHorizontal
         parent {
