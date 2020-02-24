@@ -1,17 +1,17 @@
 {
-  "slug": "devotrack",
-  "brandName": "Devotrack",
-  "brandPageHeadline": "Lovebrands also need their own eshop, sometimes.",
-  "workType": "Logo / Web Design / Illustrations",
-  "workDetails": "",
   "coverImageSquare": "/img/devotrack-–-3.png",
-  "coverImageHorizontal": "/img/devotrack-–-4.png",
   "spacing": 0,
+  "coverImageHorizontal": "/img/devotrack-–-4.png",
+  "brandPageHeadline": "Lovebrands also need their own eshop, sometimes.",
+  "workType": "Visual Identity",
+  "slug": "devotrack",
+  "workDetails": "Logo / Web Design / Illustrations",
+  "brandName": "Devotrack",
   "rows": [
     {
       "cols": [
         {
-          "imageSrc": "/img/group-1366.png"
+          "imageSrc": "/img/devotrack_Logo.png"
         }
       ]
     },
