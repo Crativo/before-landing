@@ -187,7 +187,7 @@ class Services extends Component<{ data: any }> {
               <Fade>
                 <ServiceItem>
                   <ServiceTitle>Motion</ServiceTitle>
-                  <ServiceDetails>Explainer</ServiceDetails>
+                  <ServiceDetails>Explainer Video</ServiceDetails>
                   <ServiceDetails>Presentation</ServiceDetails>
                   <ServiceDetails>Infographics</ServiceDetails>
                 </ServiceItem>
@@ -204,10 +204,10 @@ class Services extends Component<{ data: any }> {
 
               <Fade>
                 <ServiceItem>
-                  <ServiceTitle>Photography</ServiceTitle>
-                  <ServiceDetails>Product</ServiceDetails>
-                  <ServiceDetails>Lifestyle</ServiceDetails>
-                  <ServiceDetails>Food</ServiceDetails>
+                  <ServiceTitle>Production</ServiceTitle>
+                  <ServiceDetails>Promotional Video</ServiceDetails>
+                  <ServiceDetails>Lifestyle Photography</ServiceDetails>
+                  <ServiceDetails>Product Photography</ServiceDetails>
                 </ServiceItem>
               </Fade>
             </ProvidedServices>
