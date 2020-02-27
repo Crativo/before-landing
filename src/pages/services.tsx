@@ -23,6 +23,7 @@ const ProvidedServices = styled.div`
   }
 
   ${mq.desktop} {
+    max-width: 106rem;
   }
 `
 
