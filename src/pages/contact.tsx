@@ -74,7 +74,7 @@ class Contact extends Component<{ data: any }> {
               <Fade>
             <CardList>
                 <CardItem>
-                  <CardTitle>Contact us</CardTitle>
+                  <CardTitle>Contact Info</CardTitle>
                   <CardInfo>
                     <div>Michal Ivanecký</div>
                     <div>+ 420 601 097 043</div>
@@ -83,7 +83,7 @@ class Contact extends Component<{ data: any }> {
                 </CardItem>
 
                 <CardItem>
-                  <CardTitle>Meet us</CardTitle>
+                  <CardTitle>Prague Office</CardTitle>
                   <CardInfo>
                     <div>Slavíkova 1611/5</div>
                     <div>120 00 Vinohrady</div>
@@ -94,7 +94,7 @@ class Contact extends Component<{ data: any }> {
 
 
                 <CardItem>
-                  <CardTitle>Sue us</CardTitle>
+                  <CardTitle>Company Details</CardTitle>
                   <CardInfo>
                     <div>Chopsticks s.r.o.</div>
                     <div>IC: 03604080</div>
