@@ -152,7 +152,7 @@ const Navigation = () => (
 
 const SocialLinks = () => (
   <StyledSocialNavigation>
-    <a href="http://instagram.com" target="_blank">instagram</a>
+    {/* <a href="http://instagram.com" target="_blank">instagram</a> */}
   </StyledSocialNavigation>
 )
 

@@ -6,9 +6,20 @@ import { mq } from '../styles/media'
 import styled, { css } from 'styled-components'
 import theme from '../styles/theme'
 
+const StyledPageHeadline = styled(PageHeadline)`
+  ${mq.desktop} {
+    margin-bottom: 8rem;
+  }
+`
+
 const BrandName = styled.div`
-  font-size: 3.2rem;
-  line-height: 4.4rem;
+  font-size: 2rem; 
+  line-height: 2.4rem;
+
+  ${mq.tablet} {
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+  }
 `
 
 const StyledTop = styled.div`
@@ -22,8 +33,13 @@ const StyledTop = styled.div`
 const WorkType = styled.div`
   color: ${theme.colors.darkerGrey};
 
-  font-size: 3.2rem;
-  line-height: 4.4rem;
+  font-size: 2rem; 
+  line-height: 2.4rem;
+
+  ${mq.tablet} {
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+  }
 `
 
 const StyledImageItem = styled.img`
@@ -92,7 +108,7 @@ class CaseStudyTemplate extends Component<{ caseStudy: CaseStudy }> {
       <Container>
         <SectionWrap>
           <StyledTop>
-            <PageHeadline>{caseStudy?.brandPageHeadline}</PageHeadline>
+            <StyledPageHeadline>{caseStudy?.brandPageHeadline}</StyledPageHeadline>
             <BrandName>{caseStudy?.brandName}</BrandName>
             <WorkType>{caseStudy?.workDetails}</WorkType>
           </StyledTop>
