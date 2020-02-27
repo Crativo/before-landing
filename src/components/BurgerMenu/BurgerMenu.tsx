@@ -16,7 +16,6 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   transition: transform 0.2s ease-in-out;
   width: 100%;
   z-index: 1;
-  overflow-y: hidden;
 
   ${({ open }) => open ? 'display: flex;' : 'display: none;'};
 
