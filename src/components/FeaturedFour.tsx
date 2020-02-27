@@ -77,7 +77,6 @@ const StyledFeaturedFour = styled(TransitionGroup)`
 
 const CaseStudyFoot = styled.div`
   ${standardTextLG}
-  display: flex;
 `
 
 const BrandName = styled.div`
@@ -106,7 +105,6 @@ export const FeaturedFour = ({ caseStudies }: any) => (
                 </CaseStudyImageWrap>
                 <CaseStudyFoot>
                   <BrandName>{caseStudy.brandName}</BrandName>
-                  <Splitter>&nbsp;/&nbsp;</Splitter>
                   <WorkType>{caseStudy.workType}</WorkType>
                 </CaseStudyFoot>
               </CaseStudy>

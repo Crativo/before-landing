@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 import { mq } from '../../styles/media'
@@ -15,18 +15,18 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   right: 0;
   bottom: 0;
   left: 0;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.2s ease-in-out;
   background: ${theme.colors.primary};
   text-align: left;
 
-  ${({ open }) => open ? 'display: flex;' : 'display: none;'};
+  ${({ open }) => (open ? 'display: flex;' : 'display: none;')};
 
   ${mq.tablet} {
     display: none;
     width: 40rem;
   }
-`;
+`
 
 export const StyledLink = styled(Link)`
   margin-left: 2rem;
@@ -52,19 +52,56 @@ const LinksWrap = styled.div`
   margin-top: 3rem;
 `
 
-const Menu = ({ open, ...props }: { open: boolean; setOpen: (isOpen: boolean) => void; id: string }) => {
-  const [isHidden, setIsHidden] = useState<boolean>(Boolean(open))
-  // const isHidden = open ? true : false
+const Menu = ({
+  open,
+  setOpen,
+  ...props
+}: {
+  open: boolean
+  setOpen: (isOpen: boolean) => void
+  id: string
+}) => {
+  const isHidden = open ? true : false
   const tabIndex = isHidden ? 0 : -1
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-<LinksWrap>
-        <StyledLink to="/" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>Home</StyledLink>
-        <StyledLink to="/work" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>Work</StyledLink>
-        <StyledLink to="/services" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>Services</StyledLink>
-        <StyledLink to="/about" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>About</StyledLink>
-        <StyledLink to="/contact" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>Contact</StyledLink>
+      <LinksWrap>
+        <StyledLink
+          to="/"
+          onClick={() => setOpen(false)}
+          tabIndex={tabIndex}
+        >
+          Home
+        </StyledLink>
+        <StyledLink
+          to="/work"
+          onClick={() => setOpen(false)}
+          tabIndex={tabIndex}
+        >
+          Work
+        </StyledLink>
+        <StyledLink
+          to="/services"
+          onClick={() => setOpen(false)}
+          tabIndex={tabIndex}
+        >
+          Services
+        </StyledLink>
+        <StyledLink
+          to="/about"
+          onClick={() => setOpen(false)}
+          tabIndex={tabIndex}
+        >
+          About
+        </StyledLink>
+        <StyledLink
+          to="/contact"
+          onClick={() => setOpen(false)}
+          tabIndex={tabIndex}
+        >
+          Contact
+        </StyledLink>
       </LinksWrap>
     </StyledMenu>
   )
