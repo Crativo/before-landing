@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 import { mq } from '../../styles/media'
 import { Link } from 'gatsby'
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
+  z-index: 1;
   display: flex;
-  background: ${theme.colors.primary};
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-  height: 100vh;
-  text-align: left;
   position: absolute;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
   top: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
   transition: transform 0.2s ease-in-out;
-  width: 100%;
-  z-index: 1;
+  background: ${theme.colors.primary};
+  text-align: left;
 
   ${({ open }) => open ? 'display: flex;' : 'display: none;'};
 
@@ -34,6 +37,7 @@ export const StyledLink = styled(Link)`
   color: ${theme.colors.white};
   text-decoration: none;
   transition: color 0.3s linear;
+  outline: none;
 
   &:hover {
     opacity: 1;
@@ -43,24 +47,24 @@ export const StyledLink = styled(Link)`
 const LinksWrap = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   position: relative;
-  margin-bottom: 3.8rem;
+  margin-top: 3rem;
 `
 
 const Menu = ({ open, ...props }: { open: boolean; setOpen: (isOpen: boolean) => void; id: string }) => {
-  const isHidden = open ? true : false
+  const [isHidden, setIsHidden] = useState<boolean>(Boolean(open))
+  // const isHidden = open ? true : false
   const tabIndex = isHidden ? 0 : -1
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <LinksWrap>
-      <StyledLink to="/" tabIndex={tabIndex}>Home</StyledLink>
-        
-      <StyledLink to="/work" tabIndex={tabIndex}>Work</StyledLink>
-      <StyledLink to="/services" tabIndex={tabIndex}>Services</StyledLink>
-      <StyledLink to="/about" tabIndex={tabIndex}>About</StyledLink>
-      <StyledLink to="/contact" tabIndex={tabIndex}>Contact</StyledLink>
+<LinksWrap>
+        <StyledLink to="/" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>Home</StyledLink>
+        <StyledLink to="/work" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>Work</StyledLink>
+        <StyledLink to="/services" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>Services</StyledLink>
+        <StyledLink to="/about" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>About</StyledLink>
+        <StyledLink to="/contact" onClick={() => setIsHidden(false)} tabIndex={tabIndex}>Contact</StyledLink>
       </LinksWrap>
     </StyledMenu>
   )
