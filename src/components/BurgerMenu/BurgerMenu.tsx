@@ -6,12 +6,9 @@ import { Link } from 'gatsby'
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   background: ${theme.colors.primary};
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
   height: 100vh;
-  padding-bottom: 3.8rem;
   text-align: left;
   position: absolute;
   top: 0;
@@ -19,6 +16,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   transition: transform 0.2s ease-in-out;
   width: 100%;
   z-index: 1;
+  overflow-y: hidden;
 
   ${({ open }) => open ? 'display: flex;' : 'display: none;'};
 
@@ -38,11 +36,17 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   transition: color 0.3s linear;
 
-  /* opacity: 0.7; */
-
   &:hover {
     opacity: 1;
   }
+`
+
+const LinksWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: 3.8rem;
 `
 
 const Menu = ({ open, ...props }: { open: boolean; setOpen: (isOpen: boolean) => void; id: string }) => {
@@ -51,11 +55,14 @@ const Menu = ({ open, ...props }: { open: boolean; setOpen: (isOpen: boolean) =>
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+      <LinksWrap>
       <StyledLink to="/" tabIndex={tabIndex}>Home</StyledLink>
+        
       <StyledLink to="/work" tabIndex={tabIndex}>Work</StyledLink>
       <StyledLink to="/services" tabIndex={tabIndex}>Services</StyledLink>
       <StyledLink to="/about" tabIndex={tabIndex}>About</StyledLink>
       <StyledLink to="/contact" tabIndex={tabIndex}>Contact</StyledLink>
+      </LinksWrap>
     </StyledMenu>
   )
 }

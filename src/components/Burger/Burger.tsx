@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
-import { mq } from '../../styles/media'
 
 export const StyledBurger = styled.button<{ open: boolean }>`
+  outline : none;
   position: relative;
   display: flex;
   flex-direction: column;
