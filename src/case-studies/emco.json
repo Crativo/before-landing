@@ -1,12 +1,12 @@
 {
-  "slug": "emco",
-  "brandName": "EMCO",
-  "brandPageHeadline": "Lovebrands also need their own eshop, sometimes.",
-  "workType": "UX / UI Design",
-  "workDetails": "",
   "coverImageSquare": "/img/square_cover.png",
-  "coverImageHorizontal": "/img/cover.png",
   "spacing": 0,
+  "coverImageHorizontal": "/img/cover.png",
+  "brandPageHeadline": "Lovebrands also need their own eshop.",
+  "workType": "Eshop",
+  "slug": "emco",
+  "workDetails": "UX / UI Design",
+  "brandName": "EMCO",
   "rows": [
     {
       "cols": [
