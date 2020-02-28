@@ -1,12 +1,12 @@
 {
-  "slug": "metronome-festival",
-  "brandName": "Metronome Festival",
-  "brandPageHeadline": "Lovebrands also need their own eshop, sometimes.",
-  "workType": "UX / UI Design",
-  "workDetails": "",
   "coverImageSquare": "/img/mask-group-202.png",
-  "coverImageHorizontal": "/img/mask-group-184.png",
   "spacing": 0,
+  "coverImageHorizontal": "/img/mask-group-184.png",
+  "brandPageHeadline": "Lovebrands also need their own eshop, sometimes.",
+  "workType": "Website",
+  "slug": "metronome-festival",
+  "workDetails": "UX / UI Design",
+  "brandName": "Metronome Festival",
   "rows": [
     {
       "cols": [
