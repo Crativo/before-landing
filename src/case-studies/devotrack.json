@@ -1,6 +1,6 @@
 {
   "coverImageSquare": "/img/devotrack-–-3.png",
-  "spacing": 0,
+  "spacing": 10,
   "coverImageHorizontal": "/img/devotrack-–-4.png",
   "brandPageHeadline": "Automatize workflow manager for developers",
   "workType": "Visual Identity",
@@ -43,13 +43,6 @@
       "cols": [
         {
           "imageSrc": "/img/group-1472.png"
-        }
-      ]
-    },
-    {
-      "cols": [
-        {
-          "imageSrc": "/img/96813298_1127632240936273_7535803369630203904_n.gif"
         }
       ]
     }
