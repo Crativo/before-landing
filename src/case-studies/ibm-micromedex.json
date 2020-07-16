@@ -1,0 +1,60 @@
+{
+  "brandPageHeadline": "Even a sophisticated software needs an easy to follow explainer video",
+  "slug": "IBM",
+  "brandName": "IBM Micromedex",
+  "workType": "Explainer Video",
+  "workDetails": "Graphic Design / Motion Design / Sound Design",
+  "coverImageHorizontal": "/img/COVER.png",
+  "spacing": 10,
+  "rows": [
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/02_PROBLEM_1:2.gif"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/03_ADVERSE-BLUE_1:2.gif"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/PALETA_1:2.gif"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/01_IBM_GRID_1:2.gif"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/04_SOLUTION_1:2.gif"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/05_HOW_IT_WORKS_1:2.gif"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/06_GRAPH_1:2.gif"
+        }
+      ]
+    }
+  ]
+}
