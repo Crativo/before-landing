@@ -1,4 +1,62 @@
 {
   "pageName": "services",
-  "pageHeadline": "Simplified communication and intuitive controls, before anything else."
+  "pageHeadline": "Simplified communication and intuitive controls, before anything else.",
+  "features": [
+    {
+      "featureCategories": [
+        {
+          "undefined": "Naming"
+        },
+        {
+          "undefined": "Visual Identity"
+        },
+        {
+          "undefined": "Brand Strategy"
+        }
+      ],
+      "undefined": "Branding"
+    },
+    {
+      "undefined": "Motion",
+      "featureCategories": [
+        {
+          "undefined": "Explainer Video"
+        },
+        {
+          "undefined": "Presentation"
+        },
+        {
+          "undefined": "Infographics"
+        }
+      ]
+    },
+    {
+      "undefined": "Interactive",
+      "featureCategories": [
+        {
+          "undefined": "Website / Eshop"
+        },
+        {
+          "undefined": "Mobile / Web App"
+        },
+        {
+          "undefined": "Game"
+        }
+      ]
+    },
+    {
+      "undefined": "Production",
+      "featureCategories": [
+        {
+          "undefined": "Promotional Video"
+        },
+        {
+          "undefined": "Lifestyle Photography"
+        },
+        {
+          "undefined": "Product Photography"
+        }
+      ]
+    }
+  ]
 }
