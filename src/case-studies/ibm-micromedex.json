@@ -1,11 +1,12 @@
 {
-  "brandPageHeadline": "Even a sophisticated software needs an easy to follow explainer video",
-  "slug": "IBM",
-  "brandName": "IBM Micromedex",
-  "workType": "Explainer Video",
-  "workDetails": "Graphic Design / Motion Design / Sound Design",
-  "coverImageHorizontal": "/img/COVER copy.png",
   "spacing": 10,
+  "coverImageHorizontal": "/img/COVER copy.png",
+  "position": 1,
+  "brandPageHeadline": "Even a sophisticated software needs an easy to follow explainer video",
+  "workType": "Explainer Video",
+  "slug": "IBM",
+  "workDetails": "Graphic Design / Motion Design / Sound Design",
+  "brandName": "IBM Micromedex",
   "rows": [
     {
       "cols": [
