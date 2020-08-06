@@ -5,56 +5,56 @@
     {
       "featureCategories": [
         {
-          "undefined": "Naming"
+          "name": "Naming"
         },
         {
-          "undefined": "Visual Identity"
+          "name": "Visual Identity"
         },
         {
-          "undefined": "Brand Strategy"
+          "name": "Brand Strategy"
         }
       ],
-      "undefined": "Branding"
+      "title": "Branding"
     },
     {
-      "undefined": "Motion",
+      "title": "Motion",
       "featureCategories": [
         {
-          "undefined": "Explainer Video"
+          "name": "Explainer Video"
         },
         {
-          "undefined": "Presentation"
+          "name": "Presentation"
         },
         {
-          "undefined": "Infographics"
+          "name": "Infographics"
         }
       ]
     },
     {
-      "undefined": "Interactive",
+      "title": "Interactive",
       "featureCategories": [
         {
-          "undefined": "Website / Eshop"
+          "name": "Website / Eshop"
         },
         {
-          "undefined": "Mobile / Web App"
+          "name": "Mobile / Web App"
         },
         {
-          "undefined": "Game"
+          "name": "Game"
         }
       ]
     },
     {
-      "undefined": "Production",
+      "title": "Production",
       "featureCategories": [
         {
-          "undefined": "Promotional Video"
+          "name": "Promotional Video"
         },
         {
-          "undefined": "Lifestyle Photography"
+          "name": "Lifestyle Photography"
         },
         {
-          "undefined": "Product Photography"
+          "name": "Product Photography"
         }
       ]
     }
