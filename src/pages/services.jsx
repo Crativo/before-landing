@@ -164,7 +164,6 @@ const CreativeRight = styled.div`
 class Services extends Component {
   render() {
     const servicesPage = this.props.data.servicesPage.edges[0].node
-    console.log(servicesPage)
     return (
       <Fragment>
         <Header />
