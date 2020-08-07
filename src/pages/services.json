@@ -58,5 +58,24 @@
         }
       ]
     }
+  ],
+  "processHeadline": "Following process to make sure we deliver design that actually serves you",
+  "process": [
+    {
+      "processTitle": "Understand",
+      "processText": "We dive deep into the problem we're trynig to solve and we define it."
+    },
+    {
+      "processTitle": "Strategize",
+      "processText": "We set a key message, structure of information and strategy to achieve understanding."
+    },
+    {
+      "processTitle": "Concept",
+      "processText": "We prepare a visual concept to make sure we're on the same page."
+    },
+    {
+      "processTitle": "Design",
+      "processText": "After we agreed on a concept and strategy, we proceed to make it all happen."
+    }
   ]
 }

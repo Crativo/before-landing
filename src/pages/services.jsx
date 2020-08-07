@@ -163,6 +163,8 @@ const CreativeRight = styled.div`
 
 class Services extends Component {
   render() {
+    const servicesPage = this.props.data.servicesPage.edges[0].node
+    console.log(servicesPage)
     return (
       <Fragment>
         <Header />
@@ -176,41 +178,16 @@ class Services extends Component {
             </Fade>
 
             <ProvidedServices>
-              <Fade>
-                <ServiceItem>
-                  <ServiceTitle>Branding</ServiceTitle>
-                  <ServiceDetails>Naming</ServiceDetails>
-                  <ServiceDetails>Visual Identity</ServiceDetails>
-                  <ServiceDetails>Brand Strategy</ServiceDetails>
-                </ServiceItem>
-              </Fade>
-
-              <Fade>
-                <ServiceItem>
-                  <ServiceTitle>Motion</ServiceTitle>
-                  <ServiceDetails>Explainer Video</ServiceDetails>
-                  <ServiceDetails>Presentation</ServiceDetails>
-                  <ServiceDetails>Infographics</ServiceDetails>
-                </ServiceItem>
-              </Fade>
-
-              <Fade>
-                <ServiceItem>
-                  <ServiceTitle>Interactive</ServiceTitle>
-                  <ServiceDetails>Website / Eshop</ServiceDetails>
-                  <ServiceDetails>Mobile / Web App</ServiceDetails>
-                  <ServiceDetails>Game</ServiceDetails>
-                </ServiceItem>
-              </Fade>
-
-              <Fade>
-                <ServiceItem>
-                  <ServiceTitle>Production</ServiceTitle>
-                  <ServiceDetails>Promotional Video</ServiceDetails>
-                  <ServiceDetails>Lifestyle Photography</ServiceDetails>
-                  <ServiceDetails>Product Photography</ServiceDetails>
-                </ServiceItem>
-              </Fade>
+              {servicesPage.features.map((feature, i) => (
+                <Fade key={i}>
+                  <ServiceItem>
+                    <ServiceTitle>{feature.title}</ServiceTitle>
+                    {feature.featureCategories.map((fc, j) => (
+                      <ServiceDetails key={j}>{fc.name}</ServiceDetails>
+                    ))}
+                  </ServiceItem>
+                </Fade>
+              ))}
             </ProvidedServices>
           </SectionWrap>
         </Container>
@@ -222,56 +199,23 @@ class Services extends Component {
                 <CreativeLeft>
                   <Fade>
                     <CreativeProcessText>
-                      Following process to make sure we deliver design that
-                      actually serves you
+                      {servicesPage.processHeadline}
                     </CreativeProcessText>
                   </Fade>
                 </CreativeLeft>
                 <CreativeRight>
                   <Fade>
-                    <ProcessItem>
-                      <ProcessItemNumber>1</ProcessItemNumber>
-                      <ProcessInfo>
-                        <ProcessItemTitle>Understand</ProcessItemTitle>
-                        <ProcessItemDetails>
-                          We dive deep into the problem we're trynig to solve
-                          and we define it.
-                        </ProcessItemDetails>
-                      </ProcessInfo>
-                    </ProcessItem>
-
-                    <ProcessItem>
-                      <ProcessItemNumber>2</ProcessItemNumber>
-                      <ProcessInfo>
-                        <ProcessItemTitle>Strategize</ProcessItemTitle>
-                        <ProcessItemDetails>
-                          We set a key message, structure of information and
-                          strategy to achieve understanding.
-                        </ProcessItemDetails>
-                      </ProcessInfo>
-                    </ProcessItem>
-
-                    <ProcessItem>
-                      <ProcessItemNumber>3</ProcessItemNumber>
-                      <ProcessInfo>
-                        <ProcessItemTitle>Concept</ProcessItemTitle>
-                        <ProcessItemDetails>
-                          We prepare a visual concept to make sure we're on the
-                          same page.
-                        </ProcessItemDetails>
-                      </ProcessInfo>
-                    </ProcessItem>
-
-                    <ProcessItem>
-                      <ProcessItemNumber>4</ProcessItemNumber>
-                      <ProcessInfo>
-                        <ProcessItemTitle>Design</ProcessItemTitle>
-                        <ProcessItemDetails>
-                          After we agreed on a concept and strategy, we proceed
-                          to make it all happen.
-                        </ProcessItemDetails>
-                      </ProcessInfo>
-                    </ProcessItem>
+                    {servicesPage.process.map((p, i) => (
+                      <ProcessItem key={i}>
+                        <ProcessItemNumber>{i + 1}</ProcessItemNumber>
+                        <ProcessInfo>
+                          <ProcessItemTitle>{p.processTitle}</ProcessItemTitle>
+                          <ProcessItemDetails>
+                            {p.processText}
+                          </ProcessItemDetails>
+                        </ProcessInfo>
+                      </ProcessItem>
+                    ))}
                   </Fade>
                 </CreativeRight>
               </CreativeRow>
@@ -286,11 +230,22 @@ class Services extends Component {
 
 export const query = graphql`
   query ServicesQuery {
-    landingPage: allPagesJson(filter: { pageName: { eq: "services" } }) {
+    servicesPage: allPagesJson(filter: { pageName: { eq: "services" } }) {
       edges {
         node {
           id
           pageHeadline
+          features {
+            title
+            featureCategories {
+              name
+            }
+          }
+          processHeadline
+          process {
+            processTitle
+            processText
+          }
         }
       }
     }

@@ -118,7 +118,7 @@ collections:
                     name: name
                     widget: string
           - label: ProcessHeadline
-            name:  ProcessHeadline
+            name:  processHeadline
             widget: string
           - label: Process
             name: process
