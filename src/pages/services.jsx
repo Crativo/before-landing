@@ -161,7 +161,7 @@ const CreativeRight = styled.div`
   }
 `
 
-class Services extends Component<{ data: any }> {
+class Services extends Component {
   render() {
     return (
       <Fragment>

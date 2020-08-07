@@ -5,7 +5,6 @@ module.exports = {
     title: 'Portfolio',
   },
   plugins: [
-    'gatsby-plugin-typescript',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',

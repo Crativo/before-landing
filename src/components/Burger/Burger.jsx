@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 
-export const StyledBurger = styled.button<{ open: boolean }>`
+export const StyledBurger = styled.button`
   outline : none;
   position: relative;
   display: flex;
@@ -37,7 +37,7 @@ export const StyledBurger = styled.button<{ open: boolean }>`
   }
 `;
 
-const Burger = ({ open, setOpen, ...props }: { open: boolean; setOpen: (isOpen: boolean) => void }) => {
+const Burger = ({ open, setOpen, ...props }) => {
   
   const isExpanded = open ? true : false
   

@@ -58,7 +58,7 @@ const CardInfo = styled.div`
   }
 `
 
-class Contact extends Component<{ data: any }> {
+class Contact extends Component {
   render() {
     return (
       <Fragment>

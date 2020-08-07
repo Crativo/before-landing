@@ -162,7 +162,7 @@ const Footer = () => (
       <SectionWrap>
         <ActionSection>
           <FooterActionTitle>What can we help you with?</FooterActionTitle>
-          <Link to="/services"><FooterAction>see our services -></FooterAction></Link>
+          <Link to="/services"><FooterAction>see our services {`->`}</FooterAction></Link>
         </ActionSection>
         <FooterFoot>
           <FooterLogo><LogoIcon /></FooterLogo>

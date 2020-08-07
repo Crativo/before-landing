@@ -1,73 +1,134 @@
 backend:
   name: github
   repo: Crativo/before-landing
-  branch: "master"
+  branch: 'master'
 collections:
-  - label: "People"
-    name: "people"
-    folder: "src/people"
+  - label: 'People'
+    name: 'people'
+    folder: 'src/people'
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     identifier_field: name
     extension: json
     fields:
-      - { label: "Name", name: "name", widget: string }
-      - { label: "Position", name: "position", widget: string }
-      - { label: "Profile Image", name: "profileImage", widget: image }
-  - label: "Case Studies"
-    name: "caseStudies"
-    folder: "src/case-studies"
+      - { label: 'Name', name: 'name', widget: string }
+      - { label: 'Position', name: 'position', widget: string }
+      - { label: 'Profile Image', name: 'profileImage', widget: image }
+  - label: 'Case Studies'
+    name: 'caseStudies'
+    folder: 'src/case-studies'
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     identifier_field: brandName
     extension: json
     fields:
-      - { label: "Page Headline", name: "brandPageHeadline", widget: string }
-      - { label: "Slug", name: "slug", widget: string }
-      - { label: "Brand Name", name: "brandName", widget: string }
-      - { label: "Work Type", name: "workType", widget: string }
-      - { label: "Work Details", name: "workDetails", widget: string }
-      - { label: "Cover Image Horizontal", name: "coverImageHorizontal", widget: image, required: false }
-      - { label: "Cover Image Square", name: "coverImageSquare", widget: image, required: false }
-      - { label: "Row/Col Spacing (px)", name: "spacing", widget: number, default: 0, valueType: "int", min: 0, max: 200 }
-      - label: "Rows"
-        name: "rows"
+      - {
+          label: 'Position',
+          name: 'position',
+          widget: number,
+          default: 0,
+          valueType: 'int',
+          min: 0,
+          max: 200,
+        }
+      - { label: 'Page Headline', name: 'brandPageHeadline', widget: string }
+      - { label: 'Slug', name: 'slug', widget: string }
+      - { label: 'Brand Name', name: 'brandName', widget: string }
+      - { label: 'Work Type', name: 'workType', widget: string }
+      - { label: 'Work Details', name: 'workDetails', widget: string }
+      - {
+          label: 'Cover Image Horizontal',
+          name: 'coverImageHorizontal',
+          widget: image,
+          required: false,
+        }
+      - {
+          label: 'Cover Image Square',
+          name: 'coverImageSquare',
+          widget: image,
+          required: false,
+        }
+      - {
+          label: 'Row/Col Spacing (px)',
+          name: 'spacing',
+          widget: number,
+          default: 0,
+          valueType: 'int',
+          min: 0,
+          max: 200,
+        }
+      - label: 'Rows'
+        name: 'rows'
         widget: list
         fields:
-          - label: "Cols"
-            name: "cols"
+          - label: 'Cols'
+            name: 'cols'
             widget: list
             fields:
-              - { label: "Image Item", name: "imageSrc", widget: image }
-  - label: "Pages"
-    name: "pages"
+              - { label: 'Image Item', name: 'imageSrc', widget: image }
+  - label: 'Pages'
+    name: 'pages'
     files:
-      - label: "Landing Page"
-        name: "landing"
-        file: "src/pages/landing.json"
+      - label: 'Landing Page'
+        name: 'landing'
+        file: 'src/pages/landing.json'
         fields:
-          - {label: PageHeadline, name: pageHeadline, widget: string}
-          - label: "Social Links"
-            name: "social"
-            widget: "list"
+          - { label: PageHeadline, name: pageHeadline, widget: string }
+          - label: 'Social Links'
+            name: 'social'
+            widget: 'list'
             fields:
               - label: Network
                 name: network
                 widget: select
                 options:
-                - { label: "Facebook", value: "facebook" }
-                - { label: "Instagram", value: "instagram" }
-                - { label: "LinkedIn", value: "linkedin" }
-              - {label: Link, name: link, widget: string}
-      - label: "Work Page"
-        name: "work"
-        file: "src/pages/work.json"
+                  - { label: 'Facebook', value: 'facebook' }
+                  - { label: 'Instagram', value: 'instagram' }
+                  - { label: 'LinkedIn', value: 'linkedin' }
+              - { label: Link, name: link, widget: string }
+      - label: 'Work Page'
+        name: 'work'
+        file: 'src/pages/work.json'
         fields:
-          - {label: PageHeadline, name: pageHeadline, widget: string}
-      - label: "About Page"
-        name: "about"
-        file: "src/pages/about.json"
+          - { label: PageHeadline, name: pageHeadline, widget: string }
+      - label: 'About Page'
+        name: 'about'
+        file: 'src/pages/about.json'
         fields:
-          - {label: PageHeadline, name: pageHeadline, widget: string}
+          - { label: PageHeadline, name: pageHeadline, widget: string }
+      - label: 'Services Page'
+        name: 'services'
+        file: 'src/pages/services.json'
+        fields:
+          - label: PageHeadline
+            name: pageHeadline
+            widget: string
+          - label: Features
+            name: features
+            widget: list
+            fields:
+              - label: title
+                name: title
+                widget: string
+              - label: FeatureCategories
+                name: featureCategories
+                widget: list
+                fields:
+                  - label: name
+                    name: name
+                    widget: string
+          - label: ProcessHeadline
+            name:  ProcessHeadline
+            widget: string
+          - label: Process
+            name: process
+            widget: list
+            fields:
+              - label: ProcessTitle
+                name: processTitle
+                widget: string
+              - label: ProcessText
+                name: processText
+                widget: string
 media_folder: static/img
 public_folder: /img

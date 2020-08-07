@@ -91,10 +91,15 @@ const WorkType = styled.div`
   color: ${theme.colors.darkerGrey};
 `
 
-export const FeaturedFour = ({ caseStudies }: any) => (
-  <Container>
-    <StyledFeaturedFour>
-        {caseStudies.map((caseStudy: any, index: number) => (
+export const FeaturedFour = ({ caseStudies }) => {
+  const sortedCaseStudies = caseStudies.sort((a, b) => {
+    return a.position > b.position ? 1 : -1
+  })
+  
+  return (
+    <Container>
+      <StyledFeaturedFour>
+        {sortedCaseStudies.map((caseStudy, index) => (
           <CaseStudyWrap key={index}>
             <Fade key={index} delay={index * 200}>
               <CaseStudy to={`/work/${caseStudy.parent.name}`}>
@@ -111,6 +116,7 @@ export const FeaturedFour = ({ caseStudies }: any) => (
             </Fade>
           </CaseStudyWrap>
         ))}
-    </StyledFeaturedFour>
-  </Container>
-)
+      </StyledFeaturedFour>
+    </Container>
+  )
+}

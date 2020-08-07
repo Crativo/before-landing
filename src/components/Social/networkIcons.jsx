@@ -6,6 +6,6 @@ const networks = {
   twitter: <Twitter />,
   linkedin: <LinkedIn />,
   instagram: <Instagram />,
-} as any
+}
 
 export default networks

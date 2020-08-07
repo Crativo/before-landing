@@ -20,6 +20,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allCaseStudiesJson(limit: 1000) {
           nodes {
             id
+            position
             brandName
             brandPageHeadline
             workType
@@ -50,7 +51,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Create pages for each file.
-  const CaseStudyTemplate = path.resolve(`src/templates/CaseStudyPageTemplate.tsx`)
+  const CaseStudyTemplate = path.resolve(`src/templates/CaseStudyPageTemplate.jsx`)
 
   result.data.allCaseStudiesJson.nodes.forEach((node) => {
     const path = `/work/${node.parent.name}`

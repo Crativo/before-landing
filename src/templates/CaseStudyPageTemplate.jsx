@@ -13,7 +13,7 @@ const StyledCaseStudyTemplate = styled.div`
   }
 `
 
-class CaseStudyPageTemplate extends Component<{ pageContext: any }> {
+class CaseStudyPageTemplate extends Component {
   render() {
     const caseStudy = this.props.pageContext.node
 

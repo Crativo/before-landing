@@ -2,9 +2,9 @@ import React from 'react'
 import { Ul, Li, Link } from './styled'
 import networkIcons from './networkIcons'
 
-const Social = ({ networks } : { networks: any }) => (
+const Social = ({ networks }) => (
   <Ul>
-    {networks.map((network: any) => (
+    {networks.map((network) => (
       <Li key={network.network}>
         <Link target="_blank" rel="noopener noreferrer" href={network.link}>
           {networkIcons[network.network]}

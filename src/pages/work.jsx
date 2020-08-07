@@ -6,16 +6,21 @@ import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
 import { FeaturedFour } from '../components/FeaturedFour'
 
-class Work extends Component<{ data: any }> {
+class Work extends Component {
   render() {
     const caseStudies = this.props.data.caseStudies.nodes
+
+    const sortedCaseStudies = caseStudies
+      .sort(function(a, b) {
+        return a.position - b.bosition
+      })
 
     return (
       <Fragment>
         <Header />
         <Container>
           <SectionWrap>
-            <FeaturedFour caseStudies={caseStudies} />
+            <FeaturedFour caseStudies={sortedCaseStudies} />
           </SectionWrap>
         </Container>
         <Footer />
@@ -29,6 +34,7 @@ export const query = graphql`
     caseStudies: allCaseStudiesJson {
       nodes {
         id
+        position
         brandName
         workType
         workDetails
@@ -42,7 +48,7 @@ export const query = graphql`
         }
       }
     }
-    work: allPagesJson(filter: {pageName: {eq: "work"}}) {
+    work: allPagesJson(filter: { pageName: { eq: "work" } }) {
       edges {
         node {
           id

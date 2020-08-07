@@ -61,8 +61,6 @@ export const StyledWrapBurger = styled.div`
 
 const isPartiallyActive = ({
   isPartiallyCurrent,
-}: {
-  isPartiallyCurrent: boolean
 }) => {
   return isPartiallyCurrent
     ? { className: 'router-link active' }

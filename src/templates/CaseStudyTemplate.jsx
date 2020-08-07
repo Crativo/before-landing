@@ -47,7 +47,7 @@ const StyledImageItem = styled.img`
   height: auto;
 `
 
-const Row = styled.div<{ spacing: number }>`
+const Row = styled.div`
   ${({ spacing }) =>
     spacing &&
     css`
@@ -62,7 +62,7 @@ const Row = styled.div<{ spacing: number }>`
   justify-content: flex-start;
 `
 
-const Col = styled.div<{ spacing: number }>`
+const Col = styled.div`
   ${({ spacing }) =>
     spacing &&
     css`
@@ -75,22 +75,8 @@ const Col = styled.div<{ spacing: number }>`
   width: 100%;
 `
 
-interface Col {
-  imageSrc: string
-}
-interface Row {
-  cols: [Col]
-}
-interface CaseStudy {
-  rows: [Row]
-  spacing: number
-  brandPageHeadline: string
-  brandName: string
-  workDetails: string
-}
-
-class CaseStudyTemplate extends Component<{ caseStudy: CaseStudy }> {
-  renderRows(caseStudy: CaseStudy) {
+class CaseStudyTemplate extends Component {
+  renderRows(caseStudy) {
     return caseStudy?.rows?.map((row, rowIndex) => (
       <Row spacing={caseStudy.spacing} key={rowIndex}>
         {row?.cols?.map((col, colIndex) => (

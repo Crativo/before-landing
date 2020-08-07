@@ -58,13 +58,13 @@ const TeamItemJob = styled.div`
   color: ${theme.colors.darkerGrey};
 `
 
-const TeamItemPic = ({ src }: any) => (
+const TeamItemPic = ({ src }) => (
   <PicParent>
     <StyledImg src={src} />
   </PicParent>
 )
 
-class About extends Component<{ data: any }> {
+class About extends Component {
   render() {
     const people = this.props.data.people.edges
     const aboutPage = this.props.data.aboutPage.edges[0].node
@@ -81,7 +81,7 @@ class About extends Component<{ data: any }> {
             </Fade>
 
             <TeamSection>
-              {people.map((person: any, index: number) => (
+              {people.map((person, index) => (
                 <TeamItemWrap key={person.node.id}>
                   <Fade key={index} delay={index * 200}>
                     <TeamItem>

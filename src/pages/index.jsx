@@ -25,7 +25,7 @@ const StyledPageHeadline = styled(PageHeadline)`
   }
 `
 
-class Landing extends Component<{data: any}> {
+class Landing extends Component {
   render() {
     const caseStudies = this.props.data.caseStudies.nodes
     const landingPage = this.props.data.landingPage.edges[0].node
@@ -69,6 +69,7 @@ export const query = graphql`
     caseStudies: allCaseStudiesJson {
       nodes {
         id
+        position
         brandName
         workType
         workDetails

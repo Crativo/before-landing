@@ -4,7 +4,7 @@ import theme from '../../styles/theme'
 import { mq } from '../../styles/media'
 import { Link } from 'gatsby'
 
-export const StyledMenu = styled.nav<{ open: boolean }>`
+export const StyledMenu = styled.nav`
   z-index: 1;
   display: flex;
   position: absolute;
@@ -56,10 +56,6 @@ const Menu = ({
   open,
   setOpen,
   ...props
-}: {
-  open: boolean
-  setOpen: (isOpen: boolean) => void
-  id: string
 }) => {
   const isHidden = open ? true : false
   const tabIndex = isHidden ? 0 : -1

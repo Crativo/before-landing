@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 
-export const StyledButton = styled.button<{ isPrimary: boolean }>`
+export const StyledButton = styled.button`
   font-family: ${theme.fonts.primary};
   font-size: 1.2rem;
   color: ${theme.colors.white};
