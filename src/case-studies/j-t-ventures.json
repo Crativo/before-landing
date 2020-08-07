@@ -1,0 +1,53 @@
+{
+  "spacing": 10,
+  "coverImageHorizontal": "/img/cover_jt.jpg",
+  "position": 1,
+  "brandPageHeadline": "Making the right first impression on potential portfolio start-ups",
+  "workType": "Website",
+  "slug": "J&T Ventures",
+  "workDetails": "UX Design / Web Design / Photography / Copywriting ",
+  "brandName": "J&T Ventures",
+  "rows": [
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-219.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-222.jpg"
+        },
+        {
+          "imageSrc": "/img/mask-group-223.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-221.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-224.jpg"
+        },
+        {
+          "imageSrc": "/img/mask-group-225.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-220.jpg"
+        }
+      ]
+    }
+  ]
+}
