@@ -1,19 +1,10 @@
 {
   "pageName": "landing",
-  "pageHeadline": "Small design studio helping brands to be understood.",
   "footer": {
     "actionTitle": "What can we help you with?",
     "actionLink": "/services",
     "actionLinkText": "see our services ->"
   },
-  "social": [
-    {
-      "network": "linkedin",
-      "link": ""
-    },
-    {
-      "network": "instagram",
-      "link": ""
-    }
-  ]
+  "pageHeadline": "Helping brands to be understood.",
+  "social": []
 }
