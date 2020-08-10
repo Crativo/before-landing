@@ -1,0 +1,9 @@
+{
+  "pageName": "contact",
+  "pageHeadline": "Contact us if your business can't afford being misunderstood.",
+  "footer": {
+    "actionTitle": "What can we help you with?",
+    "actionLink": "/services",
+    "actionLinkText": "see our services ->"
+  }
+}

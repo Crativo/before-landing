@@ -60,6 +60,7 @@ const CardInfo = styled.div`
 
 class Contact extends Component {
   render() {
+    const contactPage = this.props.data.contactPage.edges[0].node
     return (
       <Fragment>
         <Header />
@@ -67,7 +68,7 @@ class Contact extends Component {
           <SectionWrap>
             <Fade>
               <PageHeadline>
-                Contact us if your business can't afford being misunderstood.
+                {contactPage.pageHeadline}
               </PageHeadline>
             </Fade>
 
@@ -105,10 +106,28 @@ class Contact extends Component {
               </Fade>
           </SectionWrap>
         </Container>
-        <Footer />
+        <Footer footer={contactPage.footer} />
       </Fragment>
     )
   }
 }
+
+export const query = graphql`
+  query ContactQuery {
+    contactPage: allPagesJson(filter: { pageName: { eq: "contact" } }) {
+      edges {
+        node {
+          id
+          pageHeadline
+          footer {
+            actionTitle
+            actionLink
+            actionLinkText
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Contact

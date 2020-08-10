@@ -155,7 +155,7 @@ const SocialLinks = () => (
   </StyledSocialNavigation>
 )
 
-const Footer = ({ footer }) => footer && (
+const Footer = ({ footer }) => footer && footer.actionTitle && footer.actionLink && footer.actionLinkText ? (
   <StyledFooter>
     <Container>
       <SectionWrap>
@@ -175,6 +175,6 @@ const Footer = ({ footer }) => footer && (
       </SectionWrap>
     </Container>
   </StyledFooter>
-)
+) : <></>
 
 export default Footer

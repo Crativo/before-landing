@@ -132,6 +132,23 @@ collections:
                 name: 'actionLink'
               - label: 'ActionLinkText'
                 name: 'actionLinkText'
+      - label: 'Contact Page'
+        name: 'contact'
+        file: 'src/pages/contact.json'
+        fields:
+          - label: 'PageHeadline'
+            name: 'pageHeadline'
+            widget: string
+          - label: 'Footer'
+            name: 'footer'
+            widget: 'object'
+            fields:
+              - label: 'ActionTitle'
+                name: 'actionTitle'
+              - label: 'ActionLink'
+                name: 'actionLink'
+              - label: 'ActionLinkText'
+                name: 'actionLinkText'
       - label: 'Services Page'
         name: 'services'
         file: 'src/pages/services.json'

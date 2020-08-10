@@ -63,10 +63,6 @@ export const query = graphql`
             actionLink
             actionLinkText
           }
-          social {
-            network
-            link
-          }
         }
       }
     }
