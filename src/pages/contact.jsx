@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import theme from '../styles/theme'
 import { PageHeadline } from '../components/PageHeadline'
 import { mq } from '../styles/media'
-import { standardText, standardTextLG } from '../styles/text'
+import { standardTextLG } from '../styles/text'
 
 const CardList = styled.div`
   display: flex;

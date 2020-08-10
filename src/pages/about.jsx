@@ -97,7 +97,7 @@ class About extends Component {
             </TeamSection>
           </SectionWrap>
         </Container>
-        <Footer />
+        <Footer footer={aboutPage.footer} />
       </Fragment>
     )
   }
@@ -110,6 +110,11 @@ export const query = graphql`
         node {
           id
           pageHeadline
+          footer {
+            actionTitle
+            actionLink
+            actionLinkText
+          }
         }
       }
     }

@@ -45,7 +45,7 @@ class Landing extends Component {
             <FeaturedFour caseStudies={caseStudies.slice(0, 4)} />
           </SectionWrap>
         </Container>
-        <Footer />
+        <Footer footer={landingPage.footer} />
       </Fragment>
     )
   }
@@ -58,6 +58,11 @@ export const query = graphql`
         node {
           id
           pageHeadline
+          footer {
+            actionTitle
+            actionLink
+            actionLinkText
+          }
           social {
             network
             link

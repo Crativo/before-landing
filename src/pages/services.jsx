@@ -221,7 +221,7 @@ class Services extends Component {
             </SectionWrap>
           </Container>
         </ProcessSection>
-        <Footer />
+        <Footer footer={servicesPage.footer} />
       </Fragment>
     )
   }
@@ -244,6 +244,11 @@ export const query = graphql`
           process {
             processTitle
             processText
+          }
+          footer {
+            actionTitle
+            actionLink
+            actionLinkText
           }
         }
       }

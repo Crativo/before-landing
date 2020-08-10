@@ -9,6 +9,7 @@ import { FeaturedFour } from '../components/FeaturedFour'
 class Work extends Component {
   render() {
     const caseStudies = this.props.data.caseStudies.nodes
+    const workPage = this.props.data.workPage.edges[0].node
 
     const sortedCaseStudies = caseStudies
       .sort(function(a, b) {
@@ -23,7 +24,7 @@ class Work extends Component {
             <FeaturedFour caseStudies={sortedCaseStudies} />
           </SectionWrap>
         </Container>
-        <Footer />
+        <Footer footer={workPage.footer} />
       </Fragment>
     )
   }
@@ -48,11 +49,16 @@ export const query = graphql`
         }
       }
     }
-    work: allPagesJson(filter: { pageName: { eq: "work" } }) {
+    workPage: allPagesJson(filter: { pageName: { eq: "work" } }) {
       edges {
         node {
           id
           pageHeadline
+          footer {
+            actionTitle
+            actionLink
+            actionLinkText
+          }
         }
       }
     }

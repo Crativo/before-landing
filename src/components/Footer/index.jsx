@@ -33,8 +33,7 @@ const ActionSection = styled.div`
   }
 `
 
-const FooterActionTitle = styled.div`
-`
+const FooterActionTitle = styled.div``
 
 const FooterAction = styled.div`
   color: ${theme.colors.primary};
@@ -93,7 +92,7 @@ export const StyledLink = styled(Link)`
   &:hover {
     opacity: 0.5;
   }
-  
+
   ${mq.tablet} {
     margin-right: 1rem;
   }
@@ -156,16 +155,20 @@ const SocialLinks = () => (
   </StyledSocialNavigation>
 )
 
-const Footer = () => (
+const Footer = ({ footer }) => footer && (
   <StyledFooter>
     <Container>
       <SectionWrap>
         <ActionSection>
-          <FooterActionTitle>What can we help you with?</FooterActionTitle>
-          <Link to="/services"><FooterAction>see our services {`->`}</FooterAction></Link>
+          <FooterActionTitle>{footer.actionTitle}</FooterActionTitle>
+          <Link to={footer.actionLink}>
+            <FooterAction>{footer.actionLinkText}</FooterAction>
+          </Link>
         </ActionSection>
         <FooterFoot>
-          <FooterLogo><LogoIcon /></FooterLogo>
+          <FooterLogo>
+            <LogoIcon />
+          </FooterLogo>
           <Navigation />
           <SocialLinks />
         </FooterFoot>
