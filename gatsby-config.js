@@ -15,7 +15,7 @@ module.exports = {
         short_name: 'starter',
         start_url: '/',
         display: 'minimal-ui',
-        // icon: 'static/assets/android-chrome-512x512.png', // This path is relative to the root of the site.
+        icon: 'static/assets/logo.png', // This path is relative to the root of the site.
       },
     },
     {

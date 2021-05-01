@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from './Fade'
 import Container from './Container'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import TransitionGroup from 'react-transition-group/TransitionGroup'
 import theme from '../styles/theme'
 import { mq } from '../styles/media'
@@ -81,10 +81,6 @@ const CaseStudyFoot = styled.div`
 
 const BrandName = styled.div`
   color: ${theme.colors.black};
-`
-
-const Splitter = styled.div`
-  color: ${theme.colors.darkerGrey};
 `
 
 const WorkType = styled.div`

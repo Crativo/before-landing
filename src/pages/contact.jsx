@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react'
+import { graphql } from 'gatsby'
 import Fade from '../components/Fade'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
