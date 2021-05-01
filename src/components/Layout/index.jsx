@@ -1,4 +1,4 @@
-import React, { ReactChildren } from 'react'
+import React from 'react'
 import MetaHead from '../MetaHead'
 import { Wrap } from './styled'
 
