@@ -26,6 +26,16 @@
     {
       "cols": [
         {
+          "imageSrc": "/img/mask-group-222.png"
+        },
+        {
+          "imageSrc": "/img/mask-group-239.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
           "imageSrc": "/img/mask-group-240.png"
         }
       ]
@@ -34,16 +44,6 @@
       "cols": [
         {
           "imageSrc": "/img/mask-group-233.png"
-        }
-      ]
-    },
-    {
-      "cols": [
-        {
-          "imageSrc": "/img/mask-group-222.png"
-        },
-        {
-          "imageSrc": "/img/mask-group-239.png"
         }
       ]
     },
