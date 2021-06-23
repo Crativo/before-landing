@@ -1,0 +1,34 @@
+{
+  "coverImageSquare": "/img/mask-group-244.png",
+  "spacing": 10,
+  "coverImageHorizontal": "/img/mask-group-242.png",
+  "position": 0,
+  "brandPageHeadline": "Artificial sport fields have never been greener",
+  "workType": "Visual Identity & Website",
+  "slug": "dajky",
+  "workDetails": "UX / UI / Copywriting / Webflow Development / Photography",
+  "brandName": "Dajky",
+  "rows": [
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/dajky_1.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/dajky_4.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/dajky_6.png"
+        }
+      ]
+    }
+  ]
+}
