@@ -7,5 +7,63 @@
   "workType": "Website",
   "slug": "alicekim",
   "workDetails": "UX Design / Visual Design / Copywriting / Webflow Development",
-  "brandName": "Alice Kim"
+  "brandName": "Alice Kim",
+  "rows": [
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/group-1502.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-236.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-240.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-233.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-222.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-239.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-234.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/mask-group-235.png"
+        }
+      ]
+    }
+  ]
 }
