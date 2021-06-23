@@ -20,13 +20,50 @@
       "cols": [
         {
           "imageSrc": "/img/dajky_4.png"
+        },
+        {
+          "imageSrc": "/img/dajky_6.png"
         }
       ]
     },
     {
       "cols": [
         {
-          "imageSrc": "/img/dajky_6.png"
+          "imageSrc": "/img/dajky_3.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/dajky_2.png"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/dajky_10.jpg"
+        },
+        {
+          "imageSrc": "/img/dajky_9.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/dajky_7.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/dajky_11.jpg"
+        },
+        {
+          "imageSrc": "/img/dajky_8.jpg"
         }
       ]
     }
