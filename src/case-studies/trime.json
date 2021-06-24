@@ -1,0 +1,50 @@
+{
+  "coverImageSquare": "/img/mask-group-252.png",
+  "spacing": 10,
+  "coverImageHorizontal": "/img/mask-group-254.png",
+  "position": 0,
+  "brandPageHeadline": " Supplements that embrace your full potential.",
+  "workType": "Package Design",
+  "slug": "trime",
+  "workDetails": "Visual Identity / Package Design / Web Design",
+  "brandName": "Trime",
+  "rows": [
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/hero_banner.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/all.jpg"
+        },
+        {
+          "imageSrc": "/img/d3k2__2.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/f20.jpg"
+        },
+        {
+          "imageSrc": "/img/k2_2.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/k2.jpg"
+        },
+        {
+          "imageSrc": "/img/d3k2.jpg"
+        }
+      ]
+    }
+  ]
+}
