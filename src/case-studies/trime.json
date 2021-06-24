@@ -45,6 +45,20 @@
           "imageSrc": "/img/d3k2.jpg"
         }
       ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/both_v3.jpg"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "imageSrc": "/img/both_v3.dark2.jpg"
+        }
+      ]
     }
   ]
 }
