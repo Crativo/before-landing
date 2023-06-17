@@ -1,10 +1,10 @@
 {
   "pageName": "landing",
   "footer": {
-    "actionTitle": "What can we help you with?",
+    "actionTitle": "What can i do well",
     "actionLink": "/services",
-    "actionLinkText": "see our services ->"
+    "actionLinkText": "see my services ->"
   },
-  "pageHeadline": "We use design as a strategic tool for communication with your audience.",
+  "pageHeadline": "Minimalistic designs that look and work",
   "social": []
 }
