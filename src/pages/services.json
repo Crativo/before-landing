@@ -4,83 +4,55 @@
   "footer": {
     "actionTitle": "Let's discuss your project",
     "actionLink": "/contact",
-    "actionLinkText": "contact us ->"
+    "actionLinkText": "contact me ->"
   },
   "features": [
     {
       "featureCategories": [
         {
-          "name": "Naming"
+          "name": "Brand Strategy"
         },
         {
           "name": "Visual Identity"
         },
         {
-          "name": "Brand Strategy"
+          "name": "Packaging"
         }
       ],
       "title": "Branding"
     },
     {
-      "title": "Motion",
-      "featureCategories": [
-        {
-          "name": "Explainer Video"
-        },
-        {
-          "name": "Presentation"
-        },
-        {
-          "name": "Infographics"
-        }
-      ]
-    },
-    {
       "title": "Interactive",
       "featureCategories": [
         {
-          "name": "Website / Eshop"
+          "name": "Business Website"
+        },
+        {
+          "name": "eCommerce Store"
         },
         {
           "name": "Mobile / Web App"
-        },
-        {
-          "name": "Game"
-        }
-      ]
-    },
-    {
-      "title": "Production",
-      "featureCategories": [
-        {
-          "name": "Promotional Video"
-        },
-        {
-          "name": "Lifestyle Photography"
-        },
-        {
-          "name": "Product Photography"
         }
       ]
     }
   ],
-  "processHeadline": "Our approach is not just delivering design but also offering you new ways of thinking and finding solutions.",
+  "processHeadline": "My approach is not just delivering design but also offering you new ways of thinking and finding solutions.",
   "process": [
     {
       "processTitle": "Understand",
-      "processText": "We dive deep into the problem we're trynig to solve and we define it."
+      "processText": "Diving deep into the problem we're trynig to solve and defining it."
     },
     {
       "processTitle": "Strategize",
-      "processText": "We set a key message, structure of information and strategy to achieve understanding."
+      "processText": "Setting a key message, structure of information and strategy to achieve understanding."
     },
     {
-      "processTitle": "Concept",
-      "processText": "We prepare a visual concept to make sure we're on the same page."
+      "processTitle": "Conceptualize",
+      "processText": "Preparing a visual concept to make sure we're on the same page."
     },
     {
       "processTitle": "Design",
-      "processText": "After we agreed on a concept and strategy, we proceed to make it all happen."
+      "processText": "After we agreed on a concept and strategy, I proceed to make it all happen."
     }
   ],
   "ProcessHeadline": "Following process to make sure we deliver design that actually serves you"
