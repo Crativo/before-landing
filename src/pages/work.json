@@ -1,9 +1,9 @@
 {
   "pageName": "work",
-  "pageHeadline": "Our Work",
+  "pageHeadline": "My Work",
   "footer": {
-    "actionTitle": "What can we help you with?",
+    "actionTitle": "What can i do well",
     "actionLink": "/services",
-    "actionLinkText": "see our services ->"
+    "actionLinkText": "see my services ->"
   }
 }
