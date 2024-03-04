@@ -5,7 +5,6 @@ module.exports = {
     title: 'Portfolio',
   },
   plugins: [
-    'gatsby-plugin-resolve-src',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
@@ -19,7 +18,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-netlify-cms`,
+      resolve: `gatsby-plugin-decap-cms`,
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
@@ -30,13 +29,6 @@ module.exports = {
       options: {
         name: 'pages',
         path: `${__dirname}/src/pages`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'people',
-        path: `${__dirname}/src/people`,
       },
     },
     {

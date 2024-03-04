@@ -21,7 +21,7 @@ export const StyledHeader = styled.header`
 
 export const StyledNavigation = styled.header`
   ${standardText}
-  display: none;
+  /* display: none; */
   font-weight: ${theme.fontWeight.medium};
 
   ${mq.tablet} {
@@ -82,25 +82,10 @@ const Header = () => {
             <LogoIcon />
           </Link>
           <StyledNavigation>
-            <Link to="/work" getProps={isPartiallyActive}>
-              work
-            </Link>
-            <Link to="/services" getProps={isPartiallyActive}>
-              services
-            </Link>
-            <Link to="/about" getProps={isPartiallyActive}>
-              about
-            </Link>
-            <Link to="/contact" getProps={isPartiallyActive}>
-              contact
-            </Link>
+          <a href="mailto:michal@before.cz">
+            michal@before.cz
+          </a>
           </StyledNavigation>
-          <StyledWrapBurger>
-            <FocusLock disabled={!open}>
-              <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-              <Menu open={open} setOpen={setOpen} id={menuId} />
-            </FocusLock>
-          </StyledWrapBurger>
         </StyledHeader>
       </SectionWrap>
     </Container>

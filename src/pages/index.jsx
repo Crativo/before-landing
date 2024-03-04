@@ -2,7 +2,6 @@ import React, { Fragment, Component } from 'react'
 import { graphql } from 'gatsby'
 import Fade from '../components/Fade'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
 import { PageHeadline, PageHeadlineSpace } from '../components/PageHeadline'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
@@ -42,10 +41,9 @@ class Landing extends Component {
                 </StyledPageHeadline>
               </PageHeadlineSpace>
             </Fade>
-            <FeaturedFour caseStudies={caseStudies.slice(0, 4)} />
+            <FeaturedFour caseStudies={caseStudies} />
           </SectionWrap>
         </Container>
-        <Footer footer={landingPage.footer} />
       </Fragment>
     )
   }

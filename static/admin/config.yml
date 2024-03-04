@@ -3,17 +3,6 @@ backend:
   repo: Crativo/before-landing
   branch: 'master'
 collections:
-  - label: 'People'
-    name: 'people'
-    folder: 'src/people'
-    create: true
-    slug: '{{slug}}'
-    identifier_field: name
-    extension: json
-    fields:
-      - { label: 'Name', name: 'name', widget: string }
-      - { label: 'Position', name: 'position', widget: string }
-      - { label: 'Profile Image', name: 'profileImage', widget: image }
   - label: 'Case Studies'
     name: 'caseStudies'
     folder: 'src/case-studies'
@@ -73,16 +62,6 @@ collections:
         name: 'landing'
         file: 'src/pages/landing.json'
         fields:
-          - label: 'Footer'
-            name: 'footer'
-            widget: 'object'
-            fields:
-              - label: 'ActionTitle'
-                name: 'actionTitle'
-              - label: 'ActionLink'
-                name: 'actionLink'
-              - label: 'ActionLinkText'
-                name: 'actionLinkText'
           - label: 'PageHeadline'
             name: 'pageHeadline'
             widget: string
@@ -98,100 +77,5 @@ collections:
                   - { label: 'Instagram', value: 'instagram' }
                   - { label: 'LinkedIn', value: 'linkedin' }
               - { label: Link, name: link, widget: string }
-      - label: 'Work Page'
-        name: 'work'
-        file: 'src/pages/work.json'
-        fields:
-          - label: 'PageHeadline'
-            name: 'pageHeadline'
-            widget: string
-          - label: 'Footer'
-            name: 'footer'
-            widget: 'object'
-            fields:
-              - label: 'ActionTitle'
-                name: 'actionTitle'
-              - label: 'ActionLink'
-                name: 'actionLink'
-              - label: 'ActionLinkText'
-                name: 'actionLinkText'
-      - label: 'About Page'
-        name: 'about'
-        file: 'src/pages/about.json'
-        fields:
-          - label: 'PageHeadline'
-            name: 'pageHeadline'
-            widget: string
-          - label: 'Footer'
-            name: 'footer'
-            widget: 'object'
-            fields:
-              - label: 'ActionTitle'
-                name: 'actionTitle'
-              - label: 'ActionLink'
-                name: 'actionLink'
-              - label: 'ActionLinkText'
-                name: 'actionLinkText'
-      - label: 'Contact Page'
-        name: 'contact'
-        file: 'src/pages/contact.json'
-        fields:
-          - label: 'PageHeadline'
-            name: 'pageHeadline'
-            widget: string
-          - label: 'Footer'
-            name: 'footer'
-            widget: 'object'
-            fields:
-              - label: 'ActionTitle'
-                name: 'actionTitle'
-              - label: 'ActionLink'
-                name: 'actionLink'
-              - label: 'ActionLinkText'
-                name: 'actionLinkText'
-      - label: 'Services Page'
-        name: 'services'
-        file: 'src/pages/services.json'
-        fields:
-          - label: PageHeadline
-            name: pageHeadline
-            widget: string
-          - label: 'Footer'
-            name: 'footer'
-            widget: 'object'
-            fields:
-              - label: 'ActionTitle'
-                name: 'actionTitle'
-              - label: 'ActionLink'
-                name: 'actionLink'
-              - label: 'ActionLinkText'
-                name: 'actionLinkText'
-          - label: Features
-            name: features
-            widget: list
-            fields:
-              - label: title
-                name: title
-                widget: string
-              - label: FeatureCategories
-                name: featureCategories
-                widget: list
-                fields:
-                  - label: name
-                    name: name
-                    widget: string
-          - label: ProcessHeadline
-            name:  processHeadline
-            widget: string
-          - label: Process
-            name: process
-            widget: list
-            fields:
-              - label: ProcessTitle
-                name: processTitle
-                widget: string
-              - label: ProcessText
-                name: processText
-                widget: string
 media_folder: static/img
 public_folder: /img

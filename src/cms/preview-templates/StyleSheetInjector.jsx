@@ -10,7 +10,7 @@ const StyleSheetInjector = ({ children }) => {
 		// const iframeHeadElem = iframe && iframe.contentDocument.head;
 		const iframeHeadElem = iframe && iframe.contentDocument.head
 		setIframeRef(iframeHeadElem);
-	});
+	}, []);
 
 	return (
 		<>

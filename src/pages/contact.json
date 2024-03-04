@@ -1,9 +1,0 @@
-{
-  "pageName": "contact",
-  "pageHeadline": "Contact me",
-  "footer": {
-    "actionTitle": "What can I help you with?",
-    "actionLink": "/services",
-    "actionLinkText": "see my services ->"
-  }
-}
